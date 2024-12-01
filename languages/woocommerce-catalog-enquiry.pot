@@ -1,0 +1,449 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Product Catalog Enquiry\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-08-28 08:28+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.6.11; wp-6.6.1\n"
+"X-Domain: woocommerce-catalog-enquiry"
+
+#: templates/emails/woocommerce-catalog-enquiry-admin.php:106
+#: templates/emails/plain/woocommerce-catalog-enquiry-admin.php:61
+#, php-format
+msgid "%s - Powered by WC Catalog Enquiry"
+msgstr ""
+
+#: src/components/QuoteRequests/quoteRequests.jsx:246
+msgid "-"
+msgstr ""
+
+#: src/components/QuoteRequests/quoteRequests.jsx:132
+#: src/components/QuoteRequests/quoteRequests.jsx:242
+msgid "Accepted"
+msgstr ""
+
+#: modules/Quote/Admin.php:62
+#, php-format
+msgid "Accepted Quote <span class=\"count\">(%s)</span>"
+msgid_plural "Accepted Quote <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: src/components/WholesaleUser/wholesaleUser.jsx:258
+msgid "Action"
+msgstr ""
+
+#: modules/RoleBased/Admin.php:88
+msgid "Add role successfully"
+msgstr ""
+
+#: classes/Emails/EnquiryEmail.php:31
+msgid "Admin will get an email when customer enquiry about a product"
+msgstr ""
+
+#: src/components/QuoteRequests/quoteRequests.jsx:117
+#: src/components/WholesaleUser/wholesaleUser.jsx:78
+msgid "All"
+msgstr ""
+
+#: src/blocks/wholesaleProductList/ProductListTable.jsx:278
+#: src/components/WholesaleUser/wholesaleUser.jsx:344
+msgid "All Wholesale Users"
+msgstr ""
+
+#: src/components/WholesaleUser/wholesaleUser.jsx:88
+msgid "Approve"
+msgstr ""
+
+#: classes/Admin.php:23
+msgid "catalog"
+msgstr ""
+
+#: classes/Admin.php:273
+msgid "Catalog Enquiry"
+msgstr ""
+
+#: classes/Admin.php:24
+msgid "CatalogX"
+msgstr ""
+
+#. Description of the plugin
+msgid "Convert your WooCommerce store into a catalog website in a click"
+msgstr ""
+
+#: templates/emails/woocommerce-catalog-enquiry-admin.php:92
+msgid "Customer Details"
+msgstr ""
+
+#: src/components/QuoteRequests/quoteRequests.jsx:261
+#: src/components/WholesaleUser/wholesaleUser.jsx:250
+msgid "Date"
+msgstr ""
+
+#: src/components/WholesaleUser/wholesaleUser.jsx:171
+msgid "DD/MM/YYYY"
+msgstr ""
+
+#: src/components/QuoteRequests/quoteRequests.jsx:166
+msgid "DD/MMM/YYYY"
+msgstr ""
+
+#: templates/emails/woocommerce-catalog-enquiry-admin.php:13
+#: templates/emails/plain/woocommerce-catalog-enquiry-admin.php:14
+msgid "Dear Admin"
+msgstr ""
+
+#: classes/Frontend.php:129
+msgid "Discount"
+msgstr ""
+
+#: src/components/Roles/roles.jsx:124
+msgid "Discount Amount"
+msgstr ""
+
+#: src/components/Roles/roles.jsx:110
+msgid "Discount Type"
+msgstr ""
+
+#: src/components/QuoteRequests/quoteRequests.jsx:294
+msgid "Download CSV"
+msgstr ""
+
+#: classes/Admin.php:61 classes/Admin.php:62
+msgid "Dynamic Pricing Rules"
+msgstr ""
+
+#: templates/emails/woocommerce-catalog-enquiry-admin.php:98
+msgid "Email"
+msgstr ""
+
+#: src/blocks/quoteListTable/QuoteListTable.jsx:220
+msgid "Email:"
+msgstr ""
+
+#: classes/Emails/EnquiryEmail.php:114
+msgid "Enquiry for {PRODUCT_NAME}"
+msgstr ""
+
+#: classes/Emails/EnquiryEmail.php:30
+msgid "Enquiry sent"
+msgstr ""
+
+#: modules/Enquiry/Rest.php:164
+msgid "Enquiry sent successfully"
+msgstr ""
+
+#: classes/Admin.php:300
+msgid "Enter product external link"
+msgstr ""
+
+#: modules/Quote/Ajax.php:30
+msgid "Error occurred while adding product to Request a Quote list."
+msgstr ""
+
+#: src/components/QuoteRequests/quoteRequests.jsx:137
+#: src/components/QuoteRequests/quoteRequests.jsx:240
+msgid "Expired"
+msgstr ""
+
+#: modules/Quote/Admin.php:50
+#, php-format
+msgid "Expired Quote <span class=\"count\">(%s)</span>"
+msgid_plural "Expired Quotes <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#. URI of the plugin
+#. Author URI of the plugin
+msgid "https://multivendorx.com/"
+msgstr ""
+
+#: classes/Admin.php:301
+msgid "https://www.google.com"
+msgstr ""
+
+#: src/blocks/quoteListTable/QuoteListTable.jsx:148
+#: src/blocks/wholesaleProductList/ProductListTable.jsx:195
+msgid "Image"
+msgstr ""
+
+#: classes/Admin.php:34 classes/Admin.php:35
+msgid "Inquiry Messages"
+msgstr ""
+
+#: src/blocks/quoteListTable/QuoteListTable.jsx:240
+msgid "Message:"
+msgstr ""
+
+#: src/components/Roles/roles.jsx:134
+msgid "Minimum Quantity"
+msgstr ""
+
+#: classes/Admin.php:79 classes/Admin.php:80
+msgid "Modules"
+msgstr ""
+
+#. Author of the plugin
+msgid "MultiVendorX"
+msgstr ""
+
+#: templates/emails/woocommerce-catalog-enquiry-admin.php:94
+#: src/blocks/quoteListTable/QuoteListTable.jsx:155
+#: src/blocks/wholesaleProductList/ProductListTable.jsx:206
+msgid "Name"
+msgstr ""
+
+#: src/blocks/quoteListTable/QuoteListTable.jsx:210
+msgid "Name:"
+msgstr ""
+
+#: src/components/QuoteRequests/quoteRequests.jsx:122
+msgid "New"
+msgstr ""
+
+#: src/components/QuoteRequests/quoteRequests.jsx:236
+msgid "New quote Request"
+msgstr ""
+
+#: modules/Quote/Admin.php:26
+#, php-format
+msgid "New Quote Request <span class=\"count\">(%s)</span>"
+msgid_plural "New Quote Requests <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: modules/Quote/Frontend.php:46
+msgid "No more product in Quote list!"
+msgstr ""
+
+#: src/components/QuoteRequests/quoteRequests.jsx:254
+msgid "Order"
+msgstr ""
+
+#: modules/Quote/Admin.php:57 modules/Quote/Admin.php:86
+msgctxt "Order status"
+msgid "Accepted Quote"
+msgstr ""
+
+#: modules/Quote/Admin.php:45 modules/Quote/Admin.php:85
+msgctxt "Order status"
+msgid "Expired Quote"
+msgstr ""
+
+#: modules/Quote/Admin.php:21 modules/Quote/Admin.php:83
+msgctxt "Order status"
+msgid "New Quote Request"
+msgstr ""
+
+#: modules/Quote/Admin.php:33 modules/Quote/Admin.php:84
+msgctxt "Order status"
+msgid "Pending Quote"
+msgstr ""
+
+#: modules/Quote/Admin.php:69 modules/Quote/Admin.php:87
+msgctxt "Order status"
+msgid "Rejected Quote"
+msgstr ""
+
+#: src/blocks/quoteThankyou/QuoteThankYou.jsx:55
+msgid ""
+"Our team is reviewing your details and will get back to you shortly with a "
+"personalized quote. We appreciate your patience and look forward to serving "
+"you!"
+msgstr ""
+
+#: src/components/QuoteRequests/quoteRequests.jsx:127
+#: src/components/WholesaleUser/wholesaleUser.jsx:83
+msgid "Pending"
+msgstr ""
+
+#: modules/Quote/Admin.php:38
+#, php-format
+msgid "Pending Quote <span class=\"count\">(%s)</span>"
+msgid_plural "Pending Quote <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: src/components/QuoteRequests/quoteRequests.jsx:238
+msgid "Pending Request"
+msgstr ""
+
+#: src/blocks/quoteListTable/QuoteListTable.jsx:230
+msgid "Phone:"
+msgstr ""
+
+#: src/blocks/quoteThankyou/QuoteThankYou.jsx:46
+msgid "Please feel free to enter here your reason or provide us your feedback:"
+msgstr ""
+
+#: templates/emails/woocommerce-catalog-enquiry-admin.php:14
+#: templates/emails/plain/woocommerce-catalog-enquiry-admin.php:15
+msgid "Please find the product enquiry, details are given below"
+msgstr ""
+
+#: src/blocks/wholesaleProductList/ProductListTable.jsx:226
+msgid "Price"
+msgstr ""
+
+#: templates/emails/woocommerce-catalog-enquiry-admin.php:20
+msgid "Product"
+msgstr ""
+
+#: modules/Quote/Ajax.php:36
+msgid "Product added to quote list."
+msgstr ""
+
+#: classes/Core/QuoteCart.php:460
+msgid "Product already in Cart."
+msgstr ""
+
+#: modules/Quote/Ajax.php:38
+msgid "Product already in your quote list."
+msgstr ""
+
+#. Name of the plugin
+msgid "Product Catalog Enquiry"
+msgstr ""
+
+#: templates/emails/woocommerce-catalog-enquiry-admin.php:16
+msgid "Product Details"
+msgstr ""
+
+#: classes/Emails/EnquiryEmail.php:105
+msgid "Product Enquiry for {PRODUCT_NAME} by {USER_NAME}"
+msgstr ""
+
+#: templates/emails/woocommerce-catalog-enquiry-admin.php:22
+msgid "Product SKU"
+msgstr ""
+
+#: templates/emails/woocommerce-catalog-enquiry-admin.php:21
+msgid "Product Url"
+msgstr ""
+
+#: src/blocks/quoteListTable/QuoteListTable.jsx:163
+#: src/blocks/wholesaleProductList/ProductListTable.jsx:236
+msgid "Quantity"
+msgstr ""
+
+#: classes/Install.php:491
+msgid "Quotation Confirmation"
+msgstr ""
+
+#: classes/Admin.php:43 classes/Admin.php:44
+msgid "Quotation Requests"
+msgstr ""
+
+#: modules/Quote/Rest.php:101
+msgid "Quote cart updated!"
+msgstr ""
+
+#: src/components/QuoteRequests/quoteRequests.jsx:281
+msgid "Quotes List"
+msgstr ""
+
+#: src/components/WholesaleUser/wholesaleUser.jsx:93
+msgid "Reject"
+msgstr ""
+
+#: src/blocks/quoteThankyou/QuoteThankYou.jsx:49
+msgid "Reject the quote"
+msgstr ""
+
+#: src/components/QuoteRequests/quoteRequests.jsx:142
+#: src/components/QuoteRequests/quoteRequests.jsx:244
+msgid "Rejected"
+msgstr ""
+
+#: modules/Quote/Admin.php:74
+#, php-format
+msgid "Rejected Quote <span class=\"count\">(%s)</span>"
+msgid_plural "Rejected Quote <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: src/blocks/quoteListTable/QuoteListTable.jsx:141
+msgid "Remove"
+msgstr ""
+
+#: classes/Install.php:454
+msgid "Request Quote"
+msgstr ""
+
+#: src/components/Roles/roles.jsx:100
+msgid "Role"
+msgstr ""
+
+#: src/components/Roles/roles.jsx:193
+msgid "Roles"
+msgstr ""
+
+#: src/blocks/quoteListTable/QuoteListTable.jsx:251
+msgid "Send Quote"
+msgstr ""
+
+#: classes/Admin.php:70 classes/Admin.php:71
+msgid "Settings"
+msgstr ""
+
+#: classes/Rest.php:63
+msgid "Settings Saved"
+msgstr ""
+
+#: src/blocks/wholesaleProductList/ProductListTable.jsx:186
+msgid "SKU"
+msgstr ""
+
+#: src/components/QuoteRequests/quoteRequests.jsx:268
+#: src/components/WholesaleUser/wholesaleUser.jsx:242
+msgid "Status"
+msgstr ""
+
+#: src/blocks/wholesaleProductList/ProductListTable.jsx:216
+msgid "Stock"
+msgstr ""
+
+#: src/blocks/quoteListTable/QuoteListTable.jsx:171
+msgid "Subtotal"
+msgstr ""
+
+#: src/components/QuoteRequests/quoteRequests.jsx:272
+msgid "Total"
+msgstr ""
+
+#: src/blocks/quoteListTable/QuoteListTable.jsx:187
+msgid "Update Cart"
+msgstr ""
+
+#: classes/Admin.php:94
+msgid "Upgrade to pro"
+msgstr ""
+
+#: src/components/WholesaleUser/wholesaleUser.jsx:221
+msgid "User"
+msgstr ""
+
+#: src/components/WholesaleUser/wholesaleUser.jsx:234
+msgid "User Email"
+msgstr ""
+
+#: classes/Admin.php:52 classes/Admin.php:53
+msgid "Wholesale Users"
+msgstr ""
+
+#: src/blocks/quoteThankyou/QuoteThankYou.jsx:44
+msgid "You are about to reject the quote {orderId}"
+msgstr ""
+
+#: modules/Quote/Rest.php:166
+msgid "You have confirmed rejection of the quotation No: %d"
+msgstr ""
