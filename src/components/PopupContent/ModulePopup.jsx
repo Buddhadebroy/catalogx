@@ -10,16 +10,8 @@ const Modulepopup = (props) => {
             <DialogContent>
                 <DialogContentText>
                     <div className="admin-module-dialog-content">
-                        <div className="admin-image-overlay">
-                            <div className="admin-overlay-content">
-                                <h1 className="banner-header">Unlock <span className="banner-pro-tag">Pro</span> </h1>
-                                <div className="admin-banner-content">
-                                    <strong>{props.name}</strong>
-                                    <p>&nbsp;</p>
-                                    <p>Module not active</p>
-                                </div>
-                            </div>
-                        </div>
+                        <p>These settings are unavailable as the module is inactive. Please activate the module to enable them.</p>
+                        <p>To active the module <a href={appLocalizer.module_page_url}>click here</a></p> 
                     </div>
                 </DialogContentText>
             </DialogContent>

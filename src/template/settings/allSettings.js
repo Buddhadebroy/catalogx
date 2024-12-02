@@ -142,7 +142,8 @@ export default {
                 }
             ],
             proSetting: true,
-            look: "toggle"
+            look: "toggle",
+            moduleDepend: 'enquiry',
         },
         {
             key: 'separator_content',

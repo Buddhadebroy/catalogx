@@ -31,6 +31,7 @@ export default {
                 }
             ],
             proSetting: true,
+            moduleDepend: 'wholesale',
         },
         {
             key: "disable_coupon_for_wholesale",
