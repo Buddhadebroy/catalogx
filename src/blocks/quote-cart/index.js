@@ -17,7 +17,7 @@ registerBlockType("woocommerce-catalog-enquiry/quote-cart", {
 	apiVersion: 2,
 	title: "Quote Cart",
 	icon: "list-view",
-	category: "widgets",
+	category: "catalogx",
 	supports: {
 		html: false,
 	},

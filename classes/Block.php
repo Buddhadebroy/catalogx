@@ -9,15 +9,23 @@ class Block {
     private $blocks;
 
     public function __construct() {
+        // Register block category
+        add_filter( 'block_categories_all', [$this, 'register_block_category'] );
         // Register the block
         add_action( 'init', [$this, 'register_blocks'] );
         // Enqueue the script and style for block editor
         add_action( 'enqueue_block_editor_assets', [ $this,'enqueue_block_assets'] );
         add_action( 'wp_enqueue_scripts', [ $this,'enqueue_block_assets'] );
 
+        $this->blocks = $this->initialize_blocks();
+    }
+    
+    public function initialize_blocks() {
+        $blocks = [];
         $current_user = wp_get_current_user();
-        $this->blocks = [
-            [
+
+        if (Catalog()->modules->is_active('enquiry')) {
+            $blocks[] = [
                 'name' => 'enquiry-button', // block name
                 'render_php_callback_function' => [$this, 'render_enquiry_button_block'], // php render calback function
                 'required_script' => '', // the script which is required in the frontend of the block
@@ -34,8 +42,11 @@ class Block {
                         'nonce'   => wp_create_nonce( 'catalog-security-nonce' )
 					],
 				],
-            ],
-            [
+            ];
+        }
+
+        if (Catalog()->modules->is_active('quote')) {
+            $blocks[] = [
                 'name' => 'quote-button', // block name
                 'render_php_callback_function' => '',
                 'required_script' => '',
@@ -49,8 +60,9 @@ class Block {
                         'ajaxurl' => admin_url('admin-ajax.php'),
 					],
 				],
-            ],
-            [
+            ];
+
+            $blocks[] =  [
                 'name' => 'quote-cart', // block name
                 'render_php_callback_function' => '',
                 'required_script' => '',
@@ -68,8 +80,9 @@ class Block {
                         'email' => $current_user->user_email
 					],
 				],
-            ],
-            [
+            ];
+
+            $blocks[] = [
                 'name' => 'quote-thank-you', // block name
                 'render_php_callback_function' => '',
                 'required_script' => '',
@@ -78,8 +91,10 @@ class Block {
                 // src link is generated (which is append from block name) within the function
 				'react_dependencies'   => ['wp-blocks', 'wp-element', 'wp-editor', 'wp-components', 'wp-i18n'],
                 'localize' => [],
-            ],
-        ];
+            ];
+        }
+
+        return $blocks;
     }
 
     public function enqueue_block_assets() {
@@ -93,6 +108,15 @@ class Block {
 		}
 
         wp_enqueue_style('mvx-catalog-style', Catalog()->plugin_url . '/build/index.css');
+    }
+
+    public function register_block_category($categories) {
+        // Adding a new category.
+        $categories[] = [
+            'slug'  => 'catalogx',
+            'title' => __( 'Catalogx', 'woocommerce-catalog-enquiry' )
+        ];
+        return $categories;
     }
     
     public function register_blocks() {

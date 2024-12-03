@@ -8,7 +8,7 @@ import axios from 'axios';
 registerBlockType('woocommerce-catalog-enquiry/enquiry-button', {
     title: 'Enquiry Button',
     icon: 'button',
-    category: 'widgets',
+    category: 'catalogx',
     supports: {
         html: true,
     },

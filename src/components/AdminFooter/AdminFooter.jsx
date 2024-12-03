@@ -7,19 +7,19 @@ const AdminFooter = () => {
           title: "Get in touch with Support",
           icon: "mail",
           description: "Reach out to the support team for assistance or guidance.",
-          link: "https://google.com/",
+          link: "https://catalogx.com/support/",
         },
         {
           title: "Explore Documentation",
           icon: "submission-message",
           description: "Understand the plugin and its settings.",
-          link: "https://google.com/",
+          link: "https://catalogx.com/docs/",
         },
         {
           title: "Contribute Here",
           icon: "support",
           description: "To participation in product enhancement.",
-          link: "https://google.com/",
+          link: "https://github.com/multivendorx/catalogx/issues",
         },
       ];
 

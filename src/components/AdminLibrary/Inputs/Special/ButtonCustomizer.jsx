@@ -74,7 +74,7 @@ const Customizer = (props) => {
                 <div className="simple">
                   <div className="section">
                     <span className="lable">
-                      {__("Background Color", "woocommerce-stock-manager")}
+                      {__("Background Color", "woocommerce-catalog-enquiry")}
                     </span>
                     <div className="property-section">
                       <input
@@ -91,7 +91,7 @@ const Customizer = (props) => {
                   </div>
                   <div className="section">
                     <span className="lable">
-                      {__("Font Color", "woocommerce-stock-manager")}
+                      {__("Font Color", "woocommerce-catalog-enquiry")}
                     </span>
                     <div className="property-section">
                       <input
@@ -120,7 +120,7 @@ const Customizer = (props) => {
                     <span className="lable">
                       {__(
                         "Background Color On Hover",
-                        "woocommerce-stock-manager"
+                        "woocommerce-catalog-enquiry"
                       )}
                     </span>
                     <div className="property-section">
@@ -138,7 +138,7 @@ const Customizer = (props) => {
                   </div>
                   <div className="section">
                     <span className="lable">
-                      {__("Font Color On Hover", "woocommerce-stock-manager")}
+                      {__("Font Color On Hover", "woocommerce-catalog-enquiry")}
                     </span>
                     <div className="property-section">
                       <input
@@ -161,7 +161,7 @@ const Customizer = (props) => {
                 <div className="simple">
                   <div className="section">
                     <span className="lable">
-                      {__("Border Color", "woocommerce-stock-manager")}
+                      {__("Border Color", "woocommerce-catalog-enquiry")}
                     </span>
                     <div className="property-section">
                       <input
@@ -178,7 +178,7 @@ const Customizer = (props) => {
                   </div>
                   <div className="section section-row">
                     <span className="lable">
-                      {__("Border Size", "woocommerce-stock-manager")}
+                      {__("Border Size", "woocommerce-catalog-enquiry")}
                     </span>
                     <div className="property-section">
                       {/* <div class="PB-range-slider-div"> */}
@@ -195,7 +195,7 @@ const Customizer = (props) => {
                   </div>
                   <div className="section section-row">
                     <span className="lable">
-                      {__("Border Radious", "woocommerce-stock-manager")}
+                      {__("Border Radious", "woocommerce-catalog-enquiry")}
                     </span>
                     <div className="property-section">
                       {/* <div class="PB-range-slider-div"> */}
@@ -214,7 +214,7 @@ const Customizer = (props) => {
                 <div className="hover">
                   <div className="section">
                     <span className="lable">
-                      {__("Border Color On Hover", "woocommerce-stock-manager")}
+                      {__("Border Color On Hover", "woocommerce-catalog-enquiry")}
                     </span>
                     <div className="property-section">
                       <input
@@ -237,7 +237,7 @@ const Customizer = (props) => {
                 <div className="simple">
                   <div className="section">
                     <span className="lable">
-                      {__("Button text", "woocommerce-stock-manager")}
+                      {__("Button text", "woocommerce-catalog-enquiry")}
                     </span>
                     <div className="property-section">
                       <div class="PB-range-slider-div">
@@ -252,7 +252,7 @@ const Customizer = (props) => {
                   </div>
                   <div className="section section-row">
                     <span className="lable">
-                      {__("Font Size", "woocommerce-stock-manager")}
+                      {__("Font Size", "woocommerce-catalog-enquiry")}
                     </span>
                     <div className="property-section">
                       {/* <div class="PB-range-slider-div"> */}
@@ -269,7 +269,7 @@ const Customizer = (props) => {
                   </div>
                   <div className="section section-row">
                     <span className="lable">
-                      {__("Font Width", "woocommerce-stock-manager")}
+                      {__("Font Width", "woocommerce-catalog-enquiry")}
                     </span>
                     <div className="property-section">
                       {/* <div class="PB-range-slider-div"> */}
@@ -295,7 +295,7 @@ const Customizer = (props) => {
                 <div className="simple">
                   <div className="section section-row">
                     <span className="lable">
-                      {__("Padding", "woocommerce-stock-manager")}
+                      {__("Padding", "woocommerce-catalog-enquiry")}
                     </span>
                     <div className="property-section">
                       {/* <div class="PB-range-slider-div"> */}
@@ -312,7 +312,7 @@ const Customizer = (props) => {
                   </div>
                   <div className="section section-row">
                     <span className="lable">
-                      {__("Margin", "woocommerce-stock-manager")}
+                      {__("Margin", "woocommerce-catalog-enquiry")}
                     </span>
                     <div className="property-section">
                       {/* <div class="PB-range-slider-div"> */}
@@ -358,7 +358,7 @@ const Customizer = (props) => {
             {select ===  "setting" && (
               <div>
                 <span className="lable">
-                  {__("System settings", "woocommerce-stock-manager")}
+                  {__("System settings", "woocommerce-catalog-enquiry")}
                 </span>
                 <div className="property-section">
                   <button onClick={(e) => {

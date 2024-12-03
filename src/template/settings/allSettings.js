@@ -19,7 +19,8 @@ export default {
                 }
             ],
             proSetting: true,
-            look: "toggle"
+            look: "toggle",
+            moduleDepend: 'catalog',
         },
         {
             key: 'disable_cart_page_link',
@@ -39,6 +40,7 @@ export default {
                 set: true
             },
             proSetting: true,
+            moduleDepend: 'catalog',
         },
         {
             key: 'separator_content',
@@ -56,7 +58,8 @@ export default {
                     value: "enquiry_logged_out"
                 }
             ],
-            look: "toggle"
+            look: "toggle",
+            moduleDepend: 'enquiry',
         },
         {
             key: 'is_enable_out_of_stock',
@@ -69,7 +72,8 @@ export default {
                     value: "is_enable_out_of_stock"
                 }
             ],
-            look: "toggle"
+            look: "toggle",
+            moduleDepend: 'enquiry',
         },
         {
             key: 'notify_me_button',
@@ -86,7 +90,8 @@ export default {
                     label: __("", 'woocommerce-catalog-enquiry'),
                     value: "notify_me_button"
                 }
-            ]
+            ],
+            moduleDepend: 'enquiry',
         },
         {
             key: 'is_disable_popup',
@@ -104,7 +109,8 @@ export default {
                     value: "inline",
                     label: "Inline In-page",
                 }
-            ]
+            ],
+            moduleDepend: 'enquiry',
         },
         {
             key: 'is_page_redirect',
@@ -117,7 +123,8 @@ export default {
                     value: "is_page_redirect"
                 }
             ],
-            look: "toggle"
+            look: "toggle",
+            moduleDepend: 'enquiry',
         },
         {
             key: 'redirect_page_id',
@@ -129,6 +136,7 @@ export default {
             label:  __( 'Post enquiry submission redirect page', 'woocommerce-catalog-enquiry' ),
             desc: __( 'Select page where user will be redirected after successful enquiry.', 'woocommerce-catalog-enquiry' ),
             options: appLocalizer.all_pages,
+            moduleDepend: 'enquiry',
         },
         {
             key: 'is_enable_multiple_product_enquiry',
@@ -161,7 +169,8 @@ export default {
                     value: "logged_out"
                 }
             ],
-            look: "toggle"
+            look: "toggle",
+            moduleDepend: 'quote',
         },
         {
             key: 'set_expiry_time',
@@ -170,6 +179,7 @@ export default {
             desc: __( 'Set the period after which a quotation will expire and no longer be valid for purchase.', 'woocommerce-catalog-enquiry' ),
             parameter: __('days', 'woocommerce-catalog-enquiry'),
             proSetting: true,
+            moduleDepend: 'quote',
         },
         {
             key: 'separator_content',

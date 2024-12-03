@@ -5,7 +5,7 @@ import { useBlockProps } from '@wordpress/block-editor';
 registerBlockType('woocommerce-catalog-enquiry/quote-button', {
     title: 'Quote Button',
     icon: 'button',
-    category: 'widgets',
+    category: 'catalogx',
     edit() {
         const blockProps = useBlockProps();
         return (
