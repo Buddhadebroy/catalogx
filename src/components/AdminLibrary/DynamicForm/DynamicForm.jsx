@@ -873,12 +873,14 @@ const DynamicForm = (props) => {
               description={inputField.desc}
               setting={setting}
               proSetting={isProSetting(inputField.proSetting)}
+              modules={modules}
               onChange={(key, value) => {
                 if ( !proSettingChanged(inputField.proSetting) && !moduleDependChanged(inputField.moduleDepend) ) {
                   settingChanged.current = true;
                   updateSetting(key, value);
                 }
               }}
+              moduleChange={() => setModelModuleOpen(true)}
             />
           );
           break;

@@ -204,11 +204,13 @@ export default {
             columns: [
                 {
                     key: "enquiry_pdf_permission",
-                    label: __("Enquiry", "woocommerce-catalog-enquiry")
+                    label: __("Enquiry", "woocommerce-catalog-enquiry"),
+                    moduleDepend: "enquiry"
                 },
                 {
                     key: "quote_pdf_permission",
-                    label: __("Quote", "woocommerce-catalog-enquiry")
+                    label: __("Quote", "woocommerce-catalog-enquiry"),
+                    moduleDepend: "quote"
                 }
             ],
             proSetting: true,
