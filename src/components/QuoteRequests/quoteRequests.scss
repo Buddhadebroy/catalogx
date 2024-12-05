@@ -9,53 +9,35 @@
   }
 
 .admin-subscriber-list {
-    .admin-page-title {
+    .add-to-quotation-button,
+    .filter-left-wrapper{
+        margin-left: auto;
+    }
+    .download-btn-subscriber-list, .add-to-quotation-button {
+        a {
+            color: $color-white;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
 
-        .add-to-quotation-button{
-            margin-left: auto;
-        }
-
-        .download-btn-subscriber-list, .add-to-quotation-button {
-            border-radius: 0.25rem;
-            background-color: $color-active;
-            padding: 0.5rem 1rem;
-
-            a {
-                color: $color-white;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                gap: 0.5rem;
-                text-decoration: none;
-
-                .dashicons-before {
-                    &::before {
-                        padding: 0;
-                    }
+            .dashicons-before {
+                &::before {
+                    padding: 0;
                 }
             }
         }
-
-
-    }
-
-    
+    }    
     .selectable-table {
         .wrap-bulk-all-date{
-
             &>div{
                 max-width: 13rem;
             }
-            .filter-left-wrapper{
-                margin-left: auto;
-            }
         }
     }
-
     .rdt_Table .rdt_TableBody .rdt_TableRow .rdt_TableCell{
         height: 4.25rem;
         a{
-            color: #522c81;
+            color: $theme-color;
         }
     }
 }
