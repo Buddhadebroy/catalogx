@@ -43,11 +43,6 @@ class Install {
         $this->set_default_settings();
 
         $this->migrate_vendor_settings();
-        
-        if (Catalog()->modules->is_active('quote')) {
-            $this->create_page_for_quote();
-            $this->create_page_for_quote_thank_you();
-        }
 
         // Update the version in database
         update_option( self::VERSION_KEY, self::$current_version );
@@ -517,80 +512,6 @@ class Install {
                 }
             }
         }
-    }
-
-    /**
-     * Create page for quote
-     * @return void
-     */
-    public function create_page_for_quote() {
-        // quote page
-        $option_value = get_option('request_quote_page');
-        if ($option_value > 0 && get_post($option_value)) {
-            return;
-        }
-
-        $page_found = get_posts([
-            'name' => 'request-quote',
-            'post_status' => 'publish',
-            'post_type' => 'page',
-            'fields' => 'ids',
-            'numberposts' => 1
-        ]);
-        if ($page_found) {
-            if (!$option_value) {
-                update_option('request_quote_page', $page_found[0]);
-            }
-            return;
-        }
-        $page_data = [
-            'post_status' => 'publish',
-            'post_type' => 'page',
-            'post_author' => 1,
-            'post_name' => 'request-quote',
-            'post_title' => __('Request Quote', 'woocommerce-catalog-enquiry'),
-            'post_content' => '[request_quote]',
-            'comment_status' => 'closed'
-        ];
-        $page_id = wp_insert_post($page_data);
-        update_option('request_quote_page', $page_id);
-    }
-
-    /**
-     * Create page for quote thakyou
-     * @return void
-     */
-    function create_page_for_quote_thank_you() {
-        // quote thank you page
-        $option_value = get_option('request_quote_thank_you_page');
-        if ($option_value > 0 && get_post($option_value)) {
-            return;
-        }
-
-        $page_found = get_posts([
-            'name' => 'request-quote-thank-you',
-            'post_status' => 'publish',
-            'post_type' => 'page',
-            'fields' => 'ids',
-            'numberposts' => 1
-        ]);
-        if ($page_found) {
-            if (!$option_value) {
-                update_option('request_quote_thank_you_page', $page_found[0]);
-            }
-            return;
-        }
-        $page_data = [
-            'post_status' => 'publish',
-            'post_type' => 'page',
-            'post_author' => 1,
-            'post_name' => 'request-quote-thank-you',
-            'post_title' => __('Quotation Confirmation', 'woocommerce-catalog-enquiry'),
-            'post_content' => '[request_quote_thank_you]',
-            'comment_status' => 'closed'
-        ];
-        $page_id = wp_insert_post($page_data);
-        update_option('request_quote_thank_you_page', $page_id);
     }
 
 }
