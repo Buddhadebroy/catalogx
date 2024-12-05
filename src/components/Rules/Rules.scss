@@ -1,7 +1,7 @@
 @import '/src/components/config.scss';
 
 .dynamic-rule-img{
-    background-image: url("../../assets/images/dynamic-rules-page-desktop.jpg");
+    background-image: url("../../assets/images/dynamic-pro.png");
     background-repeat: no-repeat;
     background-position: top center;
     background-size: contain;
@@ -238,7 +238,7 @@
                 outline: none;
                 height: 2.205rem !important;
                 border: 0.115rem solid rgba(0, 0, 0, 0.125);
-                border-radius: 0;
+                border-radius: $border-radius-small;
 
                 &:focus,
                 &:active {
@@ -441,6 +441,9 @@
                 min-width: 7.5rem;
                 text-align: left;
               }
+            i{
+                cursor: pointer;
+            }
         }
 
         .expand-btn{
