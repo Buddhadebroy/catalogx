@@ -644,8 +644,8 @@ const Rule = (props) => {
             <div className="single-rule-cell rule-action">
                 <h1>Action</h1>
                 <article>
-                    <div className="edit" onClick={(e) => setEditRuleOpened(true)}>🐽</div>
-                    <div className="delete" onClick={(e) => setDeleteModal(true)}>☠️</div>
+                    <div className="edit" onClick={(e) => setEditRuleOpened(true)}><i class="adminLib-create"></i></div>
+                    <div className="delete" onClick={(e) => setDeleteModal(true)}><i class="adminLib-vendor-form-delete"></i></div>
                 </article>
             </div>
             <div className="expand-btn">
