@@ -67,7 +67,7 @@ class Block {
                 'render_php_callback_function' => '',
                 'required_script' => '',
                 'required_scripts' => '',
-                'required_style'   => 'quote-cart-block-style',
+                'required_style'   => 'quote_list_css',
                 // src link is generated (which is append from block name) within the function
 				'react_dependencies'   => ['wp-blocks', 'wp-element', 'wp-editor', 'wp-components', 'wp-i18n'],
                 'localize' => [

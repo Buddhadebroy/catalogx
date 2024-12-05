@@ -150,7 +150,7 @@ class Rest {
                     wp_die(__("PDF document could not be generated", 'mvx-pro'));
                 }
                 $attach_pdf = Catalog()->setting->get_setting( 'enquiry_pdf_permission' );
-                if ($attach_pdf === 'attach_pdf_to_email') {
+                if (in_array('attach_pdf_to_email', $attach_pdf, true)) {
                     $attachments[] = $file_path; // Add PDF to attachments
                 }
             }

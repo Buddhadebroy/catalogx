@@ -44,8 +44,10 @@ class Install {
 
         $this->migrate_vendor_settings();
         
-        $this->create_page_for_quote();
-        $this->create_page_for_quote_thank_you();
+        if (Catalog()->modules->is_active('quote')) {
+            $this->create_page_for_quote();
+            $this->create_page_for_quote_thank_you();
+        }
 
         // Update the version in database
         update_option( self::VERSION_KEY, self::$current_version );
