@@ -313,7 +313,7 @@ const AddUpdateRuleSection = (props) => {
                     <nav className="popup-navigation">
                         <p>{editMode ? 'Edit rule' : 'Add new rule'}</p>
                         <div
-                            className="add-update-rule-close"
+                            className="main-btn btn-purple"
                             onClick={(e) => { onClose?.() }}
                         >
                             Close
@@ -501,7 +501,7 @@ const AddUpdateRuleSection = (props) => {
                                 </div>
                             </>
                         }
-                        <div className="submit-add-new-rule-btn edit-popup-btn" onClick={(e) => { handleSubmit(e) }}>{editMode ? 'Update' : 'Add and Activate'}</div>
+                        <div className="submit-add-new-rule-btn main-btn btn-purple" onClick={(e) => { handleSubmit(e) }}>{editMode ? 'Update' : 'Add and Activate'}</div>
                     </section>
                 </section>
             </main>

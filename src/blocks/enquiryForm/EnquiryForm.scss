@@ -1,3 +1,5 @@
+@import '../../components/config.scss';
+
 .catalog-modal {
     $menu-btn-color: #522c81;
     $body-background: #f9f9f9;
@@ -331,13 +333,6 @@
                                 flex-direction: column;
                                 justify-content: center;
                                 align-items: center;
-
-                                svg {
-                                    margin-bottom: 1rem;
-                                    width: 2rem;
-                                    height: 2rem;
-                                    color: #6B7280;
-                                }
 
                                 .heading {
                                     margin-bottom: 0.5rem;
