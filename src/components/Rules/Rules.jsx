@@ -693,6 +693,7 @@ const Rules = () => {
 
     // State variable declearation
     const [rulesList, setRuleList] = useState(null);
+    const [totalRulesList, setTotalRulesList] = useState(null);
     const [addRuleOpend, setAddRuleOpend] = useState(false);
     const [openDialog, setOpenDialog] = useState(false);
 
@@ -701,6 +702,7 @@ const Rules = () => {
         axios.post(getApiLink('get-rules'), {})
             .then(response => {
                 setRuleList(response.data || []);
+                setTotalRulesList(response.data || []);
             })
             .catch(error => {
                 console.error('Error:', error);
@@ -870,7 +872,21 @@ const Rules = () => {
                     </section>
 
                     <div className="rule-section-main-wrapper">
-                        <FilterSection onChange={() => { }} />
+                        <FilterSection onChange={(inputFields) => {
+                            const hasValidFilter = Object.values(inputFields).some((value) => value !== -1);
+
+                            if (hasValidFilter) {
+                                // Apply filtering
+                                const filteredRules = totalRulesList.filter((rule) =>
+                                    Object.entries(inputFields).every(([key, value]) =>
+                                        value === -1 || String(rule[key]) === String(value)
+                                    )
+                                );
+                                setRuleList(filteredRules);
+                            } else {
+                                setRuleList(totalRulesList);
+                            }
+                            }} />
 
                         {/* Render drag and drop */}
                         {
