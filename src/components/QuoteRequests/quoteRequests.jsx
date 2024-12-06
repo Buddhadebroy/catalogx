@@ -354,12 +354,12 @@ export default function QuotesList() {
           <div className="admin-subscriber-list">
             <div className="admin-page-title">
               <p>{__("Quotes List", "woocommerce-catalog-enquiry")}</p>
-              <div className="add-to-quotation-button">
+              <div className="main-btn btn-purple add-to-quotation-button">
                 <a className="" href="admin-ajax.php?action=add_quote_from_adminend">
                   Add Quote
                 </a>
               </div>
-              <div className="download-btn-subscriber-list">
+              <div className="main-btn btn-purple download-btn-subscriber-list">
                 <CSVLink
                   data={filterForCSV(data || [])}
                   filename={"Quotes.csv"}
