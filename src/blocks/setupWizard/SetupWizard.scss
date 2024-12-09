@@ -1,9 +1,4 @@
-$menu-btn-color: #522c81;
-$body-background: #f9f9f9;
-$color-white: #fff;
-$menu-color: #f9f8fb;
-$color-active: #65438f;
-
+@import '../../components/config.scss';
 
 .setup-wizard-main-wrapper {
     display: flex;
@@ -214,7 +209,7 @@ $color-active: #65438f;
                         input:checked+label::after {
                             left: calc(100% - 1.313rem);
                             transform: translateY(-50%);
-                            background: $body-background;
+                            background: $background-color;
                         }
                     }
                 }

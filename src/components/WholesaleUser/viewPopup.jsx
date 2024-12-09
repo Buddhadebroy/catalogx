@@ -8,7 +8,19 @@ const ViewPopup = (props) => {
     return (
         <>
             <main className='view-wholesale-wrapper'>
-                <h1 className='popup-heading'>View Form</h1>
+            <section className="popup-main-wrapper">
+                <nav className="popup-navigation">
+                    <p></p>
+                    <div
+                        className="main-btn btn-purple"
+                        onClick={()=> setOpenDialog(false)}
+                    >
+                        Close
+                    </div>
+                </nav>
+            </section>
+
+                
                 {
                     Object.entries(addiionalFields).map(([key, value], index)=>{
                         return(

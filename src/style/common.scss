@@ -449,8 +449,10 @@ button,
   width: fit-content;
   color: $color-white;
 
-  &:hover{
+  &:hover,
+  &:focus{
     color: $color-white; 
+    background: $theme-color;
   }
 }
 
