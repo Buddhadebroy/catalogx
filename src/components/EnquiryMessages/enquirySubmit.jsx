@@ -4,47 +4,7 @@ import "./enquiryMessages.scss";
 import EmojiPicker from 'emoji-picker-react';
 import Products from './MessageComponents/Products.jsx';
 import { FaAt, FaMoneyBillWaveAlt } from "react-icons/fa";
-
-const MediaUploader = (props) => {
-    let frame
-    const runUploader = (event) => {
-        event.preventDefault()
-
-        // If the media frame already exists, reopen it.
-        if (frame) {
-            frame.open()
-            return
-        }
-
-        // Create a new media frame
-        frame = wp.media({
-            title: 'Select or Upload Media Of Your Chosen Persuasion',
-            button: {
-                text: 'Use this media',
-            },
-            multiple: false, // Set to true to allow multiple files to be selected
-        })
-
-        frame.on('select', function(){
-            var selection = frame.state().get('selection');
-            selection.map( function( attachment ) {
-              attachment = attachment.toJSON();
-                props.onChange(attachment);
-            });
-        });
-
-        // Finally, open the modal on click
-        frame.open()
-    }
-
-    return (
-        <React.Fragment>
-            <button className='media-uploader controls-btn' type='button' onClick={runUploader}>
-                {props.children}
-            </button>
-        </React.Fragment>
-    )
-}
+import ChatAttachment from './MessageComponents/ChatAttachment.jsx';
 
 const AtSignList = ({ message, enquery, onSelect }) => {
 
@@ -106,6 +66,7 @@ const EnquirySubmit = (props) => {
     const [addQuote, setAddQuote] = useState(false);
     const [loadQuoteModal, setLoadQuoteModal] = useState(false);
     const [createOrderId, setCreateOrderId] = useState(false);
+    const [ShowChatAttachment, setShowChatAttachment] = useState(false);    
 
     const handleDeleteFile = () => {
         setFile(null);
@@ -126,6 +87,7 @@ const EnquirySubmit = (props) => {
 
     // Function to toggle emoji picker visibility
     const toggleEmojiPicker = () => {
+        setShowChatAttachment(false);
         setShowEmojiPicker(!showEmojiPicker);
     };
 
@@ -177,8 +139,91 @@ const EnquirySubmit = (props) => {
         setAddQuote(false);
     }
 
+
+    const handleShowChatAttachment = () => {
+        setShowEmojiPicker(false);
+        setShowChatAttachment(!ShowChatAttachment);
+    };
+
     return (
         <>
+        <div className="chat-controls">
+            <div className="wrapper">
+                <div className="chat-attachment">
+                    {ShowChatAttachment && <ChatAttachment enquiry={enquiry} />}       
+                    <button  onClick={handleShowChatAttachment} className="chat-more-option-button">
+                        <i className="admin-font adminLib-plus-circle-o" />
+                    </button>
+                </div>
+                <div className='emoji-wrapper'>
+                    <button onClick={toggleEmojiPicker} className='emoji-btn'>
+                        <i className="admin-font adminLib-smile-o" />
+                    </button>
+                </div>
+                {showEmojiPicker && (
+                    <div className='emoji-picker-container'>
+                        <EmojiPicker
+                            onEmojiClick={onEmojiClick}
+                            autoFocusSearch={false}
+                            Theme={'auto'}
+                            skinTonesDisabled={true}
+                        />
+                    </div>
+                )}
+
+                {quotationModal &&
+                <div className='cart-products-container quotation-section'>
+                {/* main Wrapper */}
+                   
+
+                    {/* Loading Wrapper */}
+                    { loadQuoteModal &&
+                        <article className='loader-wrapper'>
+                            <div class="loader">
+                                <div class="three-body__dot"></div>
+                                <div class="three-body__dot"></div>
+                                <div class="three-body__dot"></div>
+                            </div>
+                            <p>Loading....</p>
+                    </article>
+                    }
+
+                    {/* thank you Wrapper */}
+                    { createOrderId && 
+                        <section className='thankyou-section-wrapper'>
+                                <div className='section-icon'>
+                                    <i className='admin-font adminLib-check'></i>
+                                </div>
+                                <h3 className='section-tittle'>Thank you!</h3>
+                                <p className='section-message'>Your personalized quotation has been successfully created and is now ready for review. You can send it to the customer or make any further adjustments if needed.</p>
+                                <div className='section-button'>
+                                    <a className="" href={`${appLocalizer.order_edit}&id=${createOrderId}`}>
+                                        View Quote
+                                    </a>
+                                </div>
+                        </section>
+                    }
+                </div>
+                }
+                <div className="typing-section">
+                    {
+                        <AtSignList
+                            message={message}
+                            enquery={enquiry}
+                            onSelect={setMessage}
+                        />
+                    }
+                    <textarea name="reply_msg" id="reply_msg" value={message}
+                        onChange={(e) => setMessage(e.target.value)} />
+                    
+                </div>
+                <div className="send">
+                    <button className="message-send-btn" id="send_msg" onClick={handleSendMessage}>Send</button>
+                </div>
+            </div>
+        </div>
+
+
         <div className="chat-controls">
             <div className="wrapper">
                 <div className="typing-section">
@@ -211,17 +256,8 @@ const EnquirySubmit = (props) => {
                 </div>
             </div>
             <div className="chat-attachment">
-                <MediaUploader
-                    onChange={(attachment) => {
-                        setFile(attachment);
-                    }}
-                >
-                    <label>
-                        <i className="admin-font adminLib-attachment" />
-                    </label>
-                </MediaUploader>
                 <button onClick={toggleEmojiPicker} className='option-btn controls-btn'>
-                    <i className="admin-font adminLib-smile-o" />
+                    <i className="admin-font adminLib-smile-o"/>
                 </button>
                 <button onClick={()=> setMessage(message + ' ' + "@")} className='option-btn controls-btn'>
                     <FaAt />
@@ -229,71 +265,6 @@ const EnquirySubmit = (props) => {
                 <button className='option-btn controls-btn' onClick={handleAddQuote} >
                     <FaMoneyBillWaveAlt />
                 </button>
-                {showEmojiPicker && (
-                    <div className='emoji-picker-container'>
-                        <EmojiPicker
-                            onEmojiClick={onEmojiClick}
-                            autoFocusSearch={false}
-                            Theme={'auto'}
-                            skinTonesDisabled={true}
-                        />
-                    </div>
-                )}
-
-                {quotationModal &&
-                <div className='cart-products-container quotation-section'>
-
-                {/* main Wrapper */}
-                    { addQuote &&
-                        (
-                            <>
-                                <div className='quotation-section-heading'>
-                                    <h3>Products</h3>
-                                    <span onClick={handleCloseQuoteModal}><i className='admin-font adminLib-cross'></i></span>
-                                </div>
-                                <div className="container-wrapper">
-                                    {enquiry.product_info.map((items, index)=>{
-                                        return (
-                                            <Products deletable productKey={index} productItems={items} productInfo={enquiry.product_info}/>
-                                        )
-                                    })}
-                                </div>
-                                <div className='quotation-section-button'>
-                                    <button onClick={handleCreateQuote}>Create Quotation</button>
-                                </div>
-                            </>
-                        )
-                    }
-
-                    {/* Loading Wrapper */}
-                    { loadQuoteModal &&
-                        <article className='loader-wrapper'>
-                            <div class="loader">
-                                <div class="three-body__dot"></div>
-                                <div class="three-body__dot"></div>
-                                <div class="three-body__dot"></div>
-                            </div>
-                            <p>Loading....</p>
-                    </article>
-                    }
-
-                    {/* thank you Wrapper */}
-                    { createOrderId && 
-                        <section className='thankyou-section-wrapper'>
-                                <div className='section-icon'>
-                                    <i className='admin-font adminLib-check'></i>
-                                </div>
-                                <h3 className='section-tittle'>Thank you!</h3>
-                                <p className='section-message'>Your personalized quotation has been successfully created and is now ready for review. You can send it to the customer or make any further adjustments if needed.</p>
-                                <div className='section-button'>
-                                    <a className="" href={`${appLocalizer.order_edit}&id=${createOrderId}`}>
-                                        View Quote
-                                    </a>
-                                </div>
-                        </section>
-                    }
-                </div>
-                }
             </div>
         </div>
         </>
