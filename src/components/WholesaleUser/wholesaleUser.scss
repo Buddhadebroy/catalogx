@@ -1,0 +1,23 @@
+.view-wholesale-wrapper{
+    .popup-navigation{
+        display: flex;
+        justify-content: space-between;
+
+        p{
+            font-size: 1.6rem;
+            font-weight: 700;
+        }
+    }
+    .popup-content-wrapper{
+        display: flex;
+        gap: 0.5rem;
+        margin-top: 1rem;
+        justify-content: end;
+    }
+    .popup-close-icon i{
+        background: #522c81;
+        color: #fff;
+        padding: 0.4rem;
+        border-radius: 3.125rem;
+    }
+}

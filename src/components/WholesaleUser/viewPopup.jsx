@@ -10,12 +10,9 @@ const ViewPopup = (props) => {
             <main className='view-wholesale-wrapper'>
             <section className="popup-main-wrapper">
                 <nav className="popup-navigation">
-                    <p></p>
-                    <div
-                        className="main-btn btn-purple"
-                        onClick={()=> setOpenDialog(false)}
-                    >
-                        Close
+                    <p>View Form</p>
+                    <div className='popup-close-icon' onClick={()=> setOpenDialog(false)}>
+                        <i className='adminLib-close'></i>
                     </div>
                 </nav>
             </section>
@@ -35,12 +32,12 @@ const ViewPopup = (props) => {
                         )
                     })
                 }
-                {console.log(addiionalFields)}
                 {
                     !addiionalFields && <p className='empty-form'>No Data Found</p>
                 }
                 <div className='popup-content-wrapper right-alignment'>
-                    <button className='modal-close' onClick={()=> setOpenDialog(false)}>Close</button>
+                    <button className='modal-close' onClick={()=> setOpenDialog(false)}>Decline</button>
+                    <button className='main-btn btn-purple' onClick={()=> setOpenDialog(false)}>Approve</button>
                 </div>
             </main> 
         </>

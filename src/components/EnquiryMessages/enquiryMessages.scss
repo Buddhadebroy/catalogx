@@ -608,7 +608,7 @@
 
 
       .chatting-main-container {
-        height: calc(90vh - 6.563rem);
+        height: calc(75vh - 6.563rem);
         width: 100%;
         padding: 1.5rem;
         overflow: hidden;
@@ -835,7 +835,7 @@
     }
 
     .chat-controls{
-      height: 6.563rem;
+      // height: 6.563rem;
       padding: 0.5rem;
       display: flex;
       align-items: flex-start;
@@ -843,15 +843,32 @@
       flex-direction: column;
       gap: 0.25rem;
       border: 0.063rem solid rgba($color: #000000, $alpha: 0.125);
+      border-radius: $border-radius-small;
       margin: 1rem;
-
+      padding-left: 0;
+      background: #0000000a;
+      
       .wrapper{
         display: flex;
-        align-items: center;
+        align-items: start;
         justify-content: center;
         width: 100%;
         position: relative;
         height: calc(100% - 1.563rem);
+
+        .emoji-wrapper{
+          margin: auto;
+          padding-right: 0.5rem;
+
+          .emoji-btn{
+            padding: 0;
+            background: transparent;            
+
+            i{
+              font-size: 1.5rem;
+            }
+          }
+        }
 
         .typing-section{
           width: 100%;
@@ -881,12 +898,13 @@
           textarea{
             width: 100%;
             padding: 0.25rem 2.5rem 0.25rem 0.625rem;
-            height: 100%;
+            height: 1.938rem;
             padding-right: 2.5rem;
             border:none;
             outline: none;
             box-shadow: none;
             border-radius: $border-radius-small;
+            background: $color-white;
 
             &:hover, &:focus{
               box-shadow: none;
@@ -895,15 +913,17 @@
         }
 
         .send{
-          position: absolute;
-          bottom: 0;
-          right: 0;
-         
+          // position: absolute;
+          // bottom: 0;
+          // right: 0;
+          padding-left: 0.5rem;
+
           button{
             background: #fb3f4e;
             color: white;
             padding: 0.4rem 1rem;
             font-weight: 800;
+            margin-bottom: 0.2rem;
           }
         }
       }
@@ -914,6 +934,32 @@
         justify-content: center;
         gap: 0.75rem;
         position: relative;
+
+        .chat-attachment-wrapper{
+          position: absolute;
+          bottom: 3rem;
+          left:0;
+          padding: 0.5rem;
+          background: #fff;
+          box-shadow: 0 0 1rem rgba(0, 0, 0, 0.125);
+          z-index: 1;
+        }
+
+        button{
+          background: transparent;
+          padding: 0.4rem;
+
+          &.media-uploader{
+            font-size: 1rem;
+          }
+
+          span{
+            padding-left: 0.5rem;
+          }
+        }
+        .chat-more-option-button i{
+          font-size: 1.375rem;
+        }
         
         .controls-btn{
           background: transparent;
@@ -961,7 +1007,7 @@
 
       .emoji-picker-container {
         position: absolute;
-        bottom: 6.25rem;
+        bottom: 3rem;
         left: 0.5rem;
 
         .epr-search-container {
