@@ -843,7 +843,7 @@ const Rules = () => {
 								setOpenDialog(false);
 							}}
 						></span>
-						<Modulepopup name='rules' />
+						<Modulepopup name='Rules' />
 					</Dialog>
 					<div
 						className="dynamic-rule-img"

@@ -354,7 +354,7 @@ const WholesaleUser = () => {
 								setOpenDialog(false);
 							}}
 						></span>
-						<Modulepopup name='wholesale' />
+						<Modulepopup name='Wholesale' />
 					</Dialog>
 					<div
 						className="wholesale-user-image"

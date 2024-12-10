@@ -185,7 +185,7 @@ const EnquiryMessages = (props) => {
                             setOpenDialog(false);
                         }}
                     ></span>
-                    <Modulepopup name='enquiry' />
+                    <Modulepopup name='Enquiry' />
                 </Dialog>
                 <div
                     className="enquiry-img"
