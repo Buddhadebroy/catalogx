@@ -70,7 +70,8 @@ const Multiselect = (props) => {
     useEffect(() => {
         if (isMulti) {
             onChange(selectedOptions.map((option) => option.value));
-        } else {
+        } 
+        if (selectedOptions) {
             onChange(selectedOptions.value);
         }
     }, [selectedOptions])
