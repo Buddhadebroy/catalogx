@@ -18,13 +18,13 @@ const Roles = () => {
 	const [submitData, setSubmitData] = useState({});
 
 	useEffect(() => {
-		// if (appLocalizer.pro_active) {
+		// if (appLocalizer.khali_dabba) {
 			requestData();
 		// }
 	}, []);
 
     useEffect(() => {
-		// if (appLocalizer.pro_active) {
+		// if (appLocalizer.khali_dabba) {
 			axios({
 				method: "post",
 				url: getApiLink('get-roles'),
@@ -162,7 +162,7 @@ const Roles = () => {
 				/>
 			</Dialog>
 		}
-			{/* {!appLocalizer.pro_active ? (
+			{/* {!appLocalizer.khali_dabba ? (
 				<>
 					<Dialog
 						className="admin-module-popup"

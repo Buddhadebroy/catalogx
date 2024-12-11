@@ -58,11 +58,11 @@ class EnquiryEmail extends \WC_Email {
 
 	protected function initialize_templates() {
 		// Determine the base template path based on Pro status and email setting
-		$is_pro_active = Utill::is_pro_active();
-		$email_setting = $is_pro_active ? Catalog()->setting->get_setting('selected_email_tpl') : '';
+		$is_khali_dabba = Utill::is_khali_dabba();
+		$email_setting = $is_khali_dabba ? Catalog()->setting->get_setting('selected_email_tpl') : '';
 	
 		// Use Pro template path if Pro is active and email setting is not empty, otherwise fallback to default path
-		$base_template_path = ($is_pro_active && !empty($email_setting)) 
+		$base_template_path = ($is_khali_dabba && !empty($email_setting)) 
 			? Catalog_PRO()->plugin_path . 'templates/' 
 			: Catalog()->plugin_path . 'templates/';
 	
@@ -79,7 +79,7 @@ class EnquiryEmail extends \WC_Email {
 	
 		// Set the appropriate template paths
 		$this->template_html  = $template_map[$email_setting] ?? 'emails/woocommerce-catalog-enquiry-admin.php';
-		$this->template_plain = $is_pro_active ? 'emails/plain/enquiry-email-plain.php' : 'emails/plain/woocommerce-catalog-enquiry-admin.php';
+		$this->template_plain = $is_khali_dabba ? 'emails/plain/enquiry-email-plain.php' : 'emails/plain/woocommerce-catalog-enquiry-admin.php';
 		$this->template_base  = $base_template_path;
 	}
 	

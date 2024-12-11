@@ -42,7 +42,7 @@ const WholesaleUser = () => {
 	}, [])
 
 	useEffect(() => {
-		if (appLocalizer.pro_active) {
+		if (appLocalizer.khali_dabba) {
 			axios({
 				method: "post",
 				url: getApiLink('get-wholesale-users'),
@@ -58,12 +58,12 @@ const WholesaleUser = () => {
 
 	useEffect(() => {
 		requestData();
-		if (appLocalizer.pro_active) {
+		if (appLocalizer.khali_dabba) {
 		}
 	}, []);
 
 	useEffect(() => {
-		if (appLocalizer.pro_active) {
+		if (appLocalizer.khali_dabba) {
 		  axios({
 			method: "post",
 			url: fetchUsersCount,
@@ -315,7 +315,7 @@ const WholesaleUser = () => {
 
 	return (
 		<>
-			{!appLocalizer.pro_active ? (
+			{!appLocalizer.khali_dabba ? (
 				<>
 					<Dialog
 						className="admin-module-popup"

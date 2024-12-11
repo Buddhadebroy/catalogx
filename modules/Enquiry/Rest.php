@@ -62,7 +62,7 @@ class Rest {
         // Get the product related info
         $product_info = [];
 
-        if ( \CatalogEnquiry\Utill::is_pro_active() ) {
+        if ( \CatalogEnquiry\Utill::is_khali_dabba() ) {
             $product_data = Catalog_PRO()->cart->get_cart_data();
             
             if ( $product_data ) {
@@ -131,7 +131,7 @@ class Rest {
 				'user_enquiry_fields'   => $other_fields,
 			]);
 
-            if (Utill::is_pro_active()) {
+            if (Utill::is_khali_dabba()) {
                 $html = \CatalogEnquiryPro\Enquiry\Util::get_html($enquiry_data);
                 if ($html) { 
                     $pdf_maker = new \CatalogEnquiryPro\PDFMaker($html);
@@ -164,7 +164,7 @@ class Rest {
             
             $msg = __( "Enquiry sent successfully", 'woocommerce-catalog-enquiry' );
             
-            if ( \CatalogEnquiry\Utill::is_pro_active() ) { 
+            if ( \CatalogEnquiry\Utill::is_khali_dabba() ) { 
                 Catalog_PRO()->cart->unset_session(); 
             }
 

@@ -83,7 +83,7 @@ class Admin {
             '__return_null'
         );
 
-        if ( ! Utill::is_pro_active() ) {
+        if ( ! Utill::is_khali_dabba() ) {
             $submenu[ 'catalog' ][] = [
                 '<style>
 					a:has(.upgrade-to-pro){
@@ -242,7 +242,7 @@ class Admin {
             'template5'                 => Catalog()->plugin_url . 'assets/images/email/templates/woocommerce_catalog_send_email_tpl_4.png',
             'template6'                 => Catalog()->plugin_url . 'assets/images/email/templates/woocommerce_catalog_send_email_tpl_5.png',
             'template7'                 => Catalog()->plugin_url . 'assets/images/email/templates/woocommerce_catalog_send_email_tpl_6.png',
-            'pro_active'                => Utill::is_pro_active(),
+            'khali_dabba'                => Utill::is_khali_dabba(),
             'pro_url'                   => esc_url( WOOCOMMERCE_CATALOG_ENQUIRY_PRO_SHOP_URL ),
             'order_edit'                => admin_url( "admin.php?page=wc-orders&action=edit" ),
             'site_url'                  => admin_url( 'admin.php?page=catalog#&tab=settings&subtab=all_settings' ),

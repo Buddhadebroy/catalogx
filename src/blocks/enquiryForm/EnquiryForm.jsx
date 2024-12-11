@@ -196,7 +196,7 @@ const EnquiryForm = (props) => {
     const [ toast, setToast ] = useState(false);
     const [ responseMessage, setResponseMessage ] = useState('');
     const formData = enquiry_form_data;
-    const proActive = formData.pro_active;
+    const proActive = formData.khali_dabba;
 
     const submitUrl = `${enquiry_form_data.apiurl}/catalog/v1/save-form-data`;
 

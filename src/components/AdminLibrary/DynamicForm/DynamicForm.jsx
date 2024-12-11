@@ -101,11 +101,11 @@ const DynamicForm = (props) => {
   }, [setting]);
 
   const isProSetting = (proDependent) => {
-    return proDependent && !appLocalizer.pro_active;
+    return proDependent && !appLocalizer.khali_dabba;
   }
 
   const proSettingChanged = (isProSetting) => {
-    if (isProSetting && !appLocalizer.pro_active) {
+    if (isProSetting && !appLocalizer.khali_dabba) {
       setModelOpen(true);
       return true;
     }
@@ -824,7 +824,7 @@ const DynamicForm = (props) => {
           input = (
             <FormCustomizer
               value={value}
-              buttonText={setting.button_text}
+              buttonText={setting.customize_btn.button_text || 'Submit'}
               proSetting={isProSetting(inputField.proSetting)}
               onChange={(e, key) => {
                 if ( ! proSettingChanged( inputField.proSetting ) ) {
@@ -857,7 +857,7 @@ const DynamicForm = (props) => {
           input = (
             <CatalogCustomizer
               setting={setting}
-              proSetting={appLocalizer.pro_active}
+              proSetting={appLocalizer.khali_dabba}
               onChange={(key, value) => {
                   settingChanged.current = true;
                   updateSetting(key, value);
@@ -1050,6 +1050,7 @@ const DynamicForm = (props) => {
             />
           );
           break;
+
         }
 
         return inputField.type === "section" || inputField.label === "no_label" ? (

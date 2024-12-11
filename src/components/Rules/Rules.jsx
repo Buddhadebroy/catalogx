@@ -685,7 +685,7 @@ const Rules = () => {
 
     // Check pro is active and module is active or not.
     const { modules } = useModules();
-    // if ( ! modules.includes( 'rules' ) || ! appLocalizer.pro_active ) {
+    // if ( ! modules.includes( 'rules' ) || ! appLocalizer.khali_dabba ) {
     //     return (
     //         <div className="dynamic-rule-img"></div>
     //     ); 
@@ -802,7 +802,7 @@ const Rules = () => {
 
     return (
         <>
-        {!appLocalizer.pro_active ? (
+        {!appLocalizer.khali_dabba ? (
 				<>
 					<Dialog
 						className="admin-module-popup"

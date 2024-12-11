@@ -12,11 +12,6 @@ const EnquiryMessages = (props) => {
 
     // Check pro is active and module is active or not.
     const { modules } = useModules();
-    // if ( ! modules.includes( 'enquiry' ) || ! appLocalizer.pro_active ) {
-    //     return (
-    //         <div class="enquiry-img"></div>
-    //     ); 
-    // }
 
     const [enquiryLists, setEnquiryLists] = useState([]);
     const [selectedEnquiry, setSelectedEnquiry] = useState(null);
@@ -50,7 +45,7 @@ const EnquiryMessages = (props) => {
 
     
     useEffect(() => {
-        if (appLocalizer.pro_active) {
+        if (appLocalizer.khali_dabba) {
             axios({
                 method: "post",
                 url: `${appLocalizer.apiurl}/catalog/v1/get-enquiry-list`,
@@ -144,7 +139,7 @@ const EnquiryMessages = (props) => {
 
     return (
         <>
-        {!appLocalizer.pro_active ? (
+        {!appLocalizer.khali_dabba ? (
             <>
                 <Dialog
                     className="admin-module-popup"

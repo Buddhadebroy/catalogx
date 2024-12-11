@@ -4,6 +4,7 @@ import { __ } from "@wordpress/i18n";
 
 const ViewPopup = (props) => {
     const {addiionalFields, setOpenDialog, id, handleUserAction} = props;
+
     return (
         <>
             <main className='view-wholesale-wrapper'>

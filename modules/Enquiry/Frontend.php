@@ -44,7 +44,7 @@ class Frontend{
         if ( empty( $productObj ) )
             return;
 
-        if ( Catalog()->setting->get_setting( 'is_enable_multiple_product_enquiry' ) && Utill::is_pro_active() ) {
+        if ( Catalog()->setting->get_setting( 'is_enable_multiple_product_enquiry' ) && Utill::is_khali_dabba() ) {
             return;
         }
 
@@ -156,8 +156,8 @@ class Frontend{
             'nonce'         => wp_create_nonce( 'wp_rest' ),
             'settings_free' => $this->catalog_free_form_settings(),
             'settings_pro'  => $this->catalog_pro_form_settings(),
-            'pro_active'    => \CatalogEnquiry\Utill::is_pro_active(),
-            'product_data'  => (\CatalogEnquiry\Utill::is_pro_active() && !empty(Catalog_PRO()->cart->get_cart_data())) ? Catalog_PRO()->cart->get_cart_data() : '',
+            'khali_dabba'    => \CatalogEnquiry\Utill::is_khali_dabba(),
+            'product_data'  => (\CatalogEnquiry\Utill::is_khali_dabba() && !empty(Catalog_PRO()->cart->get_cart_data())) ? Catalog_PRO()->cart->get_cart_data() : '',
             'default_placeholder'  => [
                 'name'  => $current_user->display_name,
                 'email' => $current_user->user_email
@@ -239,7 +239,7 @@ class Frontend{
             return;
         }
 
-        if ( Catalog()->setting->get_setting( 'is_enable_multiple_product_enquiry' ) && Utill::is_pro_active() ) {
+        if ( Catalog()->setting->get_setting( 'is_enable_multiple_product_enquiry' ) && Utill::is_khali_dabba() ) {
             return;
         }
 

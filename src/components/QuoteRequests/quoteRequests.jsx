@@ -117,13 +117,13 @@ export default function QuotesList() {
   // }
 
   useEffect(() => {
-    if (appLocalizer.pro_active) {
+    if (appLocalizer.khali_dabba) {
 			requestData();
 		}
   }, [postStatus]);
 
   useEffect(() => {
-    if (appLocalizer.pro_active) {
+    if (appLocalizer.khali_dabba) {
       axios({
         method: "post",
         url: fetchQuotesCount,
@@ -299,7 +299,7 @@ export default function QuotesList() {
 
   return (
     <>
-      {!appLocalizer.pro_active ? (
+      {!appLocalizer.khali_dabba ? (
 				<>
 					<Dialog
 						className="admin-module-popup"

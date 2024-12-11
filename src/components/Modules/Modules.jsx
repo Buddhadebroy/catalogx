@@ -25,7 +25,7 @@ const Modules = () => {
     const module = modulesArray.find((module) => module.id === moduleId);
 
     if ( ! module?.pro_module ) return true;
-    if ( module?.pro_module && appLocalizer.pro_active ) return true;
+    if ( module?.pro_module && appLocalizer.khali_dabba ) return true;
     return false;
   }
 
@@ -86,7 +86,7 @@ const Modules = () => {
         <div className="module-option-row">
           {modulesArray.map((module) => (
             <div className="module-list-item">
-              {module.pro_module && !appLocalizer.pro_active && <span className="admin-pro-tag">Pro</span>}
+              {module.pro_module && !appLocalizer.khali_dabba && <span className="admin-pro-tag">Pro</span>}
               <div className="module-icon">
                 <i className={`font ${module.icon}`}></i>
               </div>

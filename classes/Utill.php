@@ -46,11 +46,10 @@ class Utill {
 	 * Check is Catalog Pro is active or not.
 	 * @return bool
 	 */
-	public static function is_pro_active() {
+	public static function is_khali_dabba() {
 		if ( defined( 'CATALOG_ENQUIRY_PRO_PLUGIN_TOKEN' ) ) {
 			return Catalog_PRO()->license->is_active();
 		}
-		return false;
 	}
 
     /**

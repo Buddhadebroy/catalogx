@@ -2,7 +2,7 @@
 
 .catelog-customizer-main-wrapper {
   transition: transform 0.3s linear;
-
+  
   &.enquiry{
     transform-origin: 60% 0;
   }
@@ -20,7 +20,6 @@
     transform: scale(0);
   }
 }
-
 .catalog-customizer-wrapper {
   .settings-input-content {
     width: 100% !important; // overwrite dynamicForm.scss

@@ -24,7 +24,7 @@ class Module {
         // Init helper classes
         $this->init_classes();
 
-        if ( Utill::is_pro_active() ) {
+        if ( Utill::is_khali_dabba() ) {
             new \CatalogEnquiryPro\RoleBased\Module();
         }
 
