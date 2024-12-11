@@ -243,7 +243,7 @@ const WholesaleUser = () => {
 			name: __("Status", "woocommerce-catalog-enquiry"),
 			cell: (row) => (
 				<TableCell title="Status">
-					{row.status === 'approve' ? 'Approved' : 'Rejected'}
+					{row.status === 'approve' ? 'Approve' : 'Reject'}
 				</TableCell>
 			),
 		},
@@ -261,7 +261,7 @@ const WholesaleUser = () => {
 				<TableCell title="Action">
 					<div className='action-section'>
 						<button className={`status-show-btn ${row.status === 'approve' ? 'approved' : row.status === 'pending' ? 'pending' : 'rejected'}`}	>
-						{row.status === 'approve' ? 'Approved' : row.status === 'pending' ? 'Pending' : 'Rejected'}
+						{row.status === 'approve' ? 'Approve' : row.status === 'pending' ? 'Pending' : 'Reject'}
 						</button>
 						<div className='action-btn'>
 							{(row.status === 'reject' || row.status === 'pending') &&
@@ -298,6 +298,8 @@ const WholesaleUser = () => {
 							<ViewPopup
 								setOpenDialog={setOpenDialog}
 								addiionalFields = {row.additional_info}
+								id = {row.id}
+								handleUserAction={handleUserAction}
 							/>
 						</Dialog>
 					}

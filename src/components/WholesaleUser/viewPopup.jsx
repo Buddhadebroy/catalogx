@@ -3,8 +3,7 @@ import { __ } from "@wordpress/i18n";
 
 
 const ViewPopup = (props) => {
-    const {addiionalFields, setOpenDialog} = props;
-
+    const {addiionalFields, setOpenDialog, id, handleUserAction} = props;
     return (
         <>
             <main className='view-wholesale-wrapper'>
@@ -36,8 +35,16 @@ const ViewPopup = (props) => {
                     !addiionalFields && <p className='empty-form'>No Data Found</p>
                 }
                 <div className='popup-content-wrapper right-alignment'>
-                    <button className='modal-close' onClick={()=> setOpenDialog(false)}>Decline</button>
-                    <button className='main-btn btn-purple' onClick={()=> setOpenDialog(false)}>Approve</button>
+                    <button className='modal-close' 
+                            onClick={()=> {
+                                handleUserAction(id, 'reject')
+                                setOpenDialog(false)
+                            }}>Reject</button>
+                    <button className='main-btn btn-purple' 
+                            onClick={()=> {
+                                handleUserAction(id, 'approve')
+                                setOpenDialog(false)
+                            }}>Approve</button>
                 </div>
             </main> 
         </>
