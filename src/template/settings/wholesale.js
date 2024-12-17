@@ -15,11 +15,6 @@ export default {
             desc: __('Not Required - Disable wholesale registration form. User will be assigned as wholeseller role from backend. <br>Manual - Admin approves new wholesalers manually from "Wholeseller Users" page. <br>  Automatic - Instant wholesaler approval upon sign-up', 'woocommerce-catalog-enquiry'),
             options: [
                 {
-                    key: "off",
-                    label: __('Not required', 'woocommerce-catalog-enquiry'),
-                    value: "off"
-                },
-                {
                     key: "manual",
                     label: __('Manual', 'woocommerce-catalog-enquiry'),
                     value: "manual"
