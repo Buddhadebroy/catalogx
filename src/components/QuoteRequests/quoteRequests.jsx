@@ -5,6 +5,9 @@ import Popoup from "../PopupContent/PopupContent";
 import Modulepopup from "../PopupContent/ModulePopup";
 import { useModules } from '../../contexts/ModuleContext.jsx';
 import './quoteRequests.scss';
+import '../AdminLibrary/CustomTable/table.scss';
+import 'react-date-range/dist/styles.css'; // main style file
+import 'react-date-range/dist/theme/default.css'; // theme css file
 
 export default function QuotesList() {
   const { modules } = useModules();

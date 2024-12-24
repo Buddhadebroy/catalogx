@@ -5,6 +5,9 @@ import Popoup from "../PopupContent/PopupContent.jsx";
 import Modulepopup from "../PopupContent/ModulePopup.jsx";
 import { useModules } from '../../contexts/ModuleContext.jsx';
 import './wholesaleUser.scss';
+import '../AdminLibrary/CustomTable/table.scss';
+import 'react-date-range/dist/styles.css'; // main style file
+import 'react-date-range/dist/theme/default.css'; // theme css file
 
 const WholesaleUser = () => {
 	// Check pro is active and module is active or not.

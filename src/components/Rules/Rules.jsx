@@ -5,6 +5,7 @@ import "./Rules.scss";
 import Dialog from "@mui/material/Dialog";
 import Popoup from "../PopupContent/PopupContent";
 import Modulepopup from "../PopupContent/ModulePopup";
+import "../AdminLibrary/CustomTable/table.scss";
 
 /**
  * Render rule page
