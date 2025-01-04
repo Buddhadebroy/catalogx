@@ -1,6 +1,4 @@
-import { useTour } from '@reactour/tour';
 const MultiCheckBox = (props) => {
-    const { setIsOpen, setSteps, setCurrentStep } = useTour();
     return (
         <div className={props.wrapperClass} >
             {
@@ -44,10 +42,6 @@ const MultiCheckBox = (props) => {
                                                 return props.proChanged();
                                             }
                                             props.onChange?.(e)
-                                            // setCurrentStep(2);
-                                            if (props.step) {
-                                                setCurrentStep(props.step);
-                                            }
                                         }}
                                     />
                                     <label htmlFor={`${props.idPrefix}-${option.key}`}></label>

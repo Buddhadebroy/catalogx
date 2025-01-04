@@ -674,7 +674,6 @@ const DynamicForm = (props) => {
               inputInnerWrapperClass={inputField.look == 'toggle' ? "toggle-checkbox" : "default-checkbox"}// this props for change classes default/ Toggle
               inputClass={inputField.class}
               tour={inputField.tour}
-              step={inputField.step}
               hintOuterClass="checkbox-description"
               hintInnerClass="hover-tooltip"
               idPrefix="toggle-switch"
