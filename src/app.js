@@ -8,6 +8,7 @@ import QuotesList from './components/QuoteRequests/quoteRequests.jsx';
 import EnquiryMessages from './components/EnquiryMessages/enquiryMessages.jsx';
 import WholesaleUser from './components/WholesaleUser/wholesaleUser.jsx';
 import Rules from './components/Rules/Rules.jsx';
+import Tour from './components/TourSteps/Settings/TourSteps.jsx';
 
 const Route = () => {
     const currentTab = new URLSearchParams(useLocation().hash);
@@ -38,7 +39,10 @@ const App = () => {
    
     return (
         <>
-            <ModuleProvider modules = {appLocalizer.active_modules}><Route/></ModuleProvider>
+            <ModuleProvider modules={appLocalizer.active_modules}>
+                <Tour/>
+                <Route />
+            </ModuleProvider>
         </>
     )
 }

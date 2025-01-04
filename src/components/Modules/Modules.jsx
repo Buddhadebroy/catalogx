@@ -100,13 +100,14 @@ const Modules = () => {
                   <a href={module.doc_link} className="main-btn btn-purple card-support-btn">Docs</a>
                   <a href={module.settings_link} className="main-btn btn-purple card-support-btn">Setting</a>
                 </div>
-                <div className="toggle-checkbox-content">
+                <div className="toggle-checkbox-content" data={`${module.id}-showcase-tour`}>
                   <input
                     type="checkbox"
                     className="woo-toggle-checkbox"
                     id={`toggle-switch-${module.id}`}
                     checked={modules.includes(module.id)}
                     onChange={(e) => handleOnChange(e, module.id)}
+                    
                   />
                   <label htmlFor={`toggle-switch-${module.id}`} className="toggle-switch-is_hide_cart_checkout"></label>
                 </div>

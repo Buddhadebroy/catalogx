@@ -42,7 +42,8 @@ class SetupWizard {
                 'setup_wizard_js', 'appLocalizer', [
                 'apiurl' => untrailingslashit(get_rest_url()),
                 'nonce' => wp_create_nonce( 'wp_rest' ),
-                'redirect_url' => admin_url() . 'admin.php?page=catalog#&tab=settings&subtab=all_settings',
+                'restUrl' => 'catalog/v1',
+                'redirect_url' => admin_url() . 'admin.php?page=catalog#&tab=modules',
             ]);
         }
     }

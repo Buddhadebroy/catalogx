@@ -247,6 +247,9 @@ class Admin {
             'order_edit'                => admin_url( "admin.php?page=wc-orders&action=edit" ),
             'site_url'                  => admin_url( 'admin.php?page=catalog#&tab=settings&subtab=all_settings' ),
             'module_page_url'           => admin_url( 'admin.php?page=catalog#&tab=modules' ),
+            'settings_page_url'           => admin_url( 'admin.php?page=catalog#&tab=settings&subtab=all_settings' ),
+            'enquiry_form_settings_url'   => admin_url( 'admin.php?page=catalog#&tab=settings&subtab=enquiry_form_customization' ),
+            'customization_settings_url'  => admin_url( 'admin.php?page=catalog#&tab=settings&subtab=enquiry_catalog_customization' ),
             'currency'                  => get_woocommerce_currency(),
             'stock_alert_open'          => class_exists('StockManager')
         ]));

@@ -41,7 +41,29 @@ class Rest {
             'permission_callback'   => [ $this, 'catalog_permission' ]
         ] );
 
+        register_rest_route( Catalog()->rest_namespace, '/tour', [
+            'methods'               => 'GET',
+            'callback'              => [ $this, 'get_tour_status' ],
+            'permission_callback'   => [ $this, 'catalog_permission' ],
+        ]);
+    
+        register_rest_route(Catalog()->rest_namespace, '/tour', [
+            'methods'               => 'POST',
+            'callback'              => [ $this, 'set_tour_status' ],
+            'permission_callback'   => [ $this, 'catalog_permission' ],
+        ]);
+
 	}
+
+    function get_tour_status() {
+        $status = get_option('catalog_tour_active', false);
+        return ['active' => $status];
+    }
+    
+    function set_tour_status($request) {
+        update_option('catalog_tour_active', $request->get_param( 'active' ));
+        return ['success' => true];
+    }
 
     /**
      * Save global settings

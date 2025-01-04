@@ -96,8 +96,9 @@ const FormCustomizer = (props) => {
     ]
 
     const [menu, setMenu] = useState([
-        { name: "Pro", link: "hi", id: 1, icon: 'adminLib-cart' },
         { name: "Free", link: "hi", id: 2, icon: 'adminLib-info' },
+        { name: "Pro", link: "hi", id: 1, icon: 'adminLib-cart' },
+
     ]);
 
     // Set default current tab
@@ -148,7 +149,7 @@ const FormCustomizer = (props) => {
                                                         activeDeactiveFields(fields.key, readonlyFields[index]);
                                                     }}
                                                 >
-                                                    <i class={`admin-font ${readonlyFields[index] ? 'adminLib-eye-blocked' : 'adminLib-eye'}`}></i>
+                                                    <i class={`admin-font ${readonlyFields[index] ? 'adminLib-eye-blocked enable-visibility' : 'adminLib-eye'}`}></i>
                                                 </div>
                                             </div>
                                         );

@@ -299,6 +299,7 @@ const DynamicForm = (props) => {
               min={inputField.min || 0} // for range min value
               max={inputField.max || 50} // for range max value
               value={value}
+              tour={inputField.tour}
               proSetting={isProSetting(inputField.proSetting)}
               onChange={(e) => {
                 if (!proSettingChanged(inputField.proSetting) && !moduleDependChanged(inputField.moduleDepend)) {
@@ -584,6 +585,7 @@ const DynamicForm = (props) => {
                 inputClass={inputField.key}
                 options={options}
                 value={value}
+                tour={inputField.tour}
                 proSetting={isProSetting(inputField.proSetting)}
                 onChange={(data) => {
                   if ( !proSettingChanged(inputField.proSetting) && !moduleDependChanged(inputField.moduleDepend) ) {
@@ -671,6 +673,8 @@ const DynamicForm = (props) => {
               inputWrapperClass="toggle-checkbox-header"
               inputInnerWrapperClass={inputField.look == 'toggle' ? "toggle-checkbox" : "default-checkbox"}// this props for change classes default/ Toggle
               inputClass={inputField.class}
+              tour={inputField.tour}
+              step={inputField.step}
               hintOuterClass="checkbox-description"
               hintInnerClass="hover-tooltip"
               idPrefix="toggle-switch"
@@ -714,6 +718,7 @@ const DynamicForm = (props) => {
               rightContent={inputField.right_content}
               options={inputField.options}
               value={value}
+              tour={inputField.tour}
               proSetting={isProSetting(inputField.proSetting)}
               onChange={(e) => {
                 if (!inputField.dependentPlugin) {
@@ -742,6 +747,7 @@ const DynamicForm = (props) => {
               key={inputField.key}
               options={inputField.options}
               value={value || inputField.defaultValue}
+              tour={inputField.tour}
               proSetting={isProSetting(inputField.proSetting)}
               onChange={(data) => {
                 if ( !proSettingChanged(inputField.proSetting) && !moduleDependChanged(inputField.moduleDepend) ) {

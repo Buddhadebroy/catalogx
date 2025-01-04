@@ -171,6 +171,7 @@ export default {
             ],
             look: "toggle",
             moduleDepend: 'quote',
+            tour: "quote-permission"
         },
         {
             key: 'set_expiry_time',
@@ -180,6 +181,7 @@ export default {
             parameter: __('days', 'woocommerce-catalog-enquiry'),
             proSetting: true,
             moduleDepend: 'quote',
+            tour: "quote-expiry-time"
         },
         {
             key: 'separator_content',

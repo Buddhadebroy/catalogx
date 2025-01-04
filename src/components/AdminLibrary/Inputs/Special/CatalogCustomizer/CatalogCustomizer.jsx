@@ -344,7 +344,7 @@ const CatalogCustomizer = (props) => {
                                   {item.id === 'enquery_button' && (
                                     <div
                                       onClick={() => { handleSubMenuChange(menu[0]); }}
-                                      className={`button-main-container toggle-visibility ${currentTab.id === "enquiry" ? '' : 'disable'}`}
+                                      className={`button-main-container toggle-visibility ${currentTab.id === "enquiry" ? '' : 'disable'} enquiry-btn`}
                                     >
                                       <ButtonCustomizer
                                         className='ignore-drag'
