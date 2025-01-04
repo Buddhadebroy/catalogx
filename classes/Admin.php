@@ -250,6 +250,7 @@ class Admin {
             'settings_page_url'           => admin_url( 'admin.php?page=catalog#&tab=settings&subtab=all_settings' ),
             'enquiry_form_settings_url'   => admin_url( 'admin.php?page=catalog#&tab=settings&subtab=enquiry_form_customization' ),
             'customization_settings_url'  => admin_url( 'admin.php?page=catalog#&tab=settings&subtab=enquiry_catalog_customization' ),
+            'wholesale_settings_url'      => admin_url( 'admin.php?page=catalog#&tab=settings&subtab=wholesale' ),
             'currency'                  => get_woocommerce_currency(),
             'stock_alert_open'          => class_exists('StockManager')
         ]));

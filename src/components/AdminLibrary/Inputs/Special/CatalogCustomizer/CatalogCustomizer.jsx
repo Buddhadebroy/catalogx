@@ -348,7 +348,7 @@ const CatalogCustomizer = (props) => {
                                     >
                                       <ButtonCustomizer
                                         className='ignore-drag'
-                                        text='enquiry'
+                                        text={setting['enquery_button']['button_text'] || 'enquiry'}
                                         setting={setting['enquery_button']}
                                         onChange={(key, value, isRestoreDefaults=false) => {
                                           const previousSetting = setting['enquery_button'] || {};
@@ -382,7 +382,7 @@ const CatalogCustomizer = (props) => {
                                       className={`button-main-container toggle-visibility ${currentTab.id === "quote" ? '' : 'disable'}`}
                                     >
                                       <ButtonCustomizer
-                                        text='Add to quote'
+                                        text={setting['quote_button']['button_text'] || 'Add to quote'}
                                         setting={setting['quote_button']}
                                         onChange={(key, value, isRestoreDefaults=false) => {
                                           const previousSetting = setting['quote_button'] || {};
