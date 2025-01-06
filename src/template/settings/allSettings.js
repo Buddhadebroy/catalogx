@@ -181,7 +181,6 @@ export default {
             parameter: __('days', 'woocommerce-catalog-enquiry'),
             proSetting: true,
             moduleDepend: 'quote',
-            tour: "quote-expiry-time"
         },
         {
             key: 'separator_content',

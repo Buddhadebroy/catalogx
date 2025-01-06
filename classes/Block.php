@@ -90,7 +90,12 @@ class Block {
                 'required_style'   => '',
                 // src link is generated (which is append from block name) within the function
 				'react_dependencies'   => ['wp-blocks', 'wp-element', 'wp-editor', 'wp-components', 'wp-i18n'],
-                'localize' => [],
+                'localize' => [
+                    'object_name' => 'quote_thank_you',
+                    'data' => [
+                        'quote_my_account_url'        =>  site_url('/my-account/all-quotes/'),
+                    ]
+                ],
             ];
         }
 
