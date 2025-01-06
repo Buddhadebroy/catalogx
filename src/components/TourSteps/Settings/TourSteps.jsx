@@ -151,27 +151,9 @@ const Tour = () => {
                         <button
                             className="btn-purple"
                             onClick={() => {
-                                setCurrentStep(5);
-                            }}
-                        >
-                            Next
-                        </button>
-                    </div>
-                </div>
-            ),
-        },
-        {
-            selector: '[data="quote-expiry-time"]',
-            content: () => (
-                <div>
-                    <h3>Quote expiry time</h3>
-                    <div className="tour-footer">
-                        <button
-                            className="btn-purple"
-                            onClick={() => {
                                 navigateTo(
                                     appLocalizer.customization_settings_url,
-                                    6,
+                                    5,
                                     '.enquiry-tab'
                                 )
                             }}
@@ -191,7 +173,7 @@ const Tour = () => {
                         <button
                             className="btn-purple"
                             onClick={() => {
-                                setCurrentStep(7);
+                                setCurrentStep(6);
                             }}
                         >
                             Next
