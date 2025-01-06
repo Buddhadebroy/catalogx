@@ -72,6 +72,7 @@ const Tour = () => {
                                     } else {
                                         setCurrentStep(3);
                                     }
+                                    // modules.includes('enquiry') ?
                                 }
                             }
                         >
@@ -144,14 +145,33 @@ const Tour = () => {
             selector: '[data="quote-permission"]',
             content: () => (
                 <div>
-                    <h3>Quote permission</h3>
+                    <h3>Configure Quote Settings</h3>
+                    <h4>Set up your Quote settings by deciding if quotes have an expiration date or view restrictions, ensuring better control over the quote process.</h4>
+                    <div className="tour-footer">
+                        <button
+                            className="btn-purple"
+                            onClick={() => {
+                                setCurrentStep(5);
+                            }}
+                        >
+                            Next
+                        </button>
+                    </div>
+                </div>
+            ),
+        },
+        {
+            selector: '[data="quote-expiry-time"]',
+            content: () => (
+                <div>
+                    <h3>Quote expiry time</h3>
                     <div className="tour-footer">
                         <button
                             className="btn-purple"
                             onClick={() => {
                                 navigateTo(
                                     appLocalizer.customization_settings_url,
-                                    5,
+                                    6,
                                     '.enquiry-tab'
                                 )
                             }}
@@ -184,7 +204,8 @@ const Tour = () => {
             selector: '.enquiry-btn',
             content: () => (
                 <div>
-                    <h3>Enquiry button</h3>
+                    <h3>Customize Buttons with Live Page Builder</h3>
+                    <h4>Easily drag and drop to adjust the position of buttons like "Enquiry" and "Quotation," while also customizing their names and colors to match your theme.</h4>
                     <div className="tour-footer">
                         <button
                             className="btn-purple"

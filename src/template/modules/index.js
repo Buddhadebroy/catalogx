@@ -31,7 +31,7 @@ export default [
     {
         id: 'wholesale',
         name: __("Wholesale Pricing", "woocommerce-catalog-enquiry"),
-        desc: __("<span class='highlight'>Free:</span> Create a wholesale user role with customizable discounts.<br><br> <span class='highlight'>Pro:</span> Custom wholesale registration forms builder, admin approval, wholesale order lists, and coupon restrictions for wholesale users."),
+        desc: __("Custom wholesale registration forms builder, admin approval, wholesale order lists, and coupon restrictions for wholesale users."),
         icon: 'adminLib-warehousing-icon',
         doc_link: 'https://catalogx.com/docs/wholesale-pricing/',
         settings_link: appLocalizer.wholesale_settings_url,

@@ -597,6 +597,11 @@ span.admin-pro-tag{
     }
   }
 }
+// tour style
+.reactour__mask{
+  color: #0000001f !important; // to overwrite tour style
+}
+
 // Commone loader style
 .loader-wrapper{
     display: flex;

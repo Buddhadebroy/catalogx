@@ -11,7 +11,6 @@ const QuoteThankYou = () => {
     const [successMessage, setSuccessMessage] = useState('');
   
     const location = useLocation();
-    console.log(quote_thank_you)
   
     useEffect(() => {
       const params = new URLSearchParams(location.search);

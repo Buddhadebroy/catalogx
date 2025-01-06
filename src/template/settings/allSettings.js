@@ -11,7 +11,7 @@ export default {
             key: 'is_hide_cart_checkout',
             type: 'checkbox',
             label: __( "Turn off sitewide buying", 'woocommerce-catalog-enquiry' ),
-             desc: __('Redirect users to the homepage when they click on the cart or checkout page. To customize the redirection to a different page, an upgrade to Pro <a href="https://multivendorx.com/woocommerce-request-a-quote-product-catalog/" target="_blank">WooCommerce Catalog Enquiry Pro</a>.', 'woocommerce-catalog-enquiry'),
+             desc: __('Redirect users to the homepage when they click on the cart or checkout page. To customize the redirection to a different page, an upgrade to Pro <a href="https://catalogx.com/pricing/" target="_blank">CatalogX Pro</a>.', 'woocommerce-catalog-enquiry'),
             options: [
                 {
                     key: "is_hide_cart_checkout",

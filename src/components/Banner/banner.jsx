@@ -101,10 +101,10 @@ export default function banner() {
                                 <ul className="carousel-list">
                                     <li className="carousel-item active">
                                         <div className="admin-pro-txt-items">
-                                            <h3>This is a sample banner</h3>
-                                            <p>Sample banner description</p>
+                                            <h3>Advanced Inquiries</h3>
+                                            <p>Rich customer-admin messaging system</p>
                                             <a
-                                                // href={appLocalizer.pro_url}
+                                                href={appLocalizer.pro_url}
                                                 target='_blank'
                                                 className="admin-btn btn-red"
                                             >
@@ -114,10 +114,36 @@ export default function banner() {
                                     </li>
                                     <li class="carousel-item">
                                     <div className="admin-pro-txt-items">
-                                            <h3>This is a example banner</h3>
-                                            <p>example banner description</p>
+                                            <h3>Dynamic Pricing</h3>
+                                            <p>Automated multi-tier price rules</p>
                                             <a
-                                                // href={appLocalizer.pro_url}
+                                                href={appLocalizer.pro_url}
+                                                target='_blank'
+                                                className="admin-btn btn-red"
+                                            >
+                                                View Pricing
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li class="carousel-item">
+                                    <div className="admin-pro-txt-items">
+                                            <h3>Wholesale Sales</h3>
+                                            <p>B2B ordering with bulk discounts</p>
+                                            <a
+                                                href={appLocalizer.pro_url}
+                                                target='_blank'
+                                                className="admin-btn btn-red"
+                                            >
+                                                View Pricing
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li class="carousel-item">
+                                    <div className="admin-pro-txt-items">
+                                            <h3>Custom Quotes</h3>
+                                            <p>Speed up sales with personalized quotes.</p>
+                                            <a
+                                                href={appLocalizer.pro_url}
                                                 target='_blank'
                                                 className="admin-btn btn-red"
                                             >

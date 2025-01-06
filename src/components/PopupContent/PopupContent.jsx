@@ -16,10 +16,10 @@ const Propopup = () => {
                                 <div className="admin-banner-content">
                                     <strong>Unlock revenue-boosting features with CatalogX Pro today !</strong>
                                     <p>&nbsp;</p>
-                                    <p>1. Speed up sales by automating personalized quotes.</p>
+                                    <p>1. Speed up sales with personalized quotes.</p>
                                     <p>2. Boost bulk sales with exclusive pricing and wholesale order forms.</p>
-                                    <p>3. Enable multiple product inquiries at once to boost customer engagement.</p>
-                                    <p>4. Advanced inquiry messaging with file uploads, tagging etc..</p>
+                                    <p>3. Enable multiple product enquiries at once to boost customer engagement.</p>
+                                    <p>4. Advanced enquiry messaging with file uploads, tagging etc..</p>
                                     <p>5. Increase revenue with tailored pricing for different user roles.</p>
                                     <p>6. Drive higher sales with customized pricing for product categories.</p>
                                 </div>

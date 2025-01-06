@@ -31,8 +31,8 @@ class Admin {
 
         add_submenu_page(
             'catalog',
-            __( 'Inquiry Messages', 'woocommerce-catalog-enquiry' ),
-            __( 'Inquiry Messages', 'woocommerce-catalog-enquiry' ),
+            __( 'Enquiry Messages', 'woocommerce-catalog-enquiry' ),
+            __( 'Enquiry Messages', 'woocommerce-catalog-enquiry' ),
             'manage_woocommerce',
             'catalog#&tab=enquiry-messages',
             '__return_null'
