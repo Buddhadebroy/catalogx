@@ -250,7 +250,7 @@ class Install {
             update_option( 'catalog_all_settings_settings', $all_settings );
             
             $email_settings = [
-                'additional_alert_email'  => $previous_general_settings[ 'other_emails' ] ?? get_option( 'admin_email' ),
+                'additional_alert_email'  => !empty($previous_general_settings[ 'other_emails' ]) ? $previous_general_settings[ 'other_emails' ] : get_option( 'admin_email' ),
             ];
 
             if (!empty($previous_general_settings['is_other_admin_mail'])) {
