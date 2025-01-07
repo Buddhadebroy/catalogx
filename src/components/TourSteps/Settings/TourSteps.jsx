@@ -128,7 +128,7 @@ const Tour = () => {
                                 } else {
                                     navigateTo(
                                         appLocalizer.customization_settings_url,
-                                        6,
+                                        5,
                                         '.enquiry-tab'
                                     )
                                     // setCurrentStep(6);
@@ -146,7 +146,7 @@ const Tour = () => {
             content: () => (
                 <div>
                     <h3>Configure Quote Settings</h3>
-                    <h4>Set up your Quote settings by deciding if quotes have an expiration date or view restrictions, ensuring better control over the quote process.</h4>
+                    <h4>Set up your quotation settings by defining whether to limit quote requests to logged-in users only.</h4>
                     <div className="tour-footer">
                         <button
                             className="btn-purple"
@@ -168,7 +168,8 @@ const Tour = () => {
             selector: '.enquiry-tab',
             content: () => (
                 <div>
-                    <h3>Enquiry tab</h3>
+                    <h3>Edit Quotation Button Settings</h3>
+                    <h4>Customize the buttons for modules like Enquiry by adjusting their text, appearance, and functionality to match your site’s design.</h4>
                     <div className="tour-footer">
                         <button
                             className="btn-purple"
@@ -186,8 +187,8 @@ const Tour = () => {
             selector: '.enquiry-btn',
             content: () => (
                 <div>
-                    <h3>Customize Buttons with Live Page Builder</h3>
-                    <h4>Easily drag and drop to adjust the position of buttons like "Enquiry" and "Quotation," while also customizing their names and colors to match your theme.</h4>
+                    <h3>Drag and Drop Button Positioning</h3>
+                    <h4>Drag and drop the buttons to your preferred positions on the page, easily adjusting the layout to suit your needs.</h4>
                     <div className="tour-footer">
                         <button
                             className="btn-purple"
