@@ -93,7 +93,8 @@ class Block {
                 'localize' => [
                     'object_name' => 'quote_thank_you',
                     'data' => [
-                        'quote_my_account_url'        =>  site_url('/my-account/all-quotes/'),
+                        'quote_my_account_url'  => site_url('/my-account/all-quotes/'),
+                        'khali_dabba'           => Utill::is_khali_dabba(),
                     ]
                 ],
             ];

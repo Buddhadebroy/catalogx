@@ -14,7 +14,7 @@ class Frontend{
         if ( ! Util::is_available() ) return;
 
         $display_enquiry_button = Catalog()->setting->get_setting( 'enquiry_user_permission' );
-        if (in_array('enquiry_logged_out', $display_enquiry_button) && !is_user_logged_in()) {
+        if (is_array($display_enquiry_button) && in_array('enquiry_logged_out', $display_enquiry_button) && !is_user_logged_in()) {
             return;
         }
 

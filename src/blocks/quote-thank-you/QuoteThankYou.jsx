@@ -53,7 +53,11 @@ const QuoteThankYou = () => {
                 <div>
                     <p>Thank you for your quote request 
                         <strong>
-                            <a href={`${quote_thank_you.quote_my_account_url}`}> {orderId}</a>
+                            {quote_thank_you.khali_dabba ? (
+                                <a href={`${quote_thank_you.quote_my_account_url}`}>{orderId}</a>
+                            ) : (
+                                orderId
+                            )}
                         </strong>.
                     </p>
                     <p>{__('Our team is reviewing your details and will get back to you shortly with a personalized quote. We appreciate your patience and look forward to serving you!', 'woocommerce-catalog-enquiry')}</p>

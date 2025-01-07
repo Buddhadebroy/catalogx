@@ -93,6 +93,7 @@ const QuoteList = () => {
 			},
 		}).then((response) => {
 			requestData();
+			window.location.reload();
 		});
 	}
 
