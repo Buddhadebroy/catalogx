@@ -127,7 +127,7 @@ const Tabs = (props) => {
               <div className="brand">
                 <img className="logo" src={menuCol ? BrandSmall : Brand} alt="Logo" />
                 <img className="logo-small" src={BrandSmall} alt="Logo" />
-                {menuCol ? null : <p>{appLocalizer.tab_name}</p>}
+                {/* {menuCol ? null : <p>{appLocalizer.tab_name}</p>} */}
               </div>
               <div className="current-tab-lists-container">
                 {tabData.map(({ type, content }) => {
