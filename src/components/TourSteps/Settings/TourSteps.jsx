@@ -3,7 +3,6 @@ import axios from "axios";
 import { useTour } from '@reactour/tour';
 import { useModules } from '../../../contexts/ModuleContext';
 import gif from "../../../assets/images/customization-btn.gif"
-import swipe from "../../../assets/images/swipe-up.gif"
 
 
 const Tour = () => {
@@ -38,7 +37,7 @@ const Tour = () => {
             selector: '[data="catalog-showcase-tour"]',
             content: () => (
                 <div>
-                    <h3><img src={swipe} width="30" />Enable Catalog Mode</h3>
+                    <h3>Enable Catalog Mode</h3>
                     <h4>Activate Catalog mode to display your site as a product catalog, removing the "Add to Cart" button and optionally hiding prices.</h4>
                     <div className="tour-footer">
                         <button
@@ -57,7 +56,7 @@ const Tour = () => {
             selector: '[data="enquiry-showcase-tour"]',
             content: () => (
                 <div>
-                    <h3><img src={swipe} width="30" />Enable Enquiry Mode</h3>
+                    <h3>Enable Enquiry Mode</h3>
                     <h4>Turn on Enquiry mode to add an "Enquiry" button for customers, allowing direct communication via submitted forms, viewable in the admin dashboard or via email.</h4>
                     <div className="tour-footer">
                         <button
@@ -114,7 +113,7 @@ const Tour = () => {
             selector: '[data="quote-showcase-tour"]',
             content: () => (
                 <div>
-                    <h3><img src={swipe} width="30" />Enable Quote Module</h3>
+                    <h3>Enable Quote Module</h3>
                     <h4>Activate the Quote module to let customers request personalized product quotations. Admins can review the quotes and provide tailored pricing for customers to proceed with purchases.</h4>
                     <div className="tour-footer">
                         <button
@@ -171,8 +170,8 @@ const Tour = () => {
             selector: '.enquiry-tab',
             content: () => (
                 <div>
-                    <h3>Edit Quotation Button Settings</h3>
-                    <h4>Customize the buttons for modules like Enquiry by adjusting their text, appearance, and functionality to match your site’s design.</h4>
+                    <h3>Customize with Live Page Builder</h3>
+                    <h4>Use the Live Page Builder to select the Enquiry or Quote tab and customize the respective buttons to match your site's design.</h4>
                     <div className="tour-footer">
                         <button
                             className="btn-purple"
@@ -190,9 +189,9 @@ const Tour = () => {
             selector: '.enquiry-btn',
             content: () => (
                 <div>
-                    <h3>Drag and Drop Button Positioning</h3>
+                    <h3>Arrange Enquiry Button</h3>
                     <img src={gif} width="290"/>
-                    <h4>Drag and drop the buttons to your preferred positions on the page, easily adjusting the layout to suit your needs.</h4>
+                    <h4>With the Enquiry tab selected, drag and drop to position the Enquiry button and customize its look</h4>
                     <div className="tour-footer">
                         <button
                             className="btn-purple"
