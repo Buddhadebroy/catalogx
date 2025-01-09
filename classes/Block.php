@@ -113,7 +113,7 @@ class Block {
 			}
 		}
 
-        wp_enqueue_style('mvx-catalog-style', Catalog()->plugin_url . 'build/index.css');
+        // wp_enqueue_style('mvx-catalog-style', Catalog()->plugin_url . 'build/index.css');
     }
 
     public function register_block_category($categories) {
