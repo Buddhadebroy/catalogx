@@ -12,7 +12,7 @@ export default {
             key: "approve_wholesaler",
             type: "settingToggle",
             label: __("Approval of wholesale users through registration form", "woocommerce-catalog-enquiry"),
-            desc: __('Not Required - Disable wholesale registration form. User will be assigned as wholeseller role from backend. <br>Manual - Admin approves new wholesalers manually from "Wholeseller Users" page. <br>  Automatic - Instant wholesaler approval upon sign-up', 'woocommerce-catalog-enquiry'),
+            desc: __('Manual - Admin approves new wholesalers manually from "Wholeseller Users" page. <br>  Automatic - Instant wholesaler approval upon sign-up', 'woocommerce-catalog-enquiry'),
             options: [
                 {
                     key: "manual",

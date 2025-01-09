@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import axios from "axios";
 import { useTour } from '@reactour/tour';
 import { useModules } from '../../../contexts/ModuleContext';
+import gif from "../../../assets/images/customization-btn.gif"
+
 
 const Tour = () => {
     const { modules } = useModules();
@@ -61,19 +63,19 @@ const Tour = () => {
                             className="btn-purple"
                             onClick={() =>
                                 {
-                                    const checkbox = document.querySelector(`[id="toggle-switch-enquiry"]`);
+                                const checkbox = document.querySelector(`[id="toggle-switch-enquiry"]`);
 
-                                    if (checkbox && checkbox.checked) {
-                                        navigateTo(
-                                            appLocalizer.enquiry_form_settings_url,
-                                            2,
-                                            '.enable-visibility'
-                                        ) 
-                                    } else {
-                                        setCurrentStep(3);
-                                    }
-                                    // modules.includes('enquiry') ?
+                                if (checkbox && checkbox.checked) {
+                                    navigateTo(
+                                        appLocalizer.enquiry_form_settings_url,
+                                        2,
+                                        '.enable-visibility'
+                                    )
+                                } else {
+                                    setCurrentStep(3);
                                 }
+                                // modules.includes('enquiry') ?
+                            }
                             }
                         >
                             Next
@@ -82,7 +84,7 @@ const Tour = () => {
                 </div>
             ),
         },
-        
+
         {
             selector: '.enable-visibility',
             content: () => (
@@ -106,7 +108,7 @@ const Tour = () => {
                 </div>
             ),
         },
-          
+
         {
             selector: '[data="quote-showcase-tour"]',
             content: () => (
@@ -168,8 +170,8 @@ const Tour = () => {
             selector: '.enquiry-tab',
             content: () => (
                 <div>
-                    <h3>Edit Quotation Button Settings</h3>
-                    <h4>Customize the buttons for modules like Enquiry by adjusting their text, appearance, and functionality to match your site’s design.</h4>
+                    <h3>Customize with Live Page Builder</h3>
+                    <h4>Use the Live Page Builder to select the Enquiry or Quote tab and customize the respective buttons to match your site's design.</h4>
                     <div className="tour-footer">
                         <button
                             className="btn-purple"
@@ -187,15 +189,16 @@ const Tour = () => {
             selector: '.enquiry-btn',
             content: () => (
                 <div>
-                    <h3>Drag and Drop Button Positioning</h3>
-                    <h4>Drag and drop the buttons to your preferred positions on the page, easily adjusting the layout to suit your needs.</h4>
+                    <h3>Arrange Enquiry Button</h3>
+                    <img src={gif} width="290"/>
+                    <h4>With the Enquiry tab selected, drag and drop to position the Enquiry button and customize its look </h4>
                     <div className="tour-footer">
                         <button
                             className="btn-purple"
                             onClick={() => {
                                 finishTour()
                             }
-                        }
+                            }
                         >
                             Finish
                         </button>
@@ -217,15 +220,18 @@ const Tour = () => {
     };
 
     useEffect(() => {
+
         const fetchTourState = async () => {
-            try {
-                const response = await axios.get(`${appLocalizer.apiurl}/catalog/v1/tour`);
-                if (response.data.active) {
-                    setSteps(settingsTourSteps);
-                    setIsOpen(true); // Start the tour
+            if (window.location.href == appLocalizer.module_page_url) {
+                try {
+                    const response = await axios.get(`${appLocalizer.apiurl}/catalog/v1/tour`);
+                    if (response.data.active) {
+                        setSteps(settingsTourSteps);
+                        setIsOpen(true); // Start the tour
+                    }
+                } catch (error) {
+                    console.error('Error fetching tour flag:', error);
                 }
-            } catch (error) {
-                console.error('Error fetching tour flag:', error);
             }
         };
 
@@ -245,7 +251,7 @@ const Tour = () => {
     // return (
     //     <>
     //         {console.log('hii')}
-        
+
     //         <button onClick={() => setIsOpen(true)} style={{ marginBottom: '10px' }}>
     //             Start Tour
     //         </button>

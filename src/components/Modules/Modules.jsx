@@ -6,6 +6,7 @@ import { getApiLink, sendApiResponse } from "../../services/apiService";
 import { useModules } from "../../contexts/ModuleContext";
 // import context
 import { getModuleData } from "../../services/templateService";
+import Animation from "../../assets/images/Animation.gif"
 import "./modules.scss";
 
 const Modules = () => {
@@ -101,6 +102,7 @@ const Modules = () => {
                   <a href={module.settings_link} className="main-btn btn-purple card-support-btn">Setting</a>
                 </div>
                 <div className="toggle-checkbox-content" data={`${module.id}-showcase-tour`}>
+                  {/* <img src={Animation}/> */}
                   <input
                     type="checkbox"
                     className="woo-toggle-checkbox"
