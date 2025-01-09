@@ -191,7 +191,7 @@ const Tour = () => {
                 <div>
                     <h3>Arrange Enquiry Button</h3>
                     <img src={gif} width="290"/>
-                    <h4>With the Enquiry tab selected, drag and drop to position the Enquiry button and customize its look</h4>
+                    <h4>With the Enquiry tab selected, drag and drop to position the Enquiry button and customize its look </h4>
                     <div className="tour-footer">
                         <button
                             className="btn-purple"
