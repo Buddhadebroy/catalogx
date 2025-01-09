@@ -209,8 +209,10 @@ final class CatalogEnquiry {
 			add_option('catalog_plugin_activated', true);
 		}
 
-		update_option('catalog_tour_active', true);
-		update_option('catalog_tour_version', Catalog()->version);
+		if (!get_option('catalog_tour_active')) {
+			add_option('catalog_tour_active', true);
+			add_option('catalog_tour_version', Catalog()->version);
+		}
         flush_rewrite_rules();
 		ob_end_clean();
     }
