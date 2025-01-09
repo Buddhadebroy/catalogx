@@ -63,19 +63,19 @@ const Tour = () => {
                             className="btn-purple"
                             onClick={() =>
                                 {
-                                    const checkbox = document.querySelector(`[id="toggle-switch-enquiry"]`);
+                                const checkbox = document.querySelector(`[id="toggle-switch-enquiry"]`);
 
-                                    if (checkbox && checkbox.checked) {
-                                        navigateTo(
-                                            appLocalizer.enquiry_form_settings_url,
-                                            2,
-                                            '.enable-visibility'
-                                        ) 
-                                    } else {
-                                        setCurrentStep(3);
-                                    }
-                                    // modules.includes('enquiry') ?
+                                if (checkbox && checkbox.checked) {
+                                    navigateTo(
+                                        appLocalizer.enquiry_form_settings_url,
+                                        2,
+                                        '.enable-visibility'
+                                    )
+                                } else {
+                                    setCurrentStep(3);
                                 }
+                                // modules.includes('enquiry') ?
+                            }
                             }
                         >
                             Next
@@ -84,7 +84,7 @@ const Tour = () => {
                 </div>
             ),
         },
-        
+
         {
             selector: '.enable-visibility',
             content: () => (
@@ -108,7 +108,7 @@ const Tour = () => {
                 </div>
             ),
         },
-          
+
         {
             selector: '[data="quote-showcase-tour"]',
             content: () => (
@@ -198,7 +198,7 @@ const Tour = () => {
                             onClick={() => {
                                 finishTour()
                             }
-                        }
+                            }
                         >
                             Finish
                         </button>
@@ -220,15 +220,18 @@ const Tour = () => {
     };
 
     useEffect(() => {
+
         const fetchTourState = async () => {
-            try {
-                const response = await axios.get(`${appLocalizer.apiurl}/catalog/v1/tour`);
-                if (response.data.active) {
-                    setSteps(settingsTourSteps);
-                    setIsOpen(true); // Start the tour
+            if (window.location.href == appLocalizer.module_page_url) {
+                try {
+                    const response = await axios.get(`${appLocalizer.apiurl}/catalog/v1/tour`);
+                    if (response.data.active) {
+                        setSteps(settingsTourSteps);
+                        setIsOpen(true); // Start the tour
+                    }
+                } catch (error) {
+                    console.error('Error fetching tour flag:', error);
                 }
-            } catch (error) {
-                console.error('Error fetching tour flag:', error);
             }
         };
 
@@ -248,7 +251,7 @@ const Tour = () => {
     // return (
     //     <>
     //         {console.log('hii')}
-        
+
     //         <button onClick={() => setIsOpen(true)} style={{ marginBottom: '10px' }}>
     //             Start Tour
     //         </button>
