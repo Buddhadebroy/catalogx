@@ -13,7 +13,7 @@ export default [
     {
         id: 'enquiry',
         name: __("Enquiry & Communication", "woocommerce-catalog-enquiry"),
-        desc: __("<span class='highlight'>Free:</span> Add inquiry button for single product email enquiries to admin.<br><br> <span class='highlight'>Pro:</span> Full messaging hub with two-way communication, multi-product ennquiries, and centralized management.", "woocommerce-catalog-enquiry"),
+        desc: __("<span class='highlight'>Free:</span> Add enquiry button for single product email enquiries to admin.<br><br> <span class='highlight'>Pro:</span> Full messaging hub with two-way communication, multi-product enquiries, and centralized management.", "woocommerce-catalog-enquiry"),
         icon: 'adminLib-inquiry-filled-svgrepo-com',
         doc_link: 'https://catalogx.com/docs/enquiry-communication/',
         settings_link: appLocalizer.site_url,

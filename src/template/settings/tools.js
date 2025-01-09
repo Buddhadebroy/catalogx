@@ -11,7 +11,7 @@ export default {
         {
             key: "custom_css_product_page",
             type: "textarea",
-            desc: __("Put your custom css here, to customize the inquiry form.", "woocommerce-catalog-enquiry"),
+            desc: __("Put your custom css here, to customize the enquiry form.", "woocommerce-catalog-enquiry"),
             label: __("Addional CSS", "woocommerce-catalog-enquiry"),
         },    
     ]

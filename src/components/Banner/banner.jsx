@@ -101,7 +101,7 @@ export default function banner() {
                                 <ul className="carousel-list">
                                     <li className="carousel-item active">
                                         <div className="admin-pro-txt-items">
-                                            <h3>Advanced Inquiries</h3>
+                                            <h3>Advanced Enquiries</h3>
                                             <p>Rich customer-admin messaging system</p>
                                             <a
                                                 href={appLocalizer.pro_url}
