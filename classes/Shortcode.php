@@ -26,7 +26,7 @@ class Shortcode {
                 'name'  => $current_user->display_name,
                 'email' => $current_user->user_email
             ]);
-            wp_enqueue_style('quote_list_css', Catalog()->plugin_url . 'build/blocks/quote-cart/index.css');
+            // wp_enqueue_style('quote_list_css', Catalog()->plugin_url . 'build/blocks/quote-cart/index.css');
     
             wp_enqueue_script('quote_thank_you_js', Catalog()->plugin_url . 'build/blocks/quote-thank-you/index.js', [ 'wp-blocks', 'jquery', 'jquery-blockui', 'wp-element', 'wp-i18n' ], Catalog()->version, true);
         }

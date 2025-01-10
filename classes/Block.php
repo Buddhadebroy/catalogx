@@ -112,6 +112,7 @@ class Block {
 				wp_localize_script($block_script['name'], $block_script['localize']['object_name'], $block_script['localize']['data']);
 			}
 		}
+        wp_enqueue_style('quote_list_css', Catalog()->plugin_url . 'build/blocks/quote-cart/index.css');
 
         // wp_enqueue_style('mvx-catalog-style', Catalog()->plugin_url . 'build/index.css');
     }
