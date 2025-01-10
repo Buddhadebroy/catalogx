@@ -12,12 +12,11 @@ const PopupPluginDependency = () => {
                     <div className="admin-module-dialog-content">
                         <div className="admin-image-overlay">
                             <div className="admin-overlay-content">
-                                <h1 className="banner-header">Stock <span className="banner-pro-tag">Pro</span> </h1>
                                 <div className="admin-banner-content">
-                                    <h2>Activate 30+ Pro Modules</h2>
-                                    <p id='description'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi fugit quibusdam adipisci accusantium at aperiam minus eum laudantium tempora consequuntur.</p>
+                                    <h2>Back In Stock Notifier for WooCommerce</h2>
+                                    <p id='description'>Let customers subscribe to out-of-stock products and receive email notifications when they're back in stock.</p>
                                 </div>
-                                <a className="admin-go-pro-btn" target="_blank" href={appLocalizer.pro_url}>Upgrade to Pro</a>
+                                <a className="admin-go-pro-btn" target="_blank" href="https://wordpress.org/plugins/woocommerce-product-stock-alert/">Download now</a>
                             </div>
                         </div>
                     </div>

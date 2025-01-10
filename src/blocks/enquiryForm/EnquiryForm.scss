@@ -352,7 +352,11 @@
 }
 
 
-
+.quantity{
+    input{
+        width: 5rem !important; // overwrite woocommerce style
+    }
+}
 .single-product-page-action-btn-catalog {
     display: flex;
     flex-wrap: wrap;
