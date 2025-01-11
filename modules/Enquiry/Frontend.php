@@ -176,7 +176,7 @@ class Frontend{
             
             wp_enqueue_script( 'frontend_js' );
             wp_enqueue_script( 'enquiry_form_js' );
-            wp_enqueue_style('mvx-catalog-style', Catalog()->plugin_url . 'build/index.css');
+            // wp_enqueue_style('mvx-catalog-style', Catalog()->plugin_url . 'build/index.css');
         }
     }
 
