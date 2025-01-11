@@ -17,7 +17,7 @@ const SelectInput = (props) => {
     });
     return (
         <>
-            <div className={props.wrapperClass} data={props.tour}>
+            <div className={props.wrapperClass}>
                 {
                     props.selectDeselect &&
                     <>

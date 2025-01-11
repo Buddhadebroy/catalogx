@@ -14,7 +14,7 @@ class Block {
         // Register the block
         add_action( 'init', [$this, 'register_blocks'] );
         // Enqueue the script and style for block editor
-        add_action( 'enqueue_block_editor_assets', [ $this,'enqueue_block_assets'] );
+        add_action( 'enqueue_block_editor_assets', [ $this,'enqueue_block_editor_assets'] );
         add_action( 'wp_enqueue_scripts', [ $this,'enqueue_block_assets'] );
 
         $this->blocks = $this->initialize_blocks();
@@ -101,6 +101,19 @@ class Block {
         }
 
         return $blocks;
+    }
+
+    public function enqueue_block_editor_assets() {
+        foreach ($this->blocks as $block_script) {
+            wp_enqueue_script($block_script['name'], Catalog()->plugin_url . 'build/blocks/' . $block_script['name'] . '/index.js', $block_script['react_dependencies'], Catalog()->version, true);
+            if (isset($block_script['localize']) && !empty($block_script['localize'])) {
+                $block_script['localize']['data']['apiUrl'] = untrailingslashit( get_rest_url() );
+                wp_localize_script($block_script['name'], $block_script['localize']['object_name'], $block_script['localize']['data']);
+            }
+            if (!empty($block_script['required_style'])) {
+                wp_enqueue_style( $block_script['required_style'], Catalog()->plugin_url . 'build/blocks/' . $block_script['name'] . '/index.css' );
+            }
+		}
     }
 
     public function enqueue_block_assets() {

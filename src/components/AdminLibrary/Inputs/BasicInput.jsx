@@ -1,7 +1,7 @@
 const BasicInput = (props) => {
     return (
         <>
-            <div className={props.wrapperClass} data={props.tour}>
+            <div className={props.wrapperClass}>
                 <label>
                     {props.inputLabel}
                 </label>

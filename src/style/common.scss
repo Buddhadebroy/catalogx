@@ -207,6 +207,10 @@ span.admin-pro-tag{
   text-align: right;
 }
 
+.reactour__popover span{
+  display: none; // for overwrite tour style
+}
+
 // Commone loader style
 .loader-wrapper{
     display: flex;
