@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from "axios";
 import { useTour } from '@reactour/tour';
 import { useModules } from '../../../contexts/ModuleContext';
-import gif from "../../../assets/images/customization-btn.gif"
+import gif from "../../../assets/images/product-page-builder.gif";
 
 
 const Tour = () => {
@@ -246,7 +246,8 @@ const Tour = () => {
                         <i class="admin-font adminLib-close"></i>
                     </div>
                     <h3>Arrange Enquiry Button</h3>
-                    {/* <img src={gif} width="290"/> */}
+                    
+                    <img src={gif} width="200"/>
                     <h4>With the Enquiry tab selected, drag and drop to position the Enquiry button and customize its look </h4>
                     <div className="tour-footer">
                         <button

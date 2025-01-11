@@ -207,8 +207,12 @@ span.admin-pro-tag{
   text-align: right;
 }
 
-.reactour__popover span{
-  display: none; // for overwrite tour style
+.reactour__popover {
+    max-height: 300px;
+    overflow: auto;
+  span{
+   display: none; // for overwrite tour style
+}
 }
 
 // Commone loader style
