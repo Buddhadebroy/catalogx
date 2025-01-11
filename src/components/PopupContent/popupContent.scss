@@ -88,6 +88,10 @@
   
   .MuiPaper-root {
     padding: 2rem;
+
+    span{
+      text-align: right;
+    }
   }
   
   .admin-module-dialog-title {

@@ -147,7 +147,6 @@ class Frontend{
     public function frontend_scripts() {
         $current_user = wp_get_current_user();
 
-        wp_register_style( 'mvx-catalog-product-style', Catalog()->plugin_url . '/build/blocks/enquiryForm/index.css' );
         wp_register_script( 'frontend_js', Catalog()->plugin_url . 'modules/Enquiry/assets/js/frontend.js', [ 'jquery', 'jquery-blockui' ], Catalog()->version, true );
         wp_register_script('enquiry_form_js', Catalog()->plugin_url . 'build/blocks/enquiryForm/index.js', [ 'jquery', 'jquery-blockui', 'wp-element', 'wp-i18n', 'wp-blocks', 'wp-hooks' ], Catalog()->version, true );
         wp_localize_script(
@@ -167,7 +166,8 @@ class Frontend{
         ]);
 
         if (is_product()) {
-            wp_enqueue_style( 'mvx-catalog-product-style' );
+            wp_enqueue_style( 'mvx-catalog-product-style', Catalog()->plugin_url . 'build/blocks/enquiryForm/index.css' );
+
             // additional css
             $additional_css_settings = Catalog()->setting->get_setting( 'custom_css_product_page' );
             if (isset($additional_css_settings) && !empty($additional_css_settings)) {
@@ -176,7 +176,6 @@ class Frontend{
             
             wp_enqueue_script( 'frontend_js' );
             wp_enqueue_script( 'enquiry_form_js' );
-            // wp_enqueue_style('mvx-catalog-style', Catalog()->plugin_url . 'build/index.css');
         }
     }
 

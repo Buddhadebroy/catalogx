@@ -601,7 +601,12 @@ span.admin-pro-tag{
 .reactour__mask{
   color: #0000008a !important; // to overwrite tour style
 }
-
+.tour-box .close-icon{
+  text-align: right;
+}
+.reactour__popover span{
+  display: none; // for overwrite tour style
+}
 // Commone loader style
 .loader-wrapper{
     display: flex;
