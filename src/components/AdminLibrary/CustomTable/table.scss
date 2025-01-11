@@ -225,6 +225,7 @@
     .rdt_TableRow {
       position: relative;
       padding: 0 0.313rem;
+      align-items: start;
 
       &:nth-child(odd) {
         background: $background-color;

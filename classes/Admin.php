@@ -93,7 +93,7 @@ class Admin {
 				</style>
                 <div class="upgrade-to-pro"><i style="margin-right: 0.25rem" class="dashicons dashicons-awards"></i>' . __( 'Upgrade to pro', 'woocommerce-catalog-enquiry' ). '</div>',
                 'manage_woocommerce',
-                'https://multivendorx.com/woocommerce-request-a-quote-product-catalog/'
+                'https://catalogx.com/pricing/?utm_source=plugin&utm_medium=settings&utm_campaign=tracking'
             ];
         }
 
