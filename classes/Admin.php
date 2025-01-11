@@ -9,7 +9,6 @@ class Admin {
     public function __construct() {
         add_action( 'admin_menu', [ $this, 'add_menu' ] );
         add_action( 'admin_enqueue_scripts', [ $this, 'enqueue_script' ] );
-        // $this->init_product_settings();
     }
 
     /**
@@ -256,61 +255,4 @@ class Admin {
         ]));
     }
 
-    // public function init_product_settings() {
-    //     global $Woocommerce_Catalog_Enquiry;
-    //     $settings = $Woocommerce_Catalog_Enquiry->options_general_settings;
-    //     $options_button_appearence_settings = $Woocommerce_Catalog_Enquiry->options_button_appearence_settings;
-    //     if (isset($settings['is_enable']) && mvx_catalog_get_settings_value($settings['is_enable'], 'checkbox') == "Enable") {
-    //         if (isset($options_button_appearence_settings['button_type']) && mvx_catalog_get_settings_value($options_button_appearence_settings['button_type'], 'select') == 3) {
-    //             add_filter('woocommerce_product_data_tabs', array($this, 'catalog_product_data_tabs'), 99);
-    //             add_action('woocommerce_product_data_panels', array($this, 'catalog_product_data_panel'));
-    //             add_action('woocommerce_process_product_meta_simple', array($this, 'save_catalog_data'));
-    //             add_action('woocommerce_process_product_meta_grouped', array($this, 'save_catalog_data'));
-    //             add_action('woocommerce_process_product_meta_external', array($this, 'save_catalog_data'));
-    //             add_action('woocommerce_process_product_meta_variable', array($this, 'save_catalog_data'));
-    //         }
-    //     }
-    // }
-
-    /**
-     * Summary of catalog_product_data_tabs
-     * @param mixed $tabs
-     * @return mixed
-     */
-    public function catalog_product_data_tabs($tabs) {
-        $tabs['woocommerce_catalog_enquiry'] = array(
-            'label' => __('Catalog Enquiry', 'woocommerce-catalog-enquiry'),
-            'target' => 'woocommerce-catalog-enquiry-product-data',
-            'class' => array(''),
-        );
-        return $tabs;
-    }
-
-    /**
-     * Save the product catalog enquiry meta data.
-     * @since 1.0.0
-     * @param int $post_id ID of the post being saved.
-     */
-    public function save_catalog_data( $post_id ) {
-        update_post_meta( $post_id, 'woocommerce_catalog_enquiry_product_link', esc_url( $_POST[ 'woocommerce_catalog_enquiry_product_link' ] ) );
-    }
-
-    /**
-     * Output catalog individual product link.
-     * Output settings to the product link tab.
-     * @since 1.0.0
-     */
-    public function catalog_product_data_panel() {
-        ?>
-        <div id="woocommerce-catalog-enquiry-product-data" class="panel woocommerce_options_panel"><?php
-        woocommerce_wp_text_input(
-            [
-                'id'          => 'woocommerce_catalog_enquiry_product_link',
-                'label'       => __('Enter product external link', 'woocommerce-catalog-enquiry'),
-                'placeholder' => __('https://www.google.com', 'woocommerce-catalog-enquiry')
-            ]
-        );
-        ?></div>
-        <?php
-    }
 }

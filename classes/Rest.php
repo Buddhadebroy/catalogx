@@ -55,12 +55,21 @@ class Rest {
 
 	}
 
-    function get_tour_status() {
+    /**
+     * get tour status
+     * @return \WP_Error|\WP_REST_Response
+     */
+    public function get_tour_status() {
         $status = get_option('catalog_tour_active', false);
         return ['active' => $status];
     }
     
-    function set_tour_status($request) {
+    /**
+     * set tour status
+     * @param mixed $request
+     * @return \WP_Error|\WP_REST_Response
+     */
+    public function set_tour_status($request) {
         update_option('catalog_tour_active', $request->get_param( 'active' ));
         return ['success' => true];
     }

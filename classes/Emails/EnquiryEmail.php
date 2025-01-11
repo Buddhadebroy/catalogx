@@ -34,28 +34,6 @@ class EnquiryEmail extends \WC_Email {
 		parent::__construct();
 	}
 
-	/**
-	 * Initialize email templates based on settings
-	 */
-	// protected function initialize_templates() {
-	// 	$base_template_path = Utill::is_pro_active() ? Catalog_PRO()->plugin_path . 'templates/' : Catalog()->plugin_path . 'templates/';
-	// 	$email_setting = Utill::is_pro_active() ? Catalog()->setting->get_setting('selected_email_tpl') : '';
-
-	// 	$template_map = [
-	// 		'template1' => 'emails/default-enquiry-template.php',
-	// 		'template2' => 'emails/enquiry-template1.php',
-	// 		'template3' => 'emails/enquiry-template2.php',
-	// 		'template4' => 'emails/enquiry-template3.php',
-	// 		'template5' => 'emails/enquiry-template4.php',
-	// 		'template6' => 'emails/enquiry-template5.php',
-	// 		'template7' => 'emails/enquiry-template6.php'
-	// 	];
-
-	// 	$this->template_html  = $template_map[$email_setting] ?? 'emails/woocommerce-catalog-enquiry-admin.php';
-	// 	$this->template_plain = 'emails/plain/enquiry-email-plain.php';
-	// 	$this->template_base  = $base_template_path;
-	// }
-
 	protected function initialize_templates() {
 		// Determine the base template path based on Pro status and email setting
 		$is_khali_dabba = Utill::is_khali_dabba();

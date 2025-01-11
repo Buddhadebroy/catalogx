@@ -240,6 +240,12 @@ class Frontend{
             return;
         }
 
+        if (!empty(Catalog()->setting->get_setting( 'is_enable_out_of_stock' )) ){
+            if ( $product->is_in_stock()) {
+                return;
+            }
+        }
+
         if ( Catalog()->setting->get_setting( 'is_enable_multiple_product_enquiry' ) && Utill::is_khali_dabba() ) {
             return;
         }
