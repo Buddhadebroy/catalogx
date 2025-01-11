@@ -47,7 +47,7 @@ const App = () => {
             <ModuleProvider modules={appLocalizer.active_modules}>
                 <TourProvider
                     steps={[]}
-                    afterOpen={disableBody}
+                    // afterOpen={disableBody}
                     beforeClose={enableBody}
                     disableDotsNavigation={true}
                     showNavigation={false}
