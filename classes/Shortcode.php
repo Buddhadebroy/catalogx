@@ -29,6 +29,12 @@ class Shortcode {
             wp_enqueue_style('quote_list_css', Catalog()->plugin_url . 'build/blocks/quote-cart/index.css');
     
             wp_enqueue_script('quote_thank_you_js', Catalog()->plugin_url . 'build/blocks/quote-thank-you/index.js', [ 'wp-blocks', 'jquery', 'jquery-blockui', 'wp-element', 'wp-i18n' ], Catalog()->version, true);
+            wp_localize_script(
+                'quote_thank_you_js', 'quote_thank_you', [
+                'apiUrl' => untrailingslashit(get_rest_url()),
+                'quote_my_account_url'  => site_url('/my-account/all-quotes/'),
+                'khali_dabba'           => Utill::is_khali_dabba(),
+            ]);
         }
     }
 
