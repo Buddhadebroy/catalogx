@@ -67,7 +67,7 @@ const Enquiry = (props) => {
                     <div className="module-details">
                         <h3>Restrict for logged-in user</h3>
                         <p className='module-description'>
-                        Add a quotation button, allowing customers to request personalized product quotes via email.
+                            If enabled, non-logged-in users can't access the enquiry flow.
                         </p>
                     </div>
                     <div className='toggle-checkbox'>

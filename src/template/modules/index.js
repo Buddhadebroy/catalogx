@@ -4,7 +4,7 @@ export default [
     {
         id: 'catalog',
         name: __("Catalog Showcase", "woocommerce-catalog-enquiry"),
-        desc: __("Idea for showcasing products by hiding prices, disabling purchases, and restricting cart/checkout access.", "woocommerce-catalog-enquiry"),
+        desc: __("Ideal for showcasing products by hiding prices, disabling purchases, and restricting cart/checkout access.", "woocommerce-catalog-enquiry"),
         icon: 'adminLib-catalog',
         doc_link: 'https://catalogx.com/docs/catalog/',
         settings_link: appLocalizer.site_url,

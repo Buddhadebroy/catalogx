@@ -252,7 +252,7 @@ const Tour = () => {
                     </h4>
                     <div className="tour-footer">
                         <button
-                            className="btn-purple end-tour-btn"
+                            className="btn-purple"
                             onClick={() => {
                                 finishTour();
                             }}
@@ -268,6 +268,7 @@ const Tour = () => {
     ];
 
     const finishTour = () => {
+        console.log('finish')
         setIsOpen(false); // Close the tour
         try {
             axios.post(`${appLocalizer.apiurl}/catalog/v1/tour`, { active: false });
@@ -283,6 +284,7 @@ const Tour = () => {
             if (window.location.href == appLocalizer.module_page_url) {
                 try {
                     const response = await axios.get(`${appLocalizer.apiurl}/catalog/v1/tour`);
+                    console.log(response)
                     if (response.data.active != '') {
                         setSteps(settingsTourSteps);
                         setIsOpen(true); // Start the tour
@@ -299,6 +301,22 @@ const Tour = () => {
     }, [isNavigating, setSteps]);
 
     return null;
+
+    // useEffect(() => {
+    //     if (!isNavigating) {
+    //         setSteps(settingsTourSteps);
+    //     }
+    // }, [isNavigating, setSteps]);
+
+    // return (
+    //     <>
+    //         {console.log('hii')}
+
+    //         <button onClick={() => setIsOpen(true)} style={{ marginBottom: '10px' }}>
+    //             Start Tour
+    //         </button>
+    //     </>
+    // );
 };
 
 export default Tour;

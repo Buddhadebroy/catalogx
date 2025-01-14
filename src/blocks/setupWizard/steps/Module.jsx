@@ -43,7 +43,7 @@ const Modules = (props) => {
                     <div className="module-details">
                         <h3>Catalog</h3>
                         <p className='module-description'>
-                            Showcase products by hiding prices, disabling purchases, and restricting access to cart and checkout for a streamlined display.
+                            Showcase products by hiding prices, disabling purchases, and restricting access to cart and checkout page.
                         </p>
                     </div>
                     <div className='toggle-checkbox'>
@@ -62,7 +62,7 @@ const Modules = (props) => {
                     <div className="module-details">
                         <h3>Enquiry </h3>
                         <p className='module-description'>
-                            Add an enquiry button on product pages to enable customers to directly email inquiries to the admin.
+                        Add a button for customers to submit inquiries, sending their details and message to the admin for a response.
                         </p>
                     </div>
                     <div className='toggle-checkbox'>
@@ -81,7 +81,7 @@ const Modules = (props) => {
                     <div className="module-details">
                         <h3>Quote</h3>
                         <p className='module-description'>
-                        Add a quotation button, allowing customers to request personalized product quotes via email.
+                        Include a quotation button for customers to request personalized product quotes via email.
                         </p>
                     </div>
                     <div className='toggle-checkbox'>
