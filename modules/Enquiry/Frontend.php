@@ -87,7 +87,13 @@ class Frontend{
                 '. esc_html( $button_onhover_style ) .'
                 } 
             </style>';
-        } 
+        }
+
+        $additional_css_settings = Catalog()->setting->get_setting( 'custom_css_product_page' );
+        if (isset($additional_css_settings) && !empty($additional_css_settings)) {
+            $button_css .= $additional_css_settings;
+        }
+        
         $settings_array[ 'button_text' ] = !empty( $settings_array[ 'button_text' ] ) ? $settings_array[ 'button_text' ] : \CatalogEnquiry\Utill::get_translated_string( 'woocommerce-catalog-enquiry', 'send_an_enquiry', 'Send an enquiry' );
         $button_position_settings = Catalog()->setting->get_setting( 'shop_page_button_position_setting' );
         $button_position_settings = is_array($button_position_settings) ? $button_position_settings : [];
@@ -276,7 +282,12 @@ class Frontend{
                 '. esc_html( $button_onhover_style ) .'
                 } 
             </style>';
-        } 
+        }
+
+        $additional_css_settings = Catalog()->setting->get_setting( 'custom_css_product_page' );
+        if (isset($additional_css_settings) && !empty($additional_css_settings)) {
+            $button_css .= $additional_css_settings;
+        }
         $button_text = !empty( $settings_array[ 'button_text' ] ) ? $settings_array[ 'button_text' ] : \CatalogEnquiry\Utill::get_translated_string( 'woocommerce-catalog-enquiry', 'send_an_enquiry', 'Send an enquiry' );
         if ( is_shop() ) {
             global $product;
