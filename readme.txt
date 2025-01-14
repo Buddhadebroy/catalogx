@@ -1,6 +1,6 @@
 === CatalogX - Product Catalog Mode For WooCommerce ===
 Contributors: wcmp
-Tags: product enquiry, woocommerce catalog ,request a quote, Product Catalog, wordpress catalog
+Tags: product enquiry, woocommerce catalog ,request a quote, b2b, wholesale pricing
 Donate link: https://multivendorx.com/donate
 Requires at least: 5.0
 Tested up to: 6.6.2
