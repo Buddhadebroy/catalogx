@@ -53,7 +53,7 @@ const Customizer = (props) => {
           className="btn-customizer-menu-items"
           onClick={(e) => setSelect("setting")}
         >
-          <i className="admin-font adminLib-setting-1"></i>
+          <i className="admin-font adminLib-setting"></i>
         </div>
       </div>
       {(select === "color" ||
