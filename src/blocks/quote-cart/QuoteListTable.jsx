@@ -109,7 +109,6 @@ const QuoteList = () => {
 				formData : formData,
 			},
 		}).then((response) => {
-			console.log(response);
 			setLoading(false);
 			setResponseContent(true);
 			if(response.status === 200 ){
@@ -166,7 +165,6 @@ const QuoteList = () => {
 
 	return (
 		<>
-		{console.log(formData)}
 			<div className="admin-enrollment-list QuoteListTable-main-wrapper">
 				<div className="admin-page-title">
 					<div className="add-to-quotation-button">

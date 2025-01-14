@@ -19,9 +19,6 @@ const SetupWizard = () => {
 	}
 
 	const onFinish = () => {
-		console.log('finishh');
-		console.log(appLocalizer.redirect_url);
-
 		window.location.href = appLocalizer.redirect_url
 	}
 

@@ -23,12 +23,12 @@ const Modules = (props) => {
 
     const moduleSave = () => {
         setLoading(true);
-		const modulesToSave = Object.keys(selectedModules).filter(key => selectedModules[key]);
+        const modulesToSave = Object.keys(selectedModules).filter(key => selectedModules[key]);
         axios({
             method: "post",
             url: getApiLink('module-save'),
             headers: { "X-WP-Nonce": appLocalizer.nonce },
-            data: {modules : modulesToSave}
+            data: { modules: modulesToSave }
         }).then((response) => {
             setLoading(false);
             onNext();
@@ -40,7 +40,12 @@ const Modules = (props) => {
             <h2>Modules</h2>
             <article className='module-wrapper'>
                 <div className="module-items">
-                    <p>Catalog</p>
+                    <div className="module-details">
+                        <h3>Catalog</h3>
+                        <p className='module-description'>
+                            Showcase products by hiding prices, disabling purchases, and restricting access to cart and checkout for a streamlined display.
+                        </p>
+                    </div>
                     <div className='toggle-checkbox'>
                         <input
                             type="checkbox"
@@ -52,9 +57,14 @@ const Modules = (props) => {
                         <label htmlFor="catalog"></label>
                     </div>
                 </div>
-                
+
                 <div className="module-items">
-                    <p>Enquiry</p>
+                    <div className="module-details">
+                        <h3>Enquiry </h3>
+                        <p className='module-description'>
+                            Add an enquiry button on product pages to enable customers to directly email inquiries to the admin.
+                        </p>
+                    </div>
                     <div className='toggle-checkbox'>
                         <input
                             type="checkbox"
@@ -66,9 +76,14 @@ const Modules = (props) => {
                         <label htmlFor="enquiry"></label>
                     </div>
                 </div>
-                
+
                 <div className="module-items">
-                    <p>Quote</p>
+                    <div className="module-details">
+                        <h3>Quote</h3>
+                        <p className='module-description'>
+                        Add a quotation button, allowing customers to request personalized product quotes via email.
+                        </p>
+                    </div>
                     <div className='toggle-checkbox'>
                         <input
                             type="checkbox"
@@ -80,7 +95,7 @@ const Modules = (props) => {
                         <label htmlFor="quote"></label>
                     </div>
                 </div>
-            
+
             </article>
             <footer className='setup-footer-btn-wrapper'>
                 <div>

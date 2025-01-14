@@ -19,7 +19,6 @@ const AddRole = (props) => {
 				inheritRole: inheritRole,
 			},
 		}).then((response) => {
-			console.log(response.data.msg);
             setOpenDialog(false);
 
 		});

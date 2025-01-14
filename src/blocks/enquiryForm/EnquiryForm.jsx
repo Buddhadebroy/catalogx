@@ -26,8 +26,6 @@ const FreeForm = (props) => {
         const { name, value, type, files } = e.target;
 
         if (type === 'file') {
-            console.log(e.target.files[0].name)
-            console.log(files[0])
             setFileName( e.target.files[0].name )
             setInputs((prevData) => ({
                 ...prevData,
@@ -212,7 +210,6 @@ const EnquiryForm = (props) => {
             setLoading(false);
             setToast(true);
             if(response.data.redirect_link !== ''){
-                console.log('response.data', response.data)
                 window.location.href = response.data.redirect_link;
             }
             setTimeout(() => {

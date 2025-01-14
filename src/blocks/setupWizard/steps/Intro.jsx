@@ -2,7 +2,6 @@ import React from 'react';
 
 const Intro = (props) => {
     const { onNext } = props;
-    console.log(onNext)
 
     return (
         <section>

@@ -38,7 +38,12 @@ const Quote = (props) => {
             <h2>Quote</h2>
             <article className='module-wrapper'>
                 <div className="module-items">
-                    <p>Restrict for logged-in user</p>
+                    <div className="module-details">
+                        <h3>Restrict for logged-in user</h3>
+                        <p className='module-description'>
+                        If enabled, non-logged-in users cannot submit quotation requests.
+                        </p>
+                    </div>
                     <div className='toggle-checkbox'>
                         <input
                             type="checkbox"

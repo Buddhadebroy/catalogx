@@ -222,7 +222,12 @@ span.admin-pro-tag {
   }
   .tour-footer{
     display:flex;
-    justify-content:space-between;
+    justify-content: end;
+    gap: 0.5rem;
+    flex-direction: row-reverse;
+    .end-tour-btn{
+      background: #522c81a6;
+    }
   }
 }
 

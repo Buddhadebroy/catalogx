@@ -44,7 +44,12 @@ const Enquiry = (props) => {
             <h2>Enquiry</h2>
             <article className='module-wrapper'>
                 <div className='module-items'>
-                    <p>Display Enquiry Form:</p>
+                    <div className="module-details">
+                        <h3>Display Enquiry Form:</h3>
+                        <p className='module-description'>
+                        Select whether the form is displayed directly on the page or in a pop-up window.
+                        </p>
+                    </div>
                     <ul>
                         <li>
                             <input className="toggle-setting-form-input" type="radio" id="popup" name="approve_vendor" value="popup" checked={displayOption === 'popup'} />
@@ -59,7 +64,12 @@ const Enquiry = (props) => {
             </article>
             <article className='module-wrapper'>
                 <div className="module-items">
-                    <p>Restrict for logged-in user</p>
+                    <div className="module-details">
+                        <h3>Restrict for logged-in user</h3>
+                        <p className='module-description'>
+                        Add a quotation button, allowing customers to request personalized product quotes via email.
+                        </p>
+                    </div>
                     <div className='toggle-checkbox'>
                         <input
                             type="checkbox"
