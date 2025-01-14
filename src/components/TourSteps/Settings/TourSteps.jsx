@@ -35,6 +35,7 @@ const Tour = () => {
     const settingsTourSteps = [
         {
             selector: '[data="catalog-showcase-tour"]',
+            placement: 'top',
             content: () => (
                 <div class="tour-box">
                     <h3>Enable Catalog Mode</h3>
@@ -157,7 +158,7 @@ const Tour = () => {
                                 } else {
                                     navigateTo(
                                         appLocalizer.customization_settings_url,
-                                        5,
+                                        6,
                                         '.enquiry-tab'
                                     )
                                     // setCurrentStep(6);
@@ -191,7 +192,7 @@ const Tour = () => {
                             onClick={() => {
                                 navigateTo(
                                     appLocalizer.customization_settings_url,
-                                    5,
+                                    6,
                                     '.enquiry-tab'
                                 )
                             }}
@@ -240,27 +241,30 @@ const Tour = () => {
             ),
         },
         {
-            selector: '.enquiry-btn',
+            selector: ".enquiry-btn",
             content: () => (
-                <div class="tour-box">
+                <div className="tour-box">
                     <h3>Arrange Enquiry Button</h3>
-                    
-                    <img src={gif} width="200"/>
-                    <h4>With the Enquiry tab selected, drag and drop to position the Enquiry button and customize its look </h4>
+                    <img src={gif} alt="Guide" width="160" />
+                    <h4>
+                        With the Enquiry tab selected, drag and drop to position the
+                        Enquiry button and customize its look.
+                    </h4>
                     <div className="tour-footer">
                         <button
                             className="btn-purple"
                             onClick={() => {
-                                finishTour()
-                            }
-                            }
+                                finishTour();
+                            }}
                         >
                             Finish
                         </button>
                     </div>
                 </div>
             ),
-        },
+            position: "auto", // Adjust dynamically based on space
+        }
+        
     ];
 
     const finishTour = () => {
