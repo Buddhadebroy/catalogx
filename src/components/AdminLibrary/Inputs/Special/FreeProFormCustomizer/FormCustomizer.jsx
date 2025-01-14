@@ -5,7 +5,7 @@ import SubTabSection from '../SubTabSection/SubTabSection';
 import ProForm from '../RegistrationForm/RegistrationForm';
 
 const FormCustomizer = (props) => {
-    const {setting, proSetting, proSettingChange, onChange} = props;
+    const {setting, proSetting, proSettingChange, moduleDependChange, onChange} = props;
     const settingChange = useRef(false);
     const [formFieldsData, setFromFieldsData] = useState(setting['freefromsetting'] || []);
     
@@ -21,6 +21,7 @@ const FormCustomizer = (props) => {
     }
     
     const activeDeactiveFields = (fieldKey, activeStatus) => {
+        if (moduleDependChange()) return;
         settingChange.current = true;
         if (getFields(fieldKey)) {
             setFromFieldsData((prevData) => {
@@ -39,6 +40,7 @@ const FormCustomizer = (props) => {
     }
     
     const updateFieldLabel = (fieldKey, labelValue) => {
+        if (moduleDependChange()) return;
         settingChange.current = true;
         if (getFields(fieldKey)) {
             setFromFieldsData((prevData) => {
@@ -107,6 +109,7 @@ const FormCustomizer = (props) => {
 
     return (
         <>
+
             <SubTabSection menuitem={menu} currentTab={currentTab} setCurrentTab={setCurrentTab} />
             {
                 currentTab.id == 1 ?
