@@ -845,6 +845,7 @@ const DynamicForm = (props) => {
               setting={setting}
               proSetting={isProSetting(inputField.proSetting)}
               proSettingChange={()=> proSettingChanged(inputField.proSetting)}
+              moduleDependChange={()=> moduleDependChanged(inputField.moduleDepend)}
               onChange={(key, value) => {
                   settingChanged.current = true;
                   updateSetting(key, value);

@@ -37,14 +37,6 @@ const Tour = () => {
             selector: '[data="catalog-showcase-tour"]',
             content: () => (
                 <div class="tour-box">
-                    <div 
-                        onClick={() => {
-                                finishTour();
-                            }}
-                        className="close-icon"
-                    >
-                        <i class="admin-font adminLib-close"></i>
-                    </div>
                     <h3>Enable Catalog Mode</h3>
                     <h4>Activate Catalog mode to display your site as a product catalog, removing the "Add to Cart" button and optionally hiding prices.</h4>
                     <div className="tour-footer">
@@ -56,6 +48,15 @@ const Tour = () => {
                         >
                             Next
                         </button>
+                        <button
+                            className="btn-purple"
+                            onClick={() => {
+                                finishTour()
+                            }
+                            }
+                        >
+                            End Tour
+                        </button>
                     </div>
                 </div>
             ),
@@ -64,14 +65,6 @@ const Tour = () => {
             selector: '[data="enquiry-showcase-tour"]',
             content: () => (
                 <div class="tour-box">
-                    <div 
-                        onClick={() => {
-                                finishTour();
-                            }}
-                        className="close-icon"
-                    >
-                        <i class="admin-font adminLib-close"></i>
-                    </div>
                     <h3>Enable Enquiry Mode</h3>
                     <h4>Turn on Enquiry mode to add an "Enquiry" button for customers, allowing direct communication via submitted forms, viewable in the admin dashboard or via email.</h4>
                     <div className="tour-footer">
@@ -96,6 +89,15 @@ const Tour = () => {
                         >
                             Next
                         </button>
+                        <button
+                            className="btn-purple"
+                            onClick={() => {
+                                finishTour()
+                            }
+                            }
+                        >
+                            End Tour
+                        </button>
                     </div>
                 </div>
             ),
@@ -105,14 +107,6 @@ const Tour = () => {
             selector: '.enable-visibility',
             content: () => (
                 <div class="tour-box">
-                    <div 
-                        onClick={() => {
-                                finishTour();
-                            }}
-                        className="close-icon"
-                    >
-                        <i class="admin-font adminLib-close"></i>
-                    </div>
                     <h3>Customize Enquiry Form</h3>
                     <h4>Head to the Enquiry Form Builder to enable the fields customers need to fill out when submitting product inquiries.</h4>
                     <div className="tour-footer">
@@ -128,6 +122,15 @@ const Tour = () => {
                         >
                             Next
                         </button>
+                        <button
+                            className="btn-purple"
+                            onClick={() => {
+                                finishTour()
+                            }
+                            }
+                        >
+                            End Tour
+                        </button>
                     </div>
                 </div>
             ),
@@ -137,14 +140,6 @@ const Tour = () => {
             selector: '[data="quote-showcase-tour"]',
             content: () => (
                 <div class="tour-box">
-                    <div 
-                        onClick={() => {
-                                finishTour();
-                            }}
-                        className="close-icon"
-                    >
-                        <i class="admin-font adminLib-close"></i>
-                    </div>
                     <h3>Enable Quote Module</h3>
                     <h4>Activate the Quote module to let customers request personalized product quotations. Admins can review the quotes and provide tailored pricing for customers to proceed with purchases.</h4>
                     <div className="tour-footer">
@@ -171,6 +166,15 @@ const Tour = () => {
                         >
                             Next
                         </button>
+                        <button
+                            className="btn-purple"
+                            onClick={() => {
+                                finishTour()
+                            }
+                            }
+                        >
+                            End Tour
+                        </button>
                     </div>
                 </div>
             ),
@@ -179,14 +183,6 @@ const Tour = () => {
             selector: '[data="quote-permission"]',
             content: () => (
                 <div class="tour-box">
-                    <div 
-                        onClick={() => {
-                                finishTour();
-                            }}
-                        className="close-icon"
-                    >
-                        <i class="admin-font adminLib-close"></i>
-                    </div>
                     <h3>Configure Quote Settings</h3>
                     <h4>Set up your quotation settings by defining whether to limit quote requests to logged-in users only.</h4>
                     <div className="tour-footer">
@@ -202,6 +198,15 @@ const Tour = () => {
                         >
                             Next
                         </button>
+                        <button
+                            className="btn-purple"
+                            onClick={() => {
+                                finishTour()
+                            }
+                            }
+                        >
+                            End Tour
+                        </button>
                     </div>
                 </div>
             ),
@@ -210,14 +215,6 @@ const Tour = () => {
             selector: '.enquiry-tab',
             content: () => (
                 <div class="tour-box">
-                    <div 
-                        onClick={() => {
-                                finishTour();
-                            }}
-                        className="close-icon"
-                    >
-                        <i class="admin-font adminLib-close"></i>
-                    </div>
                     <h3>Customize with Live Page Builder</h3>
                     <h4>Use the Live Page Builder to select the Enquiry or Quote tab and customize the respective buttons to match your site's design.</h4>
                     <div className="tour-footer">
@@ -229,6 +226,15 @@ const Tour = () => {
                         >
                             Next
                         </button>
+                        <button
+                            className="btn-purple"
+                            onClick={() => {
+                                finishTour()
+                            }
+                            }
+                        >
+                            End Tour
+                        </button>
                     </div>
                 </div>
             ),
@@ -237,14 +243,6 @@ const Tour = () => {
             selector: '.enquiry-btn',
             content: () => (
                 <div class="tour-box">
-                    <div 
-                        onClick={() => {
-                                finishTour();
-                            }}
-                        className="close-icon"
-                    >
-                        <i class="admin-font adminLib-close"></i>
-                    </div>
                     <h3>Arrange Enquiry Button</h3>
                     
                     <img src={gif} width="200"/>

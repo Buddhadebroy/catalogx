@@ -203,13 +203,13 @@ span.admin-pro-tag{
 .reactour__mask{
   color: #0000008a !important; // to overwrite tour style
 }
-.tour-box .close-icon{
-  text-align: right;
+.tour-box{
+  h3{
+    margin-top:0;
+  }
 }
 
 .reactour__popover {
-    max-height: 300px;
-    overflow: auto;
   span{
    display: none; // for overwrite tour style
 }
