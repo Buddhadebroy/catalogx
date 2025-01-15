@@ -6,7 +6,6 @@ import gif from "../../../assets/images/product-page-builder.gif";
 
 
 const Tour = () => {
-    const { modules } = useModules();
     const { setIsOpen, setSteps, setCurrentStep } = useTour();
     const [isNavigating, setIsNavigating] = useState(false);
 

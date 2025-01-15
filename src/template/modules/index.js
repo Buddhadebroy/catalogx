@@ -43,7 +43,7 @@ export default [
         desc: __("You can set up various rules to modify the prices of different categories and products in bulk, targeting specific customers and user roles."),
         icon: 'adminLib-dynamic-pricing',
         doc_link: 'https://catalogx.com/docs/dynamic-pricing-rules/',
-        settings_link: appLocalizer.site_url,
+        settings_link: appLocalizer.rule_url,
         pro_module: true
     },
 ]
