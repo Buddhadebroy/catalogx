@@ -64,7 +64,9 @@
             &::-webkit-scrollbar-thumb{
               background: $color-active;
             }
-
+            h2{
+              margin-top:0;
+            }
             ul{
                 list-style: none;
                 padding: 0;
@@ -142,7 +144,7 @@
                             border-radius: $border-radius-small;
                             box-shadow: 0 0 1rem rgba(0, 0, 0, 0.125);
                             top: 2rem;
-                            left: -2rem;
+                            left: 0;
                             z-index: 1;
                             padding: 0;
 

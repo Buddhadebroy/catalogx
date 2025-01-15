@@ -285,10 +285,22 @@
               align-items: flex-start;
               gap: 0.25rem;
 
+              .status-show-btn{
+                &.rejected{                
+                  background: red;
+                  color:$color-white;
+                }
+                
+                &.approved{
+                  background: green;
+                  color:$color-white;
+                }
+              }
               &:hover {
                 .action-btn {
                   visibility: visible;
                 }
+
               }
 
               .action-btn {
