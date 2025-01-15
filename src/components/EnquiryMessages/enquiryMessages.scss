@@ -930,13 +930,19 @@
           z-index: 1;
         }
 
-        button{
+        .chat-more-option-button,
+        .controls-btn{
           background: transparent;
           padding: 0.2rem 0.4rem;
           border:none;
 
           span{
-            padding-left: 0.5rem;
+            padding-left: 0.875rem;
+          }
+        }
+        .media-uploader{
+          span{
+            padding-left: 0.625rem;
           }
         }
         .chat-more-option-button i{
@@ -956,7 +962,11 @@
           i{
             font-size: 1.4rem;
           }  
-         
+          &.quote-btn{
+            i{
+              font-size: 1rem;
+            }
+          }
         }
         .emoji{
           font-size: 1.5rem;
@@ -1286,11 +1296,7 @@
       margin-right: 0.625rem;
 
       button{
-        color: $color-white;
-        width: 100%;
-        padding: 0.5rem;
-        background-color: $color-active;
-        border-radius: $border-radius-small;
+        margin-top:1rem;
       }
     }
 
@@ -1372,14 +1378,7 @@
         width: 100%;
 
         a{
-          display: block;
-          color: $color-white;
           width: 100%;
-          padding: 0.5rem;
-          text-align: center;
-          background-color: $color-active;
-          border-radius: $border-radius-small;
-          cursor: pointer;
         }
       }
     }

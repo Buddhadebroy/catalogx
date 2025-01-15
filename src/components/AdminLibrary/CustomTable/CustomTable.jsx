@@ -33,7 +33,7 @@ const LoadingTable = () => {
 export const TableCell = (props) => {
   return (
     <>
-      <div title={props.value} className="table-row-custom">
+      <div title={props.value} className="order-status table-row-custom">
         {props.children}
       </div>
     </>
@@ -202,7 +202,7 @@ const CustomTable = (props) => {
               onClick={(e) => { setFilterData({ typeCount: countInfo.key }) }}
               className={countInfo.key == typeCountActive ? 'type-count-active' : ''}
             >
-              {`${countInfo.name} (${countInfo.count})`}
+              {`${countInfo.name} (${countInfo.count})`} |
             </div>
           ))
         }

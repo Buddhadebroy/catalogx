@@ -262,7 +262,13 @@
             }
           }
         }
-
+        .order-status{
+          span{
+            background: #e5e5e5;
+            padding: 0.5rem 0.875rem;
+            border-radius: 0.25rem;
+          }
+          }
         .table-row-custom {
           display: flex;
           align-items: center;
