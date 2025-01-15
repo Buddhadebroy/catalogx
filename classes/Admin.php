@@ -19,8 +19,8 @@ class Admin {
         global $submenu;
 
         add_menu_page(
-            __( 'catalog', 'woocommerce-catalog-enquiry' ),
-            __( 'CatalogX', 'woocommerce-catalog-enquiry' ),
+            __( 'catalog', 'catalogx' ),
+            __( 'CatalogX', 'catalogx' ),
             'manage_woocommerce',
             'catalog',
             [ $this, 'menu_page_callback' ],
@@ -30,8 +30,8 @@ class Admin {
 
         add_submenu_page(
             'catalog',
-            __( 'Enquiry Messages', 'woocommerce-catalog-enquiry' ),
-            __( 'Enquiry Messages', 'woocommerce-catalog-enquiry' ),
+            __( 'Enquiry Messages', 'catalogx' ),
+            __( 'Enquiry Messages', 'catalogx' ),
             'manage_woocommerce',
             'catalog#&tab=enquiry-messages',
             '__return_null'
@@ -39,8 +39,8 @@ class Admin {
 
         add_submenu_page(
             'catalog',
-            __( 'Quotation Requests', 'woocommerce-catalog-enquiry' ),
-            __( 'Quotation Requests', 'woocommerce-catalog-enquiry' ),
+            __( 'Quotation Requests', 'catalogx' ),
+            __( 'Quotation Requests', 'catalogx' ),
             'manage_woocommerce',
             'catalog#&tab=quote-requests',
             '__return_null'
@@ -48,8 +48,8 @@ class Admin {
 
         add_submenu_page(
             'catalog',
-            __( 'Wholesale Users', 'woocommerce-catalog-enquiry' ),
-            __( 'Wholesale Users', 'woocommerce-catalog-enquiry' ),
+            __( 'Wholesale Users', 'catalogx' ),
+            __( 'Wholesale Users', 'catalogx' ),
             'manage_woocommerce',
             'catalog#&tab=wholesale-users',
             '__return_null'
@@ -57,8 +57,8 @@ class Admin {
 
         add_submenu_page(
             'catalog',
-            __('Dynamic Pricing Rules', 'woocommerce-catalog-enquiry'),
-            __('Dynamic Pricing Rules', 'woocommerce-catalog-enquiry'),
+            __('Dynamic Pricing Rules', 'catalogx'),
+            __('Dynamic Pricing Rules', 'catalogx'),
             'manage_woocommerce',
             'catalog#&tab=rules',
             '__return_null'
@@ -66,8 +66,8 @@ class Admin {
 
         add_submenu_page(
             'catalog',
-            __( 'Settings', 'woocommerce-catalog-enquiry' ),
-            __( 'Settings', 'woocommerce-catalog-enquiry' ),
+            __( 'Settings', 'catalogx' ),
+            __( 'Settings', 'catalogx' ),
             'manage_woocommerce',
             'catalog#&tab=settings&subtab=all_settings',
             '__return_null'
@@ -75,8 +75,8 @@ class Admin {
 
         add_submenu_page(
             'catalog',
-            __( 'Modules', 'woocommerce-catalog-enquiry' ),
-            __( 'Modules', 'woocommerce-catalog-enquiry' ),
+            __( 'Modules', 'catalogx' ),
+            __( 'Modules', 'catalogx' ),
             'manage_woocommerce',
             'catalog#&tab=modules',
             '__return_null'
@@ -90,7 +90,7 @@ class Admin {
 						color: White !important;
 					};
 				</style>
-                <div class="upgrade-to-pro"><i style="margin-right: 0.25rem" class="dashicons dashicons-awards"></i>' . __( 'Upgrade to pro', 'woocommerce-catalog-enquiry' ). '</div>',
+                <div class="upgrade-to-pro"><i style="margin-right: 0.25rem" class="dashicons dashicons-awards"></i>' . __( 'Upgrade to pro', 'catalogx' ). '</div>',
                 'manage_woocommerce',
                 'https://catalogx.com/pricing/?utm_source=plugin&utm_medium=settings&utm_campaign=tracking'
             ];
@@ -216,7 +216,7 @@ class Admin {
         // Enque script and style
         wp_enqueue_style('mvx-catalog-style', Catalog()->plugin_url . 'build/index.css');
         wp_enqueue_script('mvx-catalog-script', Catalog()->plugin_url . 'build/index.js', [ 'wp-element', 'wp-i18n', 'react-jsx-runtime' ], '1.0.0', true);
-        wp_set_script_translations( 'mvx-catalog-script', 'woocommerce-catalog-enquiry' );
+        wp_set_script_translations( 'mvx-catalog-script', 'catalogx' );
 
         // Localize script
         wp_localize_script( 'mvx-catalog-script', 'appLocalizer', apply_filters( 'catalog_settings', [

@@ -98,7 +98,7 @@ class Rest {
             $product_id = $product['id'];
             $quantity = $product['quantity'];
             Catalog()->quotecart->update_cart( $product['key'], 'quantity', $quantity );
-            $update_msg =  __( 'Quote cart updated!', 'woocommerce-catalog-enquiry');
+            $update_msg =  __( 'Quote cart updated!', 'catalogx');
         }
 
         return rest_ensure_response(['msg' => $update_msg]);
@@ -163,7 +163,7 @@ class Rest {
             $order->update_status('wc-quote-rejected');
             $order->set_customer_note($reason);
             $order->save();
-            return rest_ensure_response(['message' => sprintf( __( 'You have confirmed rejection of the quotation No: %d', 'woocommerce-catalog-enquiry' ) , $order_id )]);
+            return rest_ensure_response(['message' => sprintf( __( 'You have confirmed rejection of the quotation No: %d', 'catalogx' ) , $order_id )]);
         }
     }
 }

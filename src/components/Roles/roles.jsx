@@ -97,7 +97,7 @@ const Roles = () => {
 	//columns for the data table
 	const columns = [
 		{
-			name: __("Role", "woocommerce-catalog-enquiry"),
+			name: __("Role", "catalogx"),
 			cell: (row) => (
 				<TableCell title="Role">
 					<div className='action-section'>
@@ -107,7 +107,7 @@ const Roles = () => {
 			),
 		},
 		{
-			name: __("Discount Type", "woocommerce-catalog-enquiry"),
+			name: __("Discount Type", "catalogx"),
 			cell: (row) => (
 				<TableCell title="Discount type">
 					<div className='action-section'>
@@ -121,7 +121,7 @@ const Roles = () => {
 			),
 		},
 		{
-			name: __("Discount Amount", "woocommerce-catalog-enquiry"),
+			name: __("Discount Amount", "catalogx"),
 			cell: (row) => (
 				<TableCell title="Discount Amount">
 					<div className='action-section'>
@@ -131,7 +131,7 @@ const Roles = () => {
 			),
 		},
         {
-			name: __("Minimum Quantity", "woocommerce-catalog-enquiry"),
+			name: __("Minimum Quantity", "catalogx"),
 			cell: (row) => (
 				<TableCell title="Minimum Quantity">
 					<div className='action-section'>
@@ -190,7 +190,7 @@ const Roles = () => {
 			) : ( */}
 				<div className="admin-roles-list">
 					<div className="admin-page-title">
-						<p>{__("Roles", "woocommerce-catalog-enquiry")}</p>
+						<p>{__("Roles", "catalogx")}</p>
                         <div className="add-to-quotation-button">
                             <button onClick={handleAddRole}>
                                 Add Role

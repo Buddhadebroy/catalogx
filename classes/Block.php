@@ -119,7 +119,7 @@ class Block {
     public function enqueue_block_assets() {
         global $post;
         foreach ($this->blocks as $block_script) {
-            if (has_block('woocommerce-catalog-enquiry/' . $block_script['name'], $post->post_content)) {
+            if (has_block('catalogx/' . $block_script['name'], $post->post_content)) {
                 wp_enqueue_script($block_script['name'], Catalog()->plugin_url . 'build/blocks/' . $block_script['name'] . '/index.js', $block_script['react_dependencies'], Catalog()->version, true);
                 if (isset($block_script['localize']) && !empty($block_script['localize'])) {
                     $block_script['localize']['data']['apiUrl'] = untrailingslashit( get_rest_url() );
@@ -136,7 +136,7 @@ class Block {
         // Adding a new category.
         $categories[] = [
             'slug'  => 'catalogx',
-            'title' => __( 'Catalogx', 'woocommerce-catalog-enquiry' )
+            'title' => __( 'Catalogx', 'catalogx' )
         ];
         return $categories;
     }

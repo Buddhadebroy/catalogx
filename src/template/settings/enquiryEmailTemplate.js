@@ -3,23 +3,23 @@ import { __ } from '@wordpress/i18n';
 export default {
     id: 'enquiry_email_temp',
     priority: 50,
-    name: __("Enquiry Email ", "woocommerce-catalog-enquiry"),
-    desc: __("Select your preffered enquiry details email template", "woocommerce-catalog-enquiry"),
+    name: __("Enquiry Email ", "catalogx"),
+    desc: __("Select your preffered enquiry details email template", "catalogx"),
     icon: 'adminLib-mail',
     submitUrl: 'save_enquiry',
     modal: [
         {
             key: 'separator_content',
             type: 'section',
-            desc: __("Common Settings", "woocommerce-catalog-enquiry"),
-            hint: __("", "woocommerce-catalog-enquiry"),
+            desc: __("Common Settings", "catalogx"),
+            hint: __("", "catalogx"),
         },
         {
             key: 'additional_alert_email',
             type: 'textarea',
             class: 'woo-setting-wpeditor-class',
-            desc: __("Set the email address to receive notifications when a user submits enquiry of a product. You can add multiple comma-separated emails.<br/> Default: The admin\'s email is set as the receiver. Exclude the admin\'s email from the list to exclude admin from receiving these notifications.", "woocommerce-catalog-enquiry"),
-            label: __("Recipient email for new subscriber", "woocommerce-catalog-enquiry"),
+            desc: __("Set the email address to receive notifications when a user submits enquiry of a product. You can add multiple comma-separated emails.<br/> Default: The admin\'s email is set as the receiver. Exclude the admin\'s email from the list to exclude admin from receiving these notifications.", "catalogx"),
+            label: __("Recipient email for new subscriber", "catalogx"),
             moduleDepend: 'enquiry',
         },
         {

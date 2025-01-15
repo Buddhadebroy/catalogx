@@ -1,6 +1,6 @@
 {
   "apiVersion": 2,
-  "name": "woocommerce-catalog-enquiry/quote-cart",
+  "name": "catalogx/quote-cart",
   "title": "Quote Cart",
   "category": "catalogx",
   "icon": "list-view",
@@ -8,6 +8,6 @@
   "supports": {
     "html": false
   },
-  "textdomain": "woocommerce-catalog-enquiry",
+  "textdomain": "catalogx",
   "editorScript": "file:./index.js"
 }

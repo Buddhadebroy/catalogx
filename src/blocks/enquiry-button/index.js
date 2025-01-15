@@ -5,7 +5,7 @@ import { useState, useEffect } from '@wordpress/element';
 import { useSelect } from '@wordpress/data';
 import axios from 'axios';
 
-registerBlockType('woocommerce-catalog-enquiry/enquiry-button', {
+registerBlockType('catalogx/enquiry-button', {
     title: 'Enquiry Button',
     icon: 'button',
     category: 'catalogx',
@@ -21,7 +21,7 @@ registerBlockType('woocommerce-catalog-enquiry/enquiry-button', {
 
     edit: ({ attributes, setAttributes }) => {
         const blockProps = useBlockProps();
-        const [contentHtml, setContentHtml] = useState(__('Loading ...', 'woocommerce-catalog-enquiry'));
+        const [contentHtml, setContentHtml] = useState(__('Loading ...', 'catalogx'));
 
         // Select the product ID from the WooCommerce Single Product Block
         const productId = useSelect((select) => {
@@ -44,10 +44,10 @@ registerBlockType('woocommerce-catalog-enquiry/enquiry-button', {
             if (productId) {
                 axios.get(`${enquiryButton.apiUrl}/${enquiryButton.restUrl}/render-enquiry-button?product_id=${productId}`)
                     .then((response) => {
-                        setContentHtml(response.data.html || __('Failed to load.', 'woocommerce-catalog-enquiry'));
+                        setContentHtml(response.data.html || __('Failed to load.', 'catalogx'));
                     });
             } else {
-                setContentHtml(__('No product selected.', 'woocommerce-catalog-enquiry'));
+                setContentHtml(__('No product selected.', 'catalogx'));
             }
         }, [productId]);
 

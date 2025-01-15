@@ -1,6 +1,6 @@
 {
   "apiVersion": 2,
-  "name": "woocommerce-catalog-enquiry/quote-thank-you",
+  "name": "catalogx/quote-thank-you",
   "title": "Quote Thank you",
   "category": "catalogx",
   "editorScript": "file:./index.js"

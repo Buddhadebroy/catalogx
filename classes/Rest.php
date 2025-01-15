@@ -91,7 +91,7 @@ class Rest {
 
         do_action( 'catalog_settings_after_save', $settingsname, $get_settings_data );
 
-        $all_details[ 'error' ] = __( 'Settings Saved', 'woocommerce-catalog-enquiry' );
+        $all_details[ 'error' ] = __( 'Settings Saved', 'catalogx' );
 
         return rest_ensure_response($all_details);
 	}

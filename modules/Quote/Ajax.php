@@ -27,15 +27,15 @@ class Ajax {
         $postdata = apply_filters( 'catalog_add_item_in_cart_prepare', $postdata, $product_id );
 
         if ( ! $is_valid ) {
-            $errors[] = __( 'Error occurred while adding product to Request a Quote list.', 'woocommerce-catalog-enquiry' );
+            $errors[] = __( 'Error occurred while adding product to Request a Quote list.', 'catalogx' );
         } else {
             $return = Catalog()->quotecart->add_cart_item( $postdata );
         }
 
         if ( 'true' === $return ) {
-            $message = __( 'Product added to quote list.', 'woocommerce-catalog-enquiry' );
+            $message = __( 'Product added to quote list.', 'catalogx' );
         } elseif ( 'exists' === $return ) {
-            $message = __( 'Product already in your quote list.', 'woocommerce-catalog-enquiry' );
+            $message = __( 'Product already in your quote list.', 'catalogx' );
         } else {
             $message = $errors;
         }

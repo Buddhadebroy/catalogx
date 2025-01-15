@@ -301,22 +301,6 @@ const Tour = () => {
     }, [isNavigating, setSteps]);
 
     return null;
-
-    // useEffect(() => {
-    //     if (!isNavigating) {
-    //         setSteps(settingsTourSteps);
-    //     }
-    // }, [isNavigating, setSteps]);
-
-    // return (
-    //     <>
-    //         {console.log('hii')}
-
-    //         <button onClick={() => setIsOpen(true)} style={{ marginBottom: '10px' }}>
-    //             Start Tour
-    //         </button>
-    //     </>
-    // );
 };
 
 export default Tour;

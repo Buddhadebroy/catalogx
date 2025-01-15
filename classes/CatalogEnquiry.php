@@ -88,9 +88,9 @@ final class CatalogEnquiry {
 
 	function catalog_register_strings() {
 		if ( function_exists( 'icl_register_string' ) ) {
-			icl_register_string( 'woocommerce-catalog-enquiry', 'add_to_quote', 'Add to Quote' );
-			icl_register_string( 'woocommerce-catalog-enquiry', 'view_quote', 'View Quote' );
-			icl_register_string( 'woocommerce-catalog-enquiry', 'send_an_enquiry', 'Send an enquiry' );
+			icl_register_string( 'catalogx', 'add_to_quote', 'Add to Quote' );
+			icl_register_string( 'catalogx', 'view_quote', 'View Quote' );
+			icl_register_string( 'catalogx', 'send_an_enquiry', 'Send an enquiry' );
 		}
 	}
 
@@ -100,21 +100,21 @@ final class CatalogEnquiry {
 		if ( function_exists( 'icl_register_string' ) ) {
 			foreach ( $form_settings['formsettings']['formfieldlist'] as $field ) {
 				if ( isset( $field['label'] ) ) {
-					icl_register_string( 'woocommerce-catalog-enquiry', 'form_field_label_' . $field['id'], $field['label'] );
+					icl_register_string( 'catalogx', 'form_field_label_' . $field['id'], $field['label'] );
 				}
 				if ( isset( $field['placeholder'] ) ) {
-					icl_register_string( 'woocommerce-catalog-enquiry', 'form_field_placeholder_' . $field['id'], $field['placeholder'] );
+					icl_register_string( 'catalogx', 'form_field_placeholder_' . $field['id'], $field['placeholder'] );
 				}
 				if ( isset( $field['options'] ) ) {
 					foreach ( $field['options'] as $option ) {
-						icl_register_string( 'woocommerce-catalog-enquiry', 'form_field_option_' . $field['id'] . '_' . $option['value'], $option['label'] );
+						icl_register_string( 'catalogx', 'form_field_option_' . $field['id'] . '_' . $option['value'], $option['label'] );
 					}
 				}
 			}
 	
 			foreach ( $form_settings['freefromsetting'] as $free_field ) {
 				if ( isset( $free_field['label'] ) ) {
-					icl_register_string( 'woocommerce-catalog-enquiry', 'free_form_label_' . $free_field['key'], $free_field['label'] );
+					icl_register_string( 'catalogx', 'free_form_label_' . $free_field['key'], $free_field['label'] );
 				}
 			}
 		}
@@ -231,13 +231,16 @@ final class CatalogEnquiry {
 	 * @return void
 	 */
 	public function load_plugin_textdomain() {
-
-		$locale = is_admin() && function_exists( 'get_user_locale' ) ? get_user_locale() : get_locale();
-		$locale = apply_filters( 'woocommerce_catalog_enquiry_plugin_locale', $locale, 'woocommerce-catalog-enquiry' );
-
-		load_textdomain( 'woocommerce-catalog-enquiry', WP_LANG_DIR . '/woocommerce-catalog-enquiry/woocommerce-catalog-enquiry-' . $locale . '.mo' );
-		load_plugin_textdomain('woocommerce-catalog-enquiry', false, plugin_basename( dirname( dirname( __FILE__ ) ) ) . '/languages' );
-  	}
+		$locale = is_admin() && function_exists('get_user_locale') ? get_user_locale() : get_locale();
+		$locale = apply_filters('woocommerce_catalog_enquiry_plugin_locale', $locale, 'catalogx');
+	
+		// Load the text domain from the global WordPress languages directory
+		load_textdomain('catalogx', WP_LANG_DIR . '/woocommerce-catalog-enquiry/catalogx-' . $locale . '.mo');
+	
+		// Load the text domain from the plugin's languages directory
+		load_plugin_textdomain('catalogx', false, plugin_basename(dirname(dirname(__FILE__))) . '/languages');
+	}
+	
 
 	/**
      * Magic getter function to get the reference of class.

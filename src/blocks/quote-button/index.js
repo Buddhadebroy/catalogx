@@ -2,7 +2,7 @@ import { registerBlockType } from '@wordpress/blocks';
 import { useBlockProps } from '@wordpress/block-editor';
 
 // Register the block
-registerBlockType('woocommerce-catalog-enquiry/quote-button', {
+registerBlockType('catalogx/quote-button', {
     title: 'Quote Button',
     icon: 'button',
     category: 'catalogx',

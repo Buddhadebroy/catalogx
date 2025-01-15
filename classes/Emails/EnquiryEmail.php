@@ -25,8 +25,8 @@ class EnquiryEmail extends \WC_Email {
 	 */
 	public function __construct() {		
 		$this->id          = 'catalog_enquiry_sent';
-		$this->title       = __( 'Enquiry sent', 'woocommerce-catalog-enquiry' );
-		$this->description = __( 'Admin will get an email when a customer enquires about a product.', 'woocommerce-catalog-enquiry' );
+		$this->title       = __( 'Enquiry sent', 'catalogx' );
+		$this->description = __( 'Admin will get an email when a customer enquires about a product.', 'catalogx' );
 
 		$this->initialize_templates();
 
@@ -56,8 +56,8 @@ class EnquiryEmail extends \WC_Email {
 		];
 	
 		// Set the appropriate template paths
-		$this->template_html  = $template_map[$email_setting] ?? 'emails/woocommerce-catalog-enquiry-admin.php';
-		$this->template_plain = $is_khali_dabba ? 'emails/plain/enquiry-email-plain.php' : 'emails/plain/woocommerce-catalog-enquiry-admin.php';
+		$this->template_html  = $template_map[$email_setting] ?? 'emails/enquiry-email.php';
+		$this->template_plain = $is_khali_dabba ? 'emails/plain/enquiry-email-plain.php' : 'emails/plain/enquiry-email.php';
 		$this->template_base  = $base_template_path;
 	}
 	
@@ -125,21 +125,21 @@ class EnquiryEmail extends \WC_Email {
 			'template7' => 'emails/enquiry-template6.php'
 		];
 
-		return $template_map[$email_setting] ?? 'emails/woocommerce-catalog-enquiry-admin.php';
+		return $template_map[$email_setting] ?? 'emails/enquiry-email.php';
 	}
 
 	/**
 	 * Get email subject.
 	 */
 	public function get_default_subject() {
-		return apply_filters('woocommerce_catalog_enquiry_admin_email_subject', __('Product Enquiry for {PRODUCT_NAME} by {USER_NAME}', 'woocommerce-catalog-enquiry'), $this->object);
+		return apply_filters('woocommerce_catalog_enquiry_admin_email_subject', __('Product Enquiry for {PRODUCT_NAME} by {USER_NAME}', 'catalogx'), $this->object);
 	}
 
 	/**
 	 * Get email heading.
 	 */
 	public function get_default_heading() {
-		return apply_filters('woocommerce_catalog_enquiry_admin_email_heading', __('Enquiry for {PRODUCT_NAME}', 'woocommerce-catalog-enquiry'), $this->object);
+		return apply_filters('woocommerce_catalog_enquiry_admin_email_heading', __('Enquiry for {PRODUCT_NAME}', 'catalogx'), $this->object);
 	}
 
 	/**

@@ -8,7 +8,7 @@
  * Author URI: https://multivendorx.com/
  * WC requires at least: 4.2
  * WC tested up to: 9.3.3
- * Text Domain: woocommerce-catalog-enquiry
+ * Text Domain: catalogx
  * Domain Path: /languages/
 */
 

@@ -135,7 +135,7 @@ const QuoteList = () => {
 	//columns for the data table
 	const columns = [
 		{
-			name: __("Product", "woocommerce-catalog-enquiry"),
+			name: __("Product", "catalogx"),
 			cell: (row) =>
 				<TableCell title="image" >
 					<p dangerouslySetInnerHTML={{ __html: row.image }}></p>
@@ -145,7 +145,7 @@ const QuoteList = () => {
 				
 		},
         {
-			name: __("Quantity", "woocommerce-catalog-enquiry"),
+			name: __("Quantity", "catalogx"),
 			cell: (row) => (
 				<TableCell title="quantity">
 						<input type="number" name="quantity" min="1" value={productQuantity[row.id]?.quantity ?? row.quantity} placeholder="1" onChange={(e) => handleQuantityChange(e, row.id, row.key)} />
@@ -153,7 +153,7 @@ const QuoteList = () => {
 			),
 		},
 		{
-			name: __("Subtotal", "woocommerce-catalog-enquiry"),
+			name: __("Subtotal", "catalogx"),
 			cell: (row) => (
 				<TableCell title="subtotal">
 						<p dangerouslySetInnerHTML={{ __html: row.total }}></p>
@@ -169,7 +169,7 @@ const QuoteList = () => {
 				<div className="admin-page-title">
 					<div className="add-to-quotation-button">
 						<button onClick={handleUpdateCart}>
-							{__("Update Cart", "woocommerce-catalog-enquiry")}
+							{__("Update Cart", "catalogx")}
 						</button>
 					</div>
 				</div>
@@ -192,7 +192,7 @@ const QuoteList = () => {
 						<Loader />
 					}
 					<p className='form-row form-row-first'>
-						<label htmlFor="name">{__("Name:", "woocommerce-catalog-enquiry")}</label>
+						<label htmlFor="name">{__("Name:", "catalogx")}</label>
 						<input
 							type="text"
 							id="name"
@@ -202,7 +202,7 @@ const QuoteList = () => {
 						/>
 					</p>
 					<p className='form-row form-row-last'>
-						<label htmlFor="email">{__("Email:", "woocommerce-catalog-enquiry")}</label>
+						<label htmlFor="email">{__("Email:", "catalogx")}</label>
 						<input
 							type="email"
 							id="email"
@@ -212,7 +212,7 @@ const QuoteList = () => {
 						/>
 					</p>
 					<p className="form-row form-row-wide">
-						<label htmlFor="phone">{__("Phone:", "woocommerce-catalog-enquiry")}</label>
+						<label htmlFor="phone">{__("Phone:", "catalogx")}</label>
 						<input
 							type="tel"
 							id="phone"
@@ -222,7 +222,7 @@ const QuoteList = () => {
 						/>
 					</p>
 					<p className='form-row form-row-wide'>
-						<label htmlFor="message">{__("Message:", "woocommerce-catalog-enquiry")}</label>
+						<label htmlFor="message">{__("Message:", "catalogx")}</label>
 						<textarea
 							id="message"
 							name="message"
@@ -233,7 +233,7 @@ const QuoteList = () => {
 						></textarea>
 					</p>
 					<p>
-						<button id='SendQuote' onClick={handleSendQuote}> {__("Send Quote", "woocommerce-catalog-enquiry")} </button>
+						<button id='SendQuote' onClick={handleSendQuote}> {__("Send Quote", "catalogx")} </button>
 					</p>
 					{	
 						responseContent &&

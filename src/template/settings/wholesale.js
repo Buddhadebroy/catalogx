@@ -3,25 +3,25 @@ import { __ } from '@wordpress/i18n';
 export default {
     id: 'wholesale',
     priority: 60,
-    name: __("Wholesale", "woocommerce-catalog-enquiry"),
-    desc: __("Wholesale sign up and registration management.", "woocommerce-catalog-enquiry"),
+    name: __("Wholesale", "catalogx"),
+    desc: __("Wholesale sign up and registration management.", "catalogx"),
     icon: 'adminLib-warehousing-icon',
     submitUrl: 'save_enquiry',
     modal : [
         {
             key: "approve_wholesaler",
             type: "settingToggle",
-            label: __("Approval of wholesale users through registration form", "woocommerce-catalog-enquiry"),
-            desc: __('Manual - Admin approves new wholesalers manually from "Wholeseller Users" page. <br>  Automatic - Instant wholesaler approval upon sign-up', 'woocommerce-catalog-enquiry'),
+            label: __("Approval of wholesale users through registration form", "catalogx"),
+            desc: __('Manual - Admin approves new wholesalers manually from "Wholeseller Users" page. <br>  Automatic - Instant wholesaler approval upon sign-up', 'catalogx'),
             options: [
                 {
                     key: "manual",
-                    label: __('Manual', 'woocommerce-catalog-enquiry'),
+                    label: __('Manual', 'catalogx'),
                     value: "manual"
                 },
                 {
                     key: "automatic",
-                    label: __('Automatic', 'woocommerce-catalog-enquiry'),
+                    label: __('Automatic', 'catalogx'),
                     value: "Automatic"
                 }
             ],
@@ -31,12 +31,12 @@ export default {
         {
             key: "disable_coupon_for_wholesale",
             type: "checkbox",
-            label: __("Coupon restriction for wholesalers", "woocommerce-catalog-enquiry"),
-            desc: __('Prevent wholesale users from applying any coupon and get addional discount on their orders.', 'woocommerce-catalog-enquiry'),
+            label: __("Coupon restriction for wholesalers", "catalogx"),
+            desc: __('Prevent wholesale users from applying any coupon and get addional discount on their orders.', 'catalogx'),
             options: [
                 {
                     key: "disable_coupon_for_wholesale",
-                    label: __('', 'woocommerce-catalog-enquiry'),
+                    label: __('', 'catalogx'),
                     value: "disable_coupon_for_wholesale"
                 }
             ],
@@ -47,12 +47,12 @@ export default {
         {
             key: "show_wholesale_price",
             type: "checkbox",
-            label: __("Promote wholesale discounts to non-wholesale users", "woocommerce-catalog-enquiry"),
-             desc: __('Display discounted prices on product pages to entice regular customers into becoming wholesalers.', 'woocommerce-catalog-enquiry'),
+            label: __("Promote wholesale discounts to non-wholesale users", "catalogx"),
+             desc: __('Display discounted prices on product pages to entice regular customers into becoming wholesalers.', 'catalogx'),
             options: [
                 {
                     key: "show_wholesale_price",
-                    label: __('', 'woocommerce-catalog-enquiry'),
+                    label: __('', 'catalogx'),
                     value: "show_wholesale_price"
                 }
             ],
@@ -63,12 +63,12 @@ export default {
         {
             key: "enable_order_form",
             type: "checkbox",
-            label: __("Dedicated wholesale-only product list", "woocommerce-catalog-enquiry"),
-            desc: __('Enables a dedicated wholesale-only page displaying all wholesale products for easy browsing and single-click checkout by logged-in wholesalers.', 'woocommerce-catalog-enquiry'),
+            label: __("Dedicated wholesale-only product list", "catalogx"),
+            desc: __('Enables a dedicated wholesale-only page displaying all wholesale products for easy browsing and single-click checkout by logged-in wholesalers.', 'catalogx'),
             options: [
                 {
                     key: "enable_order_form",
-                    label: __('', 'woocommerce-catalog-enquiry'),
+                    label: __('', 'catalogx'),
                     value: "enable_order_form"
                 }
             ],
@@ -79,8 +79,8 @@ export default {
         {
             key: "wholesale_discount",
             type: "mergeComponent",
-            label: __("Discount rule", "woocommerce-catalog-enquiry"),
-            desc: __('<b>Bulk Discount Configuration: </b> Set discount type (percentage/fixed), discount amount, and minimum quantity for wholesellers', 'woocommerce-catalog-enquiry'),
+            label: __("Discount rule", "catalogx"),
+            desc: __('<b>Bulk Discount Configuration: </b> Set discount type (percentage/fixed), discount amount, and minimum quantity for wholesellers', 'catalogx'),
             proSetting: true,
             fields: [
                 {
@@ -110,36 +110,5 @@ export default {
             ],
             moduleDepend: 'wholesale',
         },
-
-        // {
-        //     key: "wholesale_discount_type",
-        //     type: "select",
-        //     label: __("Discount type", "woocommerce-catalog-enquiry"),
-        //     desc: __('Specify the exact amount or percentage to be deducted from the total order value, ', 'woocommerce-catalog-enquiry'),
-        //     options: [
-        //         {
-        //             key: "fixed_amount",
-        //             label: __('Fixed Amount', 'woocommerce-catalog-enquiry'),
-        //             value: "fixed_amount"
-        //         },
-        //         {
-        //             key: "percentage_amount",
-        //             label: __('Percentage Amount', 'woocommerce-catalog-enquiry'),
-        //             value: "percentage_amount"
-        //         }
-        //     ],
-        // },
-        // {
-        //     key: "wholesale_amount",
-        //     type: "number",
-        //     label: __("Discount value", "woocommerce-catalog-enquiry"),
-        //     desc: __('Specify the exact amount or percentage to be deducted from the total order value, ', 'woocommerce-catalog-enquiry'),
-        // },
-        // {
-        //     key: "minimum_quantity",
-        //     type: "number",
-        //     label: __("Minimum quantity", "woocommerce-catalog-enquiry"),
-        //     desc: __('Set the minimum quantity of items required to qualify for the discount.', 'woocommerce-catalog-enquiry'),
-        // },
     ]
 }

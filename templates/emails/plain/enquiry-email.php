@@ -7,12 +7,10 @@
  */
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
-global $Woocommerce_Catalog_Enquiry;
-
 echo $email_heading . "\n\n";
 
-echo sprintf( __( "Dear Admin", 'woocommerce-catalog-enquiry' ) ) . "\n\n";
-echo sprintf( __( "Please find the product enquiry, details are given below", 'woocommerce-catalog-enquiry' ) ) . "\n\n";
+echo sprintf( __( "Dear Admin", 'catalogx' ) ) . "\n\n";
+echo sprintf( __( "Please find the product enquiry, details are given below", 'catalogx' ) ) . "\n\n";
 
 echo "\n****************************************************\n\n";
 
@@ -58,4 +56,4 @@ if(isset($enquiry_data['comment']))
 
 echo "\n\n\n****************************************************\n\n";
 
-echo apply_filters('woocommerce_catalog_enquiry_email_footer_text', sprintf( __( '%s - Powered by WC Catalog Enquiry', 'woocommerce-catalog-enquiry' ), get_bloginfo( 'name', 'display' ) ) );
+echo apply_filters('woocommerce_catalog_enquiry_email_footer_text', sprintf( __( '%s - Powered by WC Catalog Enquiry', 'catalogx' ), get_bloginfo( 'name', 'display' ) ) );

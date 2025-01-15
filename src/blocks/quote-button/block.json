@@ -1,6 +1,6 @@
 {
     "apiVersion": 2,
-    "name": "woocommerce-catalog-enquiry/quote-button",
+    "name": "catalogx/quote-button",
     "title": "Quote Button",
     "category": "catalogx",
     "icon": "button",

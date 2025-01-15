@@ -1,6 +1,6 @@
 {
     "apiVersion": 2,
-    "name": "woocommerce-catalog-enquiry/enquiry-button",
+    "name": "catalogx/enquiry-button",
     "title": "Enquiry Button",
     "category": "catalogx",
     "icon": "button",
@@ -8,6 +8,6 @@
     "supports": {
         "html": false
     },
-    "textdomain": "woocommerce-catalog-enquiry",
+    "textdomain": "catalogx",
     "editorScript": "file:./index.js"
 }

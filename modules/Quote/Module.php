@@ -77,7 +77,7 @@ class Module {
             'post_type' => 'page',
             'post_author' => 1,
             'post_name' => 'request-quote',
-            'post_title' => __('Request Quote', 'woocommerce-catalog-enquiry'),
+            'post_title' => __('Request Quote', 'catalogx'),
             'post_content' => '[request_quote]',
             'comment_status' => 'closed'
         ];
@@ -114,7 +114,7 @@ class Module {
             'post_type' => 'page',
             'post_author' => 1,
             'post_name' => 'request-quote-thank-you',
-            'post_title' => __('Quotation Confirmation', 'woocommerce-catalog-enquiry'),
+            'post_title' => __('Quotation Confirmation', 'catalogx'),
             'post_content' => '[request_quote_thank_you]',
             'comment_status' => 'closed'
         ];

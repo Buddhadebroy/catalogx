@@ -10,16 +10,16 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 do_action( 'woocommerce_email_header', $email_heading ); ?>
 
-<p><?php esc_html_e('Dear Admin','woocommerce-catalog-enquiry');?>,</p>
-<p><?php esc_html_e('Please find the product enquiry, details are given below','woocommerce-catalog-enquiry');?>.</p>
+<p><?php esc_html_e('Dear Admin','catalogx');?>,</p>
+<p><?php esc_html_e('Please find the product enquiry, details are given below','catalogx');?>.</p>
 
-<h3><?php esc_html_e( 'Product Details', 'woocommerce-catalog-enquiry' ); ?></h3>
+<h3><?php esc_html_e( 'Product Details', 'catalogx' ); ?></h3>
 <table cellspacing="0" cellpadding="6" style="width: 100%; border: 1px solid #eee;" border="1" bordercolor="#eee">
 	<thead>
 		<tr>
-			<th scope="col"><?php esc_html_e( 'Product', 'woocommerce-catalog-enquiry' ); ?></th>
-			<th scope="col"><?php esc_html_e( 'Product Url', 'woocommerce-catalog-enquiry' ); ?></th>
-			<th scope="col"><?php esc_html_e( 'Product SKU', 'woocommerce-catalog-enquiry' ); ?></th>
+			<th scope="col"><?php esc_html_e( 'Product', 'catalogx' ); ?></th>
+			<th scope="col"><?php esc_html_e( 'Product Url', 'catalogx' ); ?></th>
+			<th scope="col"><?php esc_html_e( 'Product SKU', 'catalogx' ); ?></th>
 		</tr>
 	</thead>
 	<tbody>
@@ -89,13 +89,13 @@ do_action( 'woocommerce_email_header', $email_heading ); ?>
 	</tbody>
 </table>
 
-<h3><?php esc_html_e( 'Customer Details', 'woocommerce-catalog-enquiry' ); ?></h3>
+<h3><?php esc_html_e( 'Customer Details', 'catalogx' ); ?></h3>
 <p>
-	<strong><?php esc_html_e( 'Name', 'woocommerce-catalog-enquiry' ); ?> : </strong>
+	<strong><?php esc_html_e( 'Name', 'catalogx' ); ?> : </strong>
 	<?php echo $enquiry_data['user_name']; ?>
 </p>
 <p>
-	<strong><?php esc_html_e( 'Email', 'woocommerce-catalog-enquiry' ); ?> : </strong>
+	<strong><?php esc_html_e( 'Email', 'catalogx' ); ?> : </strong>
 	<a target="_blank" href="mailto:<?php echo $enquiry_data['user_email']; ?>"><?php echo $enquiry_data['user_email']; ?></a>
 </p>
 
@@ -104,28 +104,28 @@ foreach ($enquiry_data['user_enquiry_fields'] as $field) {
     if (isset($field['name']) && isset($field['value'])) {
         if ($field['name'] === 'phone') { ?>
             <p>
-                <strong><?php esc_html_e("User Phone : ", 'woocommerce-catalog-enquiry'); ?></strong>
+                <strong><?php esc_html_e("User Phone : ", 'catalogx'); ?></strong>
                 <?php echo esc_html($field['value']); ?>
             </p>
         <?php }
 
         if ($field['name'] === 'address') { ?>
             <p>
-                <strong><?php esc_html_e("User Address : ", 'woocommerce-catalog-enquiry'); ?></strong>
+                <strong><?php esc_html_e("User Address : ", 'catalogx'); ?></strong>
                 <?php echo esc_html($field['value']); ?>
             </p>
         <?php }
 
         if ($field['name'] === 'subject') { ?>
             <p>
-                <strong><?php esc_html_e("User Subject : ", 'woocommerce-catalog-enquiry'); ?></strong>
+                <strong><?php esc_html_e("User Subject : ", 'catalogx'); ?></strong>
                 <?php echo esc_html($field['value']); ?>
             </p>
         <?php }
 
         if ($field['name'] === 'comment') { ?>
             <p>
-                <strong><?php esc_html_e("User Comments : ", 'woocommerce-catalog-enquiry'); ?></strong>
+                <strong><?php esc_html_e("User Comments : ", 'catalogx'); ?></strong>
                 <?php echo esc_html($field['value']); ?>
             </p>
         <?php }
@@ -137,7 +137,7 @@ foreach ($enquiry_data['user_enquiry_fields'] as $field) {
 	<tbody>
 		<tr>
 			<td colspan="2" valign="middle" align="center">
-			<p><?php echo apply_filters('woocommerce_catalog_enquiry_email_footer_text', sprintf( __( '%s - Powered by WC Catalog Enquiry', 'woocommerce-catalog-enquiry' ), get_bloginfo( 'name', 'display' ) ) );?></a>.</p>
+			<p><?php echo apply_filters('woocommerce_catalog_enquiry_email_footer_text', sprintf( __( '%s - Powered by WC Catalog Enquiry', 'catalogx' ), get_bloginfo( 'name', 'display' ) ) );?></a>.</p>
 			</td>
 		</tr>
 	</tbody>

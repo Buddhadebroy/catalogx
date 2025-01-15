@@ -41,12 +41,12 @@ const QuoteThankYou = () => {
             {orderId && status ? (
                 <div class="reject-quote-from-mail">
                     <div class="reject-content">
-                        <p>{__( 'You are about to reject the quote {orderId}', 'woocommerce-catalog-enquiry' )}</p>
+                        <p>{__( 'You are about to reject the quote {orderId}', 'catalogx' )}</p>
                         <p>
-                            <label> {__( 'Please feel free to enter here your reason or provide us your feedback:', 'woocommerce-catalog-enquiry' )}</label>
+                            <label> {__( 'Please feel free to enter here your reason or provide us your feedback:', 'catalogx' )}</label>
                             <textarea name="reason" id="reason" cols="10" rows="3" value={reason} onChange={(e) => setReason(e.target.value)}></textarea>
                         </p>
-                            <button onClick={handleRejectQuote}>{__( 'Reject the quote', 'woocommerce-catalog-enquiry' )}</button>
+                            <button onClick={handleRejectQuote}>{__( 'Reject the quote', 'catalogx' )}</button>
                     </div>
                 </div>
             ) : ( orderId && (
@@ -60,7 +60,7 @@ const QuoteThankYou = () => {
                             )}
                         </strong>.
                     </p>
-                    <p>{__('Our team is reviewing your details and will get back to you shortly with a personalized quote. We appreciate your patience and look forward to serving you!', 'woocommerce-catalog-enquiry')}</p>
+                    <p>{__('Our team is reviewing your details and will get back to you shortly with a personalized quote. We appreciate your patience and look forward to serving you!', 'catalogx')}</p>
                 </div>
                 ))
             }

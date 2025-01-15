@@ -41,7 +41,7 @@ class Frontend {
                 [
                     'ajaxurl' => admin_url('admin-ajax.php'),
                     'loader' => admin_url('images/wpspin_light.gif'),
-                    'no_more_product' => __('No more product in Quote list!', 'woocommerce-catalog-enquiry'),
+                    'no_more_product' => __('No more product in Quote list!', 'catalogx'),
                 ]
             );
         }
@@ -60,8 +60,8 @@ class Frontend {
             return;
         }
 
-        $quote_btn_text = Utill::get_translated_string( 'woocommerce-catalog-enquiry', 'add_to_quote', 'Add to Quote' );    
-        $view_quote_btn_text = Utill::get_translated_string( 'woocommerce-catalog-enquiry', 'view_quote', 'View Quote' ); 
+        $quote_btn_text = Utill::get_translated_string( 'catalogx', 'add_to_quote', 'Add to Quote' );    
+        $view_quote_btn_text = Utill::get_translated_string( 'catalogx', 'view_quote', 'View Quote' ); 
         $btn_style = '';
 
         $settings_array = Catalog()->setting->get_setting( 'quote_button' );

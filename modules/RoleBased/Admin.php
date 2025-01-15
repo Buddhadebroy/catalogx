@@ -85,7 +85,7 @@ class Admin {
                 $all_capabilties
             );
 
-            return rest_ensure_response( [ 'msg' => __( 'Add role successfully', 'woocommerce-catalog-enquiry' ) ] );
+            return rest_ensure_response( [ 'msg' => __( 'Add role successfully', 'catalogx' ) ] );
         }
     }
 

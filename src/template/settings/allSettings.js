@@ -2,16 +2,16 @@ import { __ } from '@wordpress/i18n';
 export default {
     id: 'all_settings',
     priority: 20,
-    name: __("Shopping Journey", "woocommerce-catalog-enquiry"),
-    desc: __("Set up sales flow and catalog mode with integrated enquiry and quotation management.", "woocommerce-catalog-enquiry"),
+    name: __("Shopping Journey", "catalogx"),
+    desc: __("Set up sales flow and catalog mode with integrated enquiry and quotation management.", "catalogx"),
     icon: 'adminLib-cart',
     submitUrl: 'save_enquiry',
     modal: [
         {
             key: 'is_hide_cart_checkout',
             type: 'checkbox',
-            label: __( "Turn off sitewide buying", 'woocommerce-catalog-enquiry' ),
-             desc: __('Redirect users to the homepage when they click on the cart or checkout page. To customize the redirection to a different page, an upgrade to Pro <a href="https://catalogx.com/pricing/" target="_blank">CatalogX Pro</a>.', 'woocommerce-catalog-enquiry'),
+            label: __( "Turn off sitewide buying", 'catalogx' ),
+             desc: __('Redirect users to the homepage when they click on the cart or checkout page. To customize the redirection to a different page, an upgrade to Pro <a href="https://catalogx.com/pricing/" target="_blank">CatalogX Pro</a>.', 'catalogx'),
             options: [
                 {
                     key: "is_hide_cart_checkout",
@@ -25,8 +25,8 @@ export default {
         {
             key: 'disable_cart_page_link',
             type: 'select',
-            label:  __( 'Cart / Checkout Redirect Page', 'woocommerce-catalog-enquiry' ),
-            // desc: apply_filters('woocommerce_catalog_redirect_disabled_cart_page', __( 'Select page where user will be redirected for disable cart page. To use this feature kindly upgrade to <a href="https://multivendorx.com/woocommerce-request-a-quote-product-catalog/" target="_blank">WooCommerce Catalog Enquiry Pro</a>.', 'woocommerce-catalog-enquiry' )),
+            label:  __( 'Cart / Checkout Redirect Page', 'catalogx' ),
+            // desc: apply_filters('woocommerce_catalog_redirect_disabled_cart_page', __( 'Select page where user will be redirected for disable cart page. To use this feature kindly upgrade to <a href="https://multivendorx.com/woocommerce-request-a-quote-product-catalog/" target="_blank">WooCommerce Catalog Enquiry Pro</a>.', 'catalogx' )),
             options: [
                 {
                     value:'',
@@ -45,13 +45,13 @@ export default {
         {
             key: 'separator_content',
             type: 'section',
-            desc: __("Enquiry", "woocommerce-catalog-enquiry"),
+            desc: __("Enquiry", "catalogx"),
         },
         {
             key: 'enquiry_user_permission',
             type: 'checkbox',
-            label: __( "Restrict product enquiries for logged-in users only", 'woocommerce-catalog-enquiry' ),
-            desc: __( "If enabled, non-logged-in users can't access the enquiry flow.", 'woocommerce-catalog-enquiry' ),
+            label: __( "Restrict product enquiries for logged-in users only", 'catalogx' ),
+            desc: __( "If enabled, non-logged-in users can't access the enquiry flow.", 'catalogx' ),
             options: [
                 {
                     key: "enquiry_logged_out",
@@ -64,8 +64,8 @@ export default {
         {
             key: 'is_enable_out_of_stock',
             type: 'checkbox',
-            label: __( "Enquiry for out-of-stock products only", 'woocommerce-catalog-enquiry' ),
-            desc: __("Enquiry button is shown exclusively for products that are out of stock. For items that are in stock, the Add-to-Cart button will be displayed instead.", 'woocommerce-catalog-enquiry'),
+            label: __( "Enquiry for out-of-stock products only", 'catalogx' ),
+            desc: __("Enquiry button is shown exclusively for products that are out of stock. For items that are in stock, the Add-to-Cart button will be displayed instead.", 'catalogx'),
             options: [
                 {
                     key: "is_enable_out_of_stock",
@@ -82,12 +82,12 @@ export default {
                 key: "is_enable_out_of_stock",
                 set: true
             },
-            label: __("In-Stock notify me button ", "woocommerce-catalog-enquiry"),
-            desc: __("This option allows customers to subscribe for automatic stock notifications.", "woocommerce-catalog-enquiry"),
+            label: __("In-Stock notify me button ", "catalogx"),
+            desc: __("This option allows customers to subscribe for automatic stock notifications.", "catalogx"),
             options: [
                 {
                     key: "notify_me_button",
-                    label: __("", 'woocommerce-catalog-enquiry'),
+                    label: __("", 'catalogx'),
                     value: "notify_me_button"
                 }
             ],
@@ -96,8 +96,8 @@ export default {
         {
             key: 'is_disable_popup',
             type: 'settingToggle',
-            label: __( "Display enquiry form as", 'woocommerce-catalog-enquiry' ),
-            desc: __("Select whether the form is displayed directly on the page or in a pop-up window.", 'woocommerce-catalog-enquiry'),
+            label: __( "Display enquiry form as", 'catalogx' ),
+            desc: __("Select whether the form is displayed directly on the page or in a pop-up window.", 'catalogx'),
             options: [
                 {
                     key: "popup",
@@ -115,8 +115,8 @@ export default {
         {
             key: 'is_page_redirect',
             type: 'checkbox',
-            label: __( "Redirect after enquiry form Submission", 'woocommerce-catalog-enquiry' ),
-            desc: __("Enable this to redirect user to another page after successful enquiry submission.", 'woocommerce-catalog-enquiry'),
+            label: __( "Redirect after enquiry form Submission", 'catalogx' ),
+            desc: __("Enable this to redirect user to another page after successful enquiry submission.", 'catalogx'),
             options: [
                 {
                     key: "is_page_redirect",
@@ -133,16 +133,16 @@ export default {
                 set: true
             },
             type: 'select',
-            label:  __( 'Post enquiry submission redirect page', 'woocommerce-catalog-enquiry' ),
-            desc: __( 'Select page where user will be redirected after successful enquiry.', 'woocommerce-catalog-enquiry' ),
+            label:  __( 'Post enquiry submission redirect page', 'catalogx' ),
+            desc: __( 'Select page where user will be redirected after successful enquiry.', 'catalogx' ),
             options: appLocalizer.all_pages,
             moduleDepend: 'enquiry',
         },
         {
             key: 'is_enable_multiple_product_enquiry',
             type: 'checkbox',
-            label: __( "Multi-product enquiry", 'woocommerce-catalog-enquiry' ),
-            desc: __("Enable multiple enquiry flow so customers can add several products to their enquiry cart and submit a single enquiry for all selected items.", 'woocommerce-catalog-enquiry'),
+            label: __( "Multi-product enquiry", 'catalogx' ),
+            desc: __("Enable multiple enquiry flow so customers can add several products to their enquiry cart and submit a single enquiry for all selected items.", 'catalogx'),
             options: [
                 {
                     key: "is_enable_multiple_product_enquiry",
@@ -156,13 +156,13 @@ export default {
         {
             key: 'separator_content',
             type: 'section',
-            desc: __("Quotation", "woocommerce-catalog-enquiry"),
+            desc: __("Quotation", "catalogx"),
         },
         {
             key: 'quote_user_permission',
             type: 'checkbox',
-            label: __( "Limit quotation requests to logged-in users only", 'woocommerce-catalog-enquiry' ),
-            desc: __("If enabled, non-logged-in users cannot submit quotation requests.", 'woocommerce-catalog-enquiry'),
+            label: __( "Limit quotation requests to logged-in users only", 'catalogx' ),
+            desc: __("If enabled, non-logged-in users cannot submit quotation requests.", 'catalogx'),
             options: [
                 {
                     key: "logged_out",
@@ -176,41 +176,41 @@ export default {
         {
             key: 'set_expiry_time',
             type: 'text',
-            label:  __( 'Quotation expiry duration', 'woocommerce-catalog-enquiry' ),
-            desc: __( 'Set the period after which a quotation will expire and no longer be valid for purchase.', 'woocommerce-catalog-enquiry' ),
-            parameter: __('days', 'woocommerce-catalog-enquiry'),
+            label:  __( 'Quotation expiry duration', 'catalogx' ),
+            desc: __( 'Set the period after which a quotation will expire and no longer be valid for purchase.', 'catalogx' ),
+            parameter: __('days', 'catalogx'),
             proSetting: true,
             moduleDepend: 'quote',
         },
         {
             key: 'separator_content',
             type: 'section',
-            desc: __("PDF Manager", "woocommerce-catalog-enquiry"),
+            desc: __("PDF Manager", "catalogx"),
         },
         {
             key: 'display_pdf',
             type: 'multi-checkbox-table',
-            label: __("Attachment", "woocommerce-catalog-enquiry"),
+            label: __("Attachment", "catalogx"),
             classes: 'gridTable',
             rows: [
                 {
                     key: "allow_download_pdf",
-                    label: __('Download as PDF', 'woocommerce-catalog-enquiry'),
+                    label: __('Download as PDF', 'catalogx'),
                 },
                 {
                     key: "attach_pdf_to_email",
-                    label: __('Attach with Email', 'woocommerce-catalog-enquiry'),
+                    label: __('Attach with Email', 'catalogx'),
                 }
             ],
             columns: [
                 {
                     key: "enquiry_pdf_permission",
-                    label: __("Enquiry", "woocommerce-catalog-enquiry"),
+                    label: __("Enquiry", "catalogx"),
                     moduleDepend: "enquiry"
                 },
                 {
                     key: "quote_pdf_permission",
-                    label: __("Quote", "woocommerce-catalog-enquiry"),
+                    label: __("Quote", "catalogx"),
                     moduleDepend: "quote"
                 }
             ],

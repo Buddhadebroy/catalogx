@@ -13,7 +13,7 @@ import { render } from "@wordpress/element";
 import { BrowserRouter } from 'react-router-dom';
 import QuoteListTable from './QuoteListTable';
 
-registerBlockType("woocommerce-catalog-enquiry/quote-cart", {
+registerBlockType("catalogx/quote-cart", {
 	apiVersion: 2,
 	title: "Quote Cart",
 	icon: "list-view",

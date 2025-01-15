@@ -94,7 +94,7 @@ class Frontend{
             $button_css .= $additional_css_settings;
         }
         
-        $settings_array[ 'button_text' ] = !empty( $settings_array[ 'button_text' ] ) ? $settings_array[ 'button_text' ] : \CatalogEnquiry\Utill::get_translated_string( 'woocommerce-catalog-enquiry', 'send_an_enquiry', 'Send an enquiry' );
+        $settings_array[ 'button_text' ] = !empty( $settings_array[ 'button_text' ] ) ? $settings_array[ 'button_text' ] : \CatalogEnquiry\Utill::get_translated_string( 'catalogx', 'send_an_enquiry', 'Send an enquiry' );
         $button_position_settings = Catalog()->setting->get_setting( 'shop_page_button_position_setting' );
         $button_position_settings = is_array($button_position_settings) ? $button_position_settings : [];
         $position = array_search('enquery_button', $button_position_settings);
@@ -191,7 +191,7 @@ class Frontend{
         if ( function_exists( 'icl_t' ) ) {
             foreach ( $form_settings['freefromsetting'] as &$free_field ) {
                 if ( isset( $free_field['label'] ) ) {
-                    $free_field['label'] = icl_t( 'woocommerce-catalog-enquiry', 'free_form_label_' . $free_field['key'], $free_field['label'] );
+                    $free_field['label'] = icl_t( 'catalogx', 'free_form_label_' . $free_field['key'], $free_field['label'] );
                 }
             }
         }
@@ -205,14 +205,14 @@ class Frontend{
         if ( function_exists( 'icl_t' ) ) {
             foreach ( $form_settings['formsettings']['formfieldlist'] as &$field ) {
                 if ( isset( $field['label'] ) ) {
-                    $field['label'] = icl_t( 'woocommerce-catalog-enquiry', 'form_field_label_' . $field['id'], $field['label'] );
+                    $field['label'] = icl_t( 'catalogx', 'form_field_label_' . $field['id'], $field['label'] );
                 }
                 if ( isset( $field['placeholder'] ) ) {
-                    $field['placeholder'] = icl_t( 'woocommerce-catalog-enquiry', 'form_field_placeholder_' . $field['id'], $field['placeholder'] );
+                    $field['placeholder'] = icl_t( 'catalogx', 'form_field_placeholder_' . $field['id'], $field['placeholder'] );
                 }
                 if ( isset( $field['options'] ) ) {
                     foreach ( $field['options'] as &$option ) {
-                        $option['label'] = icl_t( 'woocommerce-catalog-enquiry', 'form_field_option_' . $field['id'] . '_' . $option['value'], $option['label'] );
+                        $option['label'] = icl_t( 'catalogx', 'form_field_option_' . $field['id'] . '_' . $option['value'], $option['label'] );
                     }
                 }
             }
@@ -288,7 +288,7 @@ class Frontend{
         if (isset($additional_css_settings) && !empty($additional_css_settings)) {
             $button_css .= $additional_css_settings;
         }
-        $button_text = !empty( $settings_array[ 'button_text' ] ) ? $settings_array[ 'button_text' ] : \CatalogEnquiry\Utill::get_translated_string( 'woocommerce-catalog-enquiry', 'send_an_enquiry', 'Send an enquiry' );
+        $button_text = !empty( $settings_array[ 'button_text' ] ) ? $settings_array[ 'button_text' ] : \CatalogEnquiry\Utill::get_translated_string( 'catalogx', 'send_an_enquiry', 'Send an enquiry' );
         if ( is_shop() ) {
             global $product;
             $product_link = get_permalink( $product->get_id() );
