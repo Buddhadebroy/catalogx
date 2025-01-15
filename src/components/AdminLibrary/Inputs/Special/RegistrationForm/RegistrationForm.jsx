@@ -535,7 +535,7 @@ const CustomFrom = (props) => {
 
                 <section className="settings-input-content">
                     <ButtonCustomizer
-                        text='Submit'
+                        text={buttonSetting.button_text && buttonSetting.button_text || 'Submit'}
                         setting={buttonSetting}
                         onChange={(key, value, isRestoreDefaults=false) => {
                             if (proSettingChange()) return;

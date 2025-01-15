@@ -286,14 +286,20 @@
               gap: 0.25rem;
 
               .status-show-btn{
-                &.rejected{                
-                  background: red;
-                  color:$color-white;
-                }
+                display: flex;
+                flex-direction: column;
+                gap: 0.5rem;
                 
-                &.approved{
-                  background: green;
-                  color:$color-white;
+                div{
+                  min-width: 6.5rem;
+                }
+                .reject{                
+                  background: #eba3a3;
+                  color: #550202;
+                }                
+                .approved{
+                  background: #c6e1c6;
+                  // color:$color-white;
                 }
               }
               &:hover {

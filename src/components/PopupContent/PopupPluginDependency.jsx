@@ -14,7 +14,7 @@ const PopupPluginDependency = () => {
                             <div className="admin-overlay-content">
                                 <div className="admin-banner-content">
                                     <h2>Add Enquiry Button for Out of Stock Products</h2>
-                                    <p id='description'>Install the "Product Stock Notified" plugin to enable the Enquiry button for out-of-stock products.</p>
+                                    <p id='description'>Install the "Back In Stock Notifier for WooCommerce" plugin to enable the Enquiry button for out-of-stock products.</p>
                                 </div>
                                 <a className="admin-go-pro-btn" target="_blank" href="https://wordpress.org/plugins/woocommerce-product-stock-alert/">Download now</a>
                             </div>
