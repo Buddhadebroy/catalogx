@@ -202,7 +202,7 @@ const CustomTable = (props) => {
               onClick={(e) => { setFilterData({ typeCount: countInfo.key }) }}
               className={countInfo.key == typeCountActive ? 'type-count-active' : ''}
             >
-              {`${countInfo.name} (${countInfo.count})`} |
+              {`${countInfo.name} (${countInfo.count})`} 
             </div>
           ))
         }
