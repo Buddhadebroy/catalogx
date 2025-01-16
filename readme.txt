@@ -186,6 +186,13 @@ Real-Time Page Builder interface
 
 == Changelog ==
 = 6.0 = 
+Added: Compatibility with WooCommerce 7.0.0.
+Added: Support for CatalogX.
+Added: New module for Quotation flow.
+Updated: Language file for improved localization.
+Revamped: Coding structure for enhanced performance and maintainability.
+New: UI design for a more intuitive user experience.
+Improved: Real-time button change display functionality.
 
 Initial release
 
