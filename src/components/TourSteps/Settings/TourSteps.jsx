@@ -97,7 +97,6 @@ const Tour = () => {
                                 } else {
                                     setCurrentStep(3);
                                 }
-                                // modules.includes('enquiry') ?
                             }
                             }
                         >
@@ -174,7 +173,6 @@ const Tour = () => {
                                         5,
                                         '.enquiry-btn'
                                     )
-                                    // setCurrentStep(6);
                                 }
                             }}
                         >
@@ -225,34 +223,6 @@ const Tour = () => {
                 </div>
             ),
         },
-        // {
-        //     selector: '.enquiry-tab',
-        //     content: () => (
-        //         <div class="tour-box">
-        //             <h3>Customize with Live Page Builder</h3>
-        //             <h4>Use the Live Page Builder to select the Enquiry or Quote tab and customize the respective buttons to match your site's design.</h4>
-        //             <div className="tour-footer">
-        //                 <button
-        //                     className="btn-purple"
-        //                     onClick={() => {
-        //                         setCurrentStep(6);
-        //                     }}
-        //                 >
-        //                     Next
-        //                 </button>
-        //                 <button
-        //                     className="btn-purple"
-        //                     onClick={() => {
-        //                         finishTour()
-        //                     }
-        //                     }
-        //                 >
-        //                     End Tour
-        //                 </button>
-        //             </div>
-        //         </div>
-        //     ),
-        // },
         {
             selector: ".enquiry-btn",
             content: () => (

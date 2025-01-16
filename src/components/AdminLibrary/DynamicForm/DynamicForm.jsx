@@ -717,7 +717,7 @@ const DynamicForm = (props) => {
               value={value}
               proSetting={isProSetting(inputField.proSetting)}
               onChange={(e) => {
-                if (!inputField.dependentPlugin) {
+                if (!inputField.dependentPlugin && !moduleDependChanged(inputField.moduleDepend)) {
                   setModelPluginOpen(true)
                 }
                 if ( !proSettingChanged(inputField.proSetting) && !moduleDependChanged(inputField.moduleDepend) ) {
