@@ -9,7 +9,7 @@ Stable tag: 5.0.10
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Elevate your store with WooCommerce Catalog Mode & enquiry System - Create professional catalogs with quote requests and wholesale pricing - powered by WordPress
+Elevate your store with WooCommerce Catalog Mode & Enquiry System - Create professional catalogs with quote requests and wholesale pricing - powered by WordPress
 == Description ==
 Transform your store with WooCommerce Catalog Mode & Enquiry System - Create professional catalogs with quote requests and wholesale pricing - powered by WordPress
 
