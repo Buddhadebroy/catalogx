@@ -42,3 +42,14 @@
         }
     }
 }
+.order-status{
+    .approved{
+        color:#7ad03a;
+    }
+    .pending{
+        color: #EAA600;
+    }
+    .reject{
+        color: #a44;
+    }
+}
