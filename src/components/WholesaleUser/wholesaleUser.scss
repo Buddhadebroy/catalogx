@@ -29,3 +29,16 @@
         border-radius: 3.125rem;
     }
 }
+.action-section{
+    display: flex;
+    flex-direction: row !important; // overwrite table.scss
+    gap: 0.625rem !important; // overwrite table.scss
+    i{
+        font-size: 1.1rem;
+        cursor: pointer;
+
+        &:hover{
+            color:#522c81;
+        }
+    }
+}

@@ -12,24 +12,38 @@ const Tour = () => {
     const waitForElement = (selector) =>
         new Promise((resolve) => {
             const checkElement = () => {
-                if (document.querySelector(selector)) {
-                    resolve();
+                const element = document.querySelector(selector);
+                if (element) {
+                    resolve(element);
                 } else {
                     setTimeout(checkElement, 100);
                 }
             };
-            checkElement();
+    
+            // Ensure the page is fully loaded before checking for the element
+            if (document.readyState === 'complete') {
+                checkElement();
+            } else {
+                window.addEventListener('load', checkElement);
+            }
         });
-
+    
     const navigateTo = async (url, step, selector) => {
         setIsNavigating(true);
         setIsOpen(false); // Close the tour
         window.location.href = url; // Navigate to the new page
-        await waitForElement(selector); // Wait for the element to load
-        setCurrentStep(step); // Move to the next step
-        setIsOpen(true); // Reopen the tour
-        setIsNavigating(false);
+    
+        // Wait for the element to load
+        await waitForElement(selector);
+    
+        // Ensure a short delay to handle rendering latencies
+        setTimeout(() => {
+            setCurrentStep(step); // Move to the next step
+            setIsOpen(true); // Reopen the tour
+            setIsNavigating(false);
+        }, 500); // Adjust delay as needed
     };
+    
 
     const settingsTourSteps = [
         {

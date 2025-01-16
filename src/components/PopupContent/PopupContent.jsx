@@ -13,7 +13,7 @@ const Propopup = () => {
                         <div className="admin-image-overlay">
                             <div className="admin-overlay-content">
                                 <h1 className="banner-header">Unlock <span className="banner-pro-tag">Pro</span> </h1>
-                                <div className="admin-banner-content">
+                                <div className="admin-banner-content list-popup">
                                     <strong>Unlock revenue-boosting features with CatalogX Pro today !</strong>
                                     <p>&nbsp;</p>
                                     <p>1. Speed up sales with personalized quotes.</p>

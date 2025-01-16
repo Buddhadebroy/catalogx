@@ -33,7 +33,7 @@ const CatalogCustomizer = (props) => {
       name: "Quote", id: 'quote', icon: 'adminLib-price-quote-icon',
     },
     {
-      name: "Catalog", id: 'catalog', icon: 'adminLib-catalog-svgrepo-com',
+      name: "Catalog", id: 'catalog', icon: 'adminLib-catalog',
     },
   ]);
 

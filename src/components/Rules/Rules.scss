@@ -444,6 +444,11 @@
             i{
                 cursor: pointer;
             }
+            article{
+                display: flex;
+                flex-direction: column;
+                gap: 0.5rem;
+            }
         }
 
         .expand-btn{
@@ -468,6 +473,13 @@
             }
         }
     }
+}
+
+.rule-loader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
 }
 
 @media screen and (max-width: 85.365rem) {

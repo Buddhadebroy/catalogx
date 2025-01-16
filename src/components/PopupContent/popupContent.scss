@@ -64,10 +64,14 @@
       line-height: 1.6;
       letter-spacing: 0.02rem;
       font-weight: 500;
-  
+      .list-popup{
+        p{
+          text-align: left;
+        }
+      }
       p {
         font-style: italic;
-        text-align: left;
+        text-align: center;
       }
     }
   
