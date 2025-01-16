@@ -181,9 +181,6 @@ Wholesale pricing setup
 Dynamic Rule-Based Pricing configuration
 Real-Time Page Builder interface
 
-== Blocks ==
-* **[WholeSale Product List]** – Description of what the block does.
-
 == Changelog ==
 = 6.0 = 
 Added: Compatibility with WooCommerce 7.0.0.
