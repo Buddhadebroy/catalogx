@@ -11,25 +11,26 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 Elevate your store with WooCommerce Catalog Mode & enquiry System - Create professional catalogs with quote requests and wholesale pricing - powered by WordPress
 == Description ==
-Transform your store with WooCommerce Catalog Mode & enquiry System - Create professional catalogs with quote requests and wholesale pricing - powered by WordPress
+Transform your store with WooCommerce Catalog Mode & Enquiry System - Create professional catalogs with quote requests and wholesale pricing - powered by WordPress
 
-Elevate your WooCommerce Shop with Product Catalog Mode For WooCommerce and Integrated enquiry button for an engaging catalog experience. Collect customer inquiries for each product effortlessly via email using dedicated custom enquiry forms. 
+Elevate your WooCommerce Shop with Product Catalog Mode For WooCommerce and Integrated Enquiry button for an engaging catalog experience. Collect customer enquiries for each product effortlessly via email using dedicated custom inquiry forms. 
 
 This plugin simplifies the quotation process, allowing customers to effortlessly request quotes directly from your site. It’s an ideal solution for wholesale and B2B operations, offering efficient management of wholesale and role-based pricing. With its extensive customization options, you can tailor the shopping experience to meet your business needs.
+
 
 = Features =
 🚫 Disable Purchase Options
 🛒 Replace Add-to-Cart button with a Custom Button.
 🔒 Hide product prices.
 📔 WooCommerce Catalog Mode
-💬 Product enquiry
+💬 Product Inquiry
 📔 Hide Add to Cart
 💰Price Visibility Management
 🎨Enhanced Single Product Page Design
 📝Enquiry Form Customization
 ⚙️Variable Product Support
 👤Role-Based Management
-📦Bulk Order enquiry
+📦Bulk Order Enquiry
 🔠WooCommerce Shortcodes
 🤝MultiVendor Support using [MultiVendorX](https://wordpress.org/plugin/dc-woocommerce-multi-vendor/) Compatibility
 
@@ -37,8 +38,6 @@ This plugin simplifies the quotation process, allowing customers to effortlessly
 👉 See It In Action
 📚 Browse [Documentation](https://catalogx.com/knowledgebase/)
 🚀 Explore CatalogX  Free & Pro [Demo](https://multivendordemo.com/catalogx/)
-
-[youtube https://youtu.be/oUAcT9EVBeo]
 
 = Perfect For =
 👉Wholesale businesses
@@ -57,19 +56,19 @@ Control store pricing visibility with ease. This tool creates exclusivity, prote
 = Key Features: =
 🛍️ **Enable Catalog Mode Across the Site** : Showcase your products by enabling catalog mode for the entire site or specific products, allowing customers to browse without the option to purchase.
 🔒 **Create a Private Store Experience**: Restrict access by hiding prices and the add-to-cart button until users log in, creating an exclusive, private shopping experience for select customers.
-📈 **Strategically Manage Price Visibility**: Boost lead generation by controlling when and where product prices are visible, encouraging users to engage and inquire about your offerings.
+📈 **Strategically Manage Price Visibility**: Boost lead generation by controlling when and where product prices are visible, encouraging users to engage and enquire about your offerings.
 
 ==✌️ Enquiry ==
-Place enquiry buttons across the store to capture leads, handle bulk orders or high-value purchases, gauge demand, and boost conversions and customer satisfaction.
+Place inquiry buttons across the store to capture leads, handle bulk orders or high-value purchases, gauge demand, and boost conversions and customer satisfaction.
 
 = Key Features: =
 📍 **Place Enquiry & Quote Request Buttons Anywhere** : Maximize visibility by placing enquiry and quote request buttons anywhere on your site using shortcodes.
 🔄 **Allow Inquiries for 'Out of Stock' Items** : Keep customers engaged by letting them inquire about out-of-stock products, ensuring you don’t miss potential sales.
-🔗 **Seamlessly Integrate enquiry Button with Page Builders** : Add an enquiry button to pages built with your preferred page builder for a smooth, cohesive shopping experience.
-🔍 **Track Customer Inquiries for Product Insights** : Gain valuable insights into product demand and customer preferences by tracking all incoming inquiries.
+🔗 **Seamlessly Integrate Enquiry Button with Page Builders** : Add an enquiry button to pages built with your preferred page builder for a smooth, cohesive shopping experience.
+🔍 **Track Customer Enquiries for Product Insights** : Gain valuable insights into product demand and customer preferences by tracking all incoming enquiries.
 🛒 **Enable Bulk or High-Value Order Inquiries [PRO]** : Let customers inquire about bulk or high-value orders using the Enquiry Cart, designed for large or custom purchases.
-✏️ **Customize enquiry Forms to Match Your Brand [PRO]** : Craft enquiry forms that align with your brand’s aesthetic and gather the most relevant customer information.
-📊 **Monitor & Manage Inquiries via the Enquiry Cart [PRO]** : Easily track and manage all inquiries through the Enquiry Cart, making it simple to follow up and convert leads.
+✏️ **Customize Inquiry Forms to Match Your Brand [PRO]** : Craft inquiry forms that align with your brand’s aesthetic and gather the most relevant customer information.
+📊 **Monitor & Manage Enquiries via the Enquiry Cart [PRO]** : Easily track and manage all enquiries through the Enquiry Cart, making it simple to follow up and convert leads.
 🎨 **Choose from 5 Advanced Enquiry Form Templates [PRO]** : Select from five customizable enquiry form templates to suit your business needs and brand aesthetic.
 
 
@@ -119,18 +118,18 @@ The Real-Time Page Builder lets you easily create customized shop pages with dra
 📊 **Boost Sales by Strategically Placing Buttons** : Place call-to-action buttons where they’ll get the most engagement, boosting clicks and sales. 
 🎨 **Match Your Brand’s Style with Customization** : Create a cohesive look by using custom colors and fonts that reflect your brand’s unique style.
 
-==✌️Customizable enquiry Forms ==
-Enhance customer interactions with customizable forms tailored to your business needs. This tool helps you create engaging enquiry experiences, capture vital information, and streamline communication.
+==✌️Customizable Enquiry Forms ==
+Enhance customer interactions with customizable forms tailored to your business needs. This tool helps you create engaging inquiry experiences, capture vital information, and streamline communication.
 
 = Key Features: =
 🎨 **Design with Brand Alignment** : Craft visually appealing forms that reflect your company's aesthetic, ensuring a consistent brand experience.
 🧩 **Diverse Field Options** : Utilize a range of input types including text, checkboxes, dropdowns, and file uploads to capture the right information.
 🛡️ **Enhanced Security Measures** : Safeguard your forms against spam and abuse by implementing reCAPTCHA, adding an extra layer of protection.
 🔧 **User-Friendly Management** : Easily create, edit, and update forms through an intuitive admin interface, simplifying form management.
-📊 **Tailored Data Collection** : Capture the exact information you need for each customer enquiry, ensuring the form meets your specific business requirements.
+📊 **Tailored Data Collection** : Capture the exact information you need for each customer inquiry, ensuring the form meets your specific business requirements.
 
-== ✌️Centralized enquiry Hub ==
-Simplify customer communication with an all-in-one messaging dashboard, streamlining enquiry management, improving team collaboration, and ensuring timely, organized responses.
+== ✌️Centralized Enquiry Hub ==
+Simplify customer communication with an all-in-one messaging dashboard, streamlining inquiry management, improving team collaboration, and ensuring timely, organized responses.
 
 = Key Features: =
 💬 **Unified Conversation Platform** : Access all customer inquiries and ongoing discussions in one centralized location, streamlining communication.
@@ -138,7 +137,7 @@ Simplify customer communication with an all-in-one messaging dashboard, streamli
 📌 **Priority Message Highlighting** : Pin crucial messages to keep important information easily accessible, ensuring nothing is overlooked.
 📎 **Integrated File Sharing** : Attach and exchange files directly within conversations, facilitating comprehensive and seamless communication.
 🔐 **Role-Based Dashboards** : Maintain organized workflows with separate views for administrators and customers, ensuring clarity and efficiency.
-📊 **Streamlined enquiry Tracking** : Monitor and manage all customer interactions from a single, intuitive interface, keeping track of every conversation in one place.
+📊 **Streamlined Enquiry Tracking** : Monitor and manage all customer interactions from a single, intuitive interface, keeping track of every conversation in one place.
 
 == Dynamic Page & Form Customization ==
 Enhance customer interactions with real-time page customization for enquiry and wholesale registration forms, creating tailored, secure, and easy-to-manage brand experiences.
@@ -149,8 +148,8 @@ Enhance customer interactions with real-time page customization for enquiry and 
 🧩 **Diverse Field Options** : Utilize a range of input types including text, checkboxes, dropdowns, and file uploads to capture the necessary information.
 🛡️ **Enhanced Security** : Protect your forms against spam and abuse by implementing reCAPTCHA, ensuring secure submissions.
 🔧 **Intuitive Administration** : Easily manage and update forms through a user-friendly interface, streamlining form management.
-📊 **Dual-Purpose Functionality** : Customize both enquiry and wholesale registration forms from a single platform, simplifying form creation.
-🔄 **Adaptable User Experience** : Create forms that cater to both general inquiries and specialized wholesale clients, enhancing user satisfaction.
+📊 **Dual-Purpose Functionality** : Customize both inquiry and wholesale registration forms from a single platform, simplifying form creation.
+🔄 **Adaptable User Experience** : Create forms that cater to both general enquiries and specialized wholesale clients, enhancing user satisfaction.
 
 = Shortcodes & Blocks =
 👉Enquiry Button
@@ -182,12 +181,14 @@ Wholesale pricing setup
 Dynamic Rule-Based Pricing configuration
 Real-Time Page Builder interface
 
+== Blocks ==
+* **[WholeSale Product List]** – Description of what the block does.
+
 == Changelog ==
-= 1.0 =
+= 6.0 = 
 
 Initial release
 
 == Upgrade Notice ==
-= 1.0 =
+= 6.0 =
 This is the initial release of CatalogX.
-
