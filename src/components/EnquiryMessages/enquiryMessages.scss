@@ -1250,6 +1250,16 @@
     align-items: center;
     justify-content: center;
 
+      .instock{
+        color:#7ad03a;
+      }
+      .outofstock{
+        color:#a44;
+      }
+      .onbackorder{
+        color:#eaa600;
+      }
+
     .product-delete-btn{
       cursor: pointer;
       width: 1.563rem;
@@ -1267,13 +1277,8 @@
     }
 
     p {
-      font-weight: 500;
-    }
-
-    p.instock {
+      font-weight: 700;
       font-size: 0.75rem;
-      color: green;
-      font-weight: 400;
     }
   }
 }
