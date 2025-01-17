@@ -67,8 +67,8 @@ const selectOptions = [
     },
     {
         icon: 'adminLib-captcha-automatic-code-svgrepo-com icon-form-recaptcha',
-        value: 'recapta',
-        label: 'Recapta'
+        value: 'recaptcha',
+        label: 'reCaptcha'
     },
     {
         icon: 'adminLib-submission-message icon-form-attachment',
@@ -113,7 +113,7 @@ const AddNewBtn = (props) => {
                         <div onClick={(event) => { onAddNew?.() }}>
                             <i className="admin-font adminLib-move"></i>
                         </div>
-                        <p>Click to add new field</p>
+                        <p>Click to add next text field</p>
                     </div>
                     :
                     <div className="add-new-sections" onClick={(event) => { onAddNew?.() }} >
@@ -487,7 +487,7 @@ const CustomFrom = (props) => {
                                                 />
                                             }
                                             {
-                                                formField.type == 'recapta' &&
+                                                formField.type == 'recaptcha' &&
                                                 <Template.Recaptach
                                                     formField={formField}
                                                     onChange={(key, value) => handleFormFieldChange(index, key, value)}

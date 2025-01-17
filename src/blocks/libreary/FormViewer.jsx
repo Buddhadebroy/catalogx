@@ -297,7 +297,7 @@ const FromViewer = (props) => {
                                     />
                                 </section>
                             );
-                        case "recapta":
+                        case "recaptcha":
                             return (
                                 <section className=' form-pro-sections'>
                                     <label>{field.label}</label>
@@ -377,7 +377,7 @@ const FromViewer = (props) => {
                 <Button
                     customStyle={buttonSetting}
                     onClick={(e) => {
-                        const captcha = formFields.formfieldlist?.find((field)=> field.key == "recapta");
+                        const captcha = formFields.formfieldlist?.find((field)=> field.key == "recaptcha");
                         if (captcha && !captchaToken) 
                             return
                         handleSubmit(e)

@@ -97,7 +97,7 @@ const SettingMetaBox = (props) => {
 				)}
 			</>
 			);
-		case "recapta":
+		case "recaptcha":
 			return (
 			<>
 				<InputField
@@ -110,6 +110,13 @@ const SettingMetaBox = (props) => {
 				value={formField.sitekey}
 				onChange={(value) => onChange("sitekey", value)}
 				/>
+				<p>
+					Register your site with your Google account to obtain the{' '}
+					<a href="https://www.google.com/recaptcha" target="_blank" rel="noopener noreferrer">
+						reCAPTCHA script
+					</a>.
+				</p>
+
 			</>
 			);
 		case "attachment":
