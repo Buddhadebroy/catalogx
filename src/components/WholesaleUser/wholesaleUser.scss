@@ -31,14 +31,15 @@
 }
 .action-section{
     display: flex;
-    flex-direction: row !important; // overwrite table.scss
-    gap: 0.625rem !important; // overwrite table.scss
-    i{
-        font-size: 1.1rem;
-        cursor: pointer;
+    .action-icons{
+        i{
+            font-size: 1.1rem;
+            padding: 0 0.313rem;
+            cursor: pointer;
 
-        &:hover{
-            color:#522c81;
+            &:hover{
+                color:#522c81;
+            }
         }
     }
 }

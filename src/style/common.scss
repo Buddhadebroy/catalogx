@@ -60,7 +60,24 @@ button,
     color: $color-white;
   }
 }
-
+.btn-yellow{
+  background: #d3a93a;
+  color: $color-white;
+}
+.btn-red{
+  background: #e34f4a;
+  color: $color-white;
+}
+.btn-light-blue{
+  background: #bfdeed;
+  color: #003d66;
+}
+.btn-light-green{
+  background: #b7b03c91;
+}
+.btn-reject{
+  background-color: #e5e5e5;
+}
 // Button hover effect style
 .btn-effect {
   position: relative;
