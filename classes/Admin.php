@@ -253,7 +253,8 @@ class Admin {
             'rule_url'                    => admin_url( 'admin.php?page=catalog#&tab=rules' ),
             'currency'                  => get_woocommerce_currency(),
             'stock_alert_open'          => class_exists('StockManager'),
-            'mvx_active'                => Utill::is_active_MVX()
+            'mvx_active'                => Utill::is_active_MVX(),
+            'quote_module_active'       => Catalog()->modules->is_active('quote')
         ]));
     }
 

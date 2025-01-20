@@ -53,38 +53,49 @@ class Rest {
      * @return \WP_Error|\WP_REST_Response
      */
     public function get_all_quote( $request ) {
-        // Get the customers
+        $row =  $request['row'];
+        $page = $request['page'];
+    
+        // Get all cart data
         $all_cart_data = Catalog()->quotecart->get_cart_data();
-
-        // Prepare user list
+    
+        // Calculate pagination
+        $total_items = count( $all_cart_data );
+        $offset = ( $page - 1 ) * $row;
+    
+        // Slice data for current page
+        $paginated_cart_data = array_slice( $all_cart_data, $offset, $row );
+    
+        // Prepare the quote list
         $quote_list = [];
-        foreach ( $all_cart_data as $key => $item ) {
-            $product = wc_get_product($item['product_id']);
-            $thumbnail = $product->get_image(apply_filters('woocommerce_catalog_enquiry_cart_item_thumbnail_size',[84,84]));
+        foreach ( $paginated_cart_data as $key => $item ) {
+            $product = wc_get_product( $item['product_id'] );
+            $thumbnail = $product->get_image( apply_filters( 'woocommerce_catalog_enquiry_cart_item_thumbnail_size', [84, 84] ) );
             $name = '';
-            if($item['variation']){
-                foreach ($item['variation'] as $label => $value) {
-                    $label = str_replace( 'attribute_pa_', '', $label );
-                    $label = str_replace( 'attribute_', '', $label );
-                    $name = "<br>".ucfirst($label).": ".ucfirst($value);
+            if ( $item['variation'] ) {
+                foreach ( $item['variation'] as $label => $value ) {
+                    $label = str_replace( ['attribute_pa_', 'attribute_'], '', $label );
+                    $name .= "<br>" . ucfirst( $label ) . ": " . ucfirst( $value );
                 }
             }
-
+    
             $product_price = $product->get_price();
-            $quantity = isset($item['quantity']) ? $item['quantity'] : 1;
+            $quantity = isset( $item['quantity'] ) ? $item['quantity'] : 1;
             $subtotal = $product_price * $quantity;
-					
+    
             $quote_list[] = apply_filters( 'catalog_quote_list_data', [
-                'key'   => $key,
-                'id'    => $product->get_id(),
-                'image' => $thumbnail,
-                'name'  => $product->get_name() . ($name ? $name : ''),
+                'key'      => $key,
+                'id'       => $product->get_id(),
+                'image'    => $thumbnail,
+                'name'     => $product->get_name() . ( $name ? $name : '' ),
                 'quantity' => $item['quantity'],
-                'total' => wc_price($subtotal)
+                'total'    => wc_price( $subtotal ),
             ], $product );
-        }       
-        return rest_ensure_response ( $quote_list );
+        }
+        
+        return rest_ensure_response( ['count' => $total_items, 'response'=> $quote_list] );
     }
+    
 
     /**
      * update quote in cart

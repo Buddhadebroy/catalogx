@@ -41,7 +41,7 @@ const QuoteThankYou = () => {
             {orderId && status ? (
                 <div class="reject-quote-from-mail">
                     <div class="reject-content">
-                        <p>{__( 'You are about to reject the quote {orderId}', 'catalogx' )}</p>
+                        <p>{`${__('You are about to reject the quote', 'catalogx')} ${orderId}`}</p>
                         <p>
                             <label> {__( 'Please feel free to enter here your reason or provide us your feedback:', 'catalogx' )}</label>
                             <textarea name="reason" id="reason" cols="10" rows="3" value={reason} onChange={(e) => setReason(e.target.value)}></textarea>

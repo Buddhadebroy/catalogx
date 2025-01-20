@@ -11,6 +11,7 @@ const QuoteList = () => {
 	const [loading, setLoading] = useState(false);
 	const [responseContent, setResponseContent] = useState(false);
 	const [responseStatus, setResponseStatus] = useState('');
+	const [totalRows, setTotalRows] = useState();
 	const [formData, setFormData] = useState({
         name: quote_cart.name || '',
         email: quote_cart.email || '',
@@ -41,14 +42,19 @@ const QuoteList = () => {
 		
 	}
 
-	function requestData() {
+	function requestData(rowsPerPage = 10, currentPage = 1,) {
 		//Fetch the data to show in the table
 		axios({
 			method: "post",
 			url: `${quote_cart.apiUrl}/${quote_cart.restUrl}/get-all-quote`,
 			headers: { "X-WP-Nonce": quote_cart.nonce },
+			data: {
+				page: currentPage,
+            	row: rowsPerPage,
+			}
 		}).then((response) => {
-			setData(response.data);
+			setTotalRows(response.data.count);
+			setData(response.data.response);
 		});
 
 	}
@@ -181,6 +187,10 @@ const QuoteList = () => {
 						handleSelect={(selectRows) => {
 							setSelectedRows(selectRows);
 						}}
+						handlePagination={requestData}
+						defaultRowsParPage={10}
+						defaultTotalRows={totalRows}
+						perPageOption={[10, 25, 50]}
 						// autoLoading={false}
 					/>
 				}

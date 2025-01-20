@@ -382,6 +382,41 @@ class Install {
     
             update_option( 'catalog_enquiry_form_customization_settings', $form_settings );
 
+            $wholesale_form = [ 
+                [
+                    'id'      => 1,
+                    'type'    => 'title',
+                    'label'   => 'Wholesale Form',
+                ],
+                [
+                    'id'           => 2,
+                    'type'         => 'text',
+                    'label'        => 'Enter your name',
+                    'required'     => true,
+                    'placeholder'  => 'I am default place holder',
+                    'name'         => 'name',
+                    'not_editable' => true
+                ],
+                [
+                    'id'           => 3,
+                    'type'         => 'email',
+                    'label'        => 'Enter your email',
+                    'required'     => true,
+                    'placeholder'  => 'I am default place holder',
+                    'name'         => 'email',
+                    'not_editable' => true
+                ],
+            ];
+
+            $wholesale_from_settings = [
+                'wholesale_from_settings'    => [
+                    'formfieldlist'  => $wholesale_form,
+                    'butttonsetting' => [],
+                ],         
+            ];
+
+            update_option( 'catalog_wholesale_registration_settings', $wholesale_from_settings );
+
             //// Update exclusion settings
             $previous_exclusion_settings = get_option( 'mvx_catalog_exclusion_tab_settings', [] );
 
