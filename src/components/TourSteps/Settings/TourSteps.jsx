@@ -223,30 +223,70 @@ const Tour = () => {
                 </div>
             ),
         },
+        // {
+        //     selector: ".enquiry-btn",
+        //     content: () => (
+        //         <div className="tour-box">
+        //             <h3>Arrange Enquiry Button</h3>
+        //             <img src={gif} alt="Guide" width="160" />
+        //             <h4>
+        //                 With the Enquiry tab selected, drag and drop to position the
+        //                 Enquiry button and customize its look.
+        //             </h4>
+        //             <div className="tour-footer">
+        //                 <button
+        //                     className="btn-purple"
+        //                     onClick={() => {
+        //                         finishTour();
+        //                     }}
+        //                 >
+        //                     Finish
+        //                 </button>
+        //             </div>
+        //         </div>
+        //     ),
+        //     position: "auto", // Adjust dynamically based on space
+        // }
         {
             selector: ".enquiry-btn",
-            content: () => (
-                <div className="tour-box">
-                    <h3>Arrange Enquiry Button</h3>
-                    <img src={gif} alt="Guide" width="160" />
-                    <h4>
-                        With the Enquiry tab selected, drag and drop to position the
-                        Enquiry button and customize its look.
-                    </h4>
-                    <div className="tour-footer">
-                        <button
-                            className="btn-purple"
-                            onClick={() => {
-                                finishTour();
-                            }}
-                        >
-                            Finish
-                        </button>
+            content: () => {
+                const handleImageLoad = () => {
+                    // Recalculate position after the image is loaded
+                    const element = document.querySelector(".enquiry-btn");
+                    if (element) {
+                        element.scrollIntoView({ behavior: "smooth", block: "center" });
+                    }
+                };
+        
+                return (
+                    <div className="tour-box">
+                        <h3>Arrange Enquiry Button</h3>
+                        <img
+                            src={gif}
+                            alt="Guide"
+                            width="160"
+                            onLoad={handleImageLoad} // Handle image load event
+                        />
+                        <h4>
+                            With the Enquiry tab selected, drag and drop to position the
+                            Enquiry button and customize its look.
+                        </h4>
+                        <div className="tour-footer">
+                            <button
+                                className="btn-purple"
+                                onClick={() => {
+                                    finishTour();
+                                }}
+                            >
+                                Finish
+                            </button>
+                        </div>
                     </div>
-                </div>
-            ),
+                );
+            },
             position: "auto", // Adjust dynamically based on space
         }
+        
         
     ];
 
