@@ -29,13 +29,26 @@
       flex-direction: column;
       background-color: $color-white;
       overflow: hidden;
-      min-height: 21.25rem;
+      min-height: 24.25rem;
       position: relative;
 
       @media screen and (max-width: 48rem) {
         max-width: 100%;
       }
 
+      fieldset{
+        border: $border-light-small;
+        margin-top:0.313rem;
+        padding: 0.5rem;
+        padding-top: 0;
+        legend {
+          background-color: #7598c66e;
+          color: $color-black;
+          padding: 3px 6px;
+          margin-left: 0.25rem;
+          border-radius: $border-radius-small;
+        }
+      }
       .admin-pro-tag {
         right: 1.25rem;
         width: fit-content;
