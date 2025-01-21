@@ -23,10 +23,10 @@
         justify-content: end;
     }
     .popup-close-icon i{
-        background: #522c81;
-        color: #fff;
-        padding: 0.4rem;
-        border-radius: 3.125rem;
+        cursor: pointer;
+        position: absolute;
+        top: 0.625rem;
+        right: 0.625rem;
     }
 }
 .action-section{

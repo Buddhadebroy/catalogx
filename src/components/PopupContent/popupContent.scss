@@ -116,3 +116,35 @@
     line-height: 1;
     text-transform: capitalize;
   }
+  .quote-popup{
+    h2{
+      font-size: 1.5rem;
+      margin-top: 0;
+    }
+    textarea{
+      width: 100%;
+      resize: none;
+    }
+    .status-field{
+      display: flex;
+      select,p{
+        width: 50%;
+
+      }
+    }
+  }
+  .cross-icon{
+    position: absolute;
+    top: 0.825rem;
+    right: 0.825rem;
+  }
+  // popup footer style
+  .footer-button{
+    display: flex;
+    justify-content: end;
+
+    button{
+      margin-top: 1rem;
+      text-align: right;
+    }
+  }
