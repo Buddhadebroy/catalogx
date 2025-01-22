@@ -100,11 +100,11 @@ const SettingMetaBox = (props) => {
 		case "recaptcha":
 			return (
 			<>
-				<InputField
+				{/* <InputField
 				label="API Key"
 				value={formField.apikey}
 				onChange={(value) => onChange("apikey", value)}
-				/>
+				/> */}
 				<InputField
 				label="Site Key"
 				value={formField.sitekey}
