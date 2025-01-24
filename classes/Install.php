@@ -128,6 +128,10 @@ class Install {
                 "ALTER TABLE `{$wpdb->prefix}" . Utill::TABLES[ 'message' ] . "`
                 ADD COLUMN star boolean;"
             );
+            $wpdb->query(
+                "ALTER TABLE `{$wpdb->prefix}" . Utill::TABLES[ 'message' ] . "`
+                ADD COLUMN reply text DEFAULT NULL;"
+            );
         }
     }
 
