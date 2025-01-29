@@ -57,7 +57,7 @@ const Checkboxes = (props) => {
  * @returns 
  */
 const Multiselect = (props) => {
-    const { options, onChange, isMulti } = props;
+    const { options=[], onChange, isMulti } = props;
 
     const [selectedOptions, setSelectedOptions] = useState(() => {
         if (isMulti) {
@@ -69,15 +69,14 @@ const Multiselect = (props) => {
 
     useEffect(() => {
         if (isMulti) {
-            onChange(selectedOptions.map((option) => option.value));
-        } 
-        if (selectedOptions) {
-            onChange(selectedOptions.value);
+            onChange(selectedOptions.length > 0 ? selectedOptions.map(option => option.value) : []);
+        } else {
+            onChange(selectedOptions ? selectedOptions.value : null);
         }
     }, [selectedOptions])
 
     const handleChange = (selectedOptions) => {
-        setSelectedOptions(selectedOptions);
+        setSelectedOptions(selectedOptions || (isMulti ? [] : null));
     };
 
     return (
