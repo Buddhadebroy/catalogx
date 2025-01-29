@@ -265,7 +265,7 @@ const Tour = () => {
                             src={gif}
                             alt="Guide"
                             width="160"
-                            onLoad={handleImageLoad} // Handle image load event
+                            // onLoad={handleImageLoad} // Handle image load event
                         />
                         <h4>
                             With the Enquiry tab selected, drag and drop to position the
@@ -291,7 +291,6 @@ const Tour = () => {
     ];
 
     const finishTour = () => {
-        console.log('finish')
         setIsOpen(false); // Close the tour
         try {
             axios.post(`${appLocalizer.apiurl}/catalog/v1/tour`, { active: false });

@@ -670,10 +670,12 @@
                   }
 
                   .chat-content {
-                    flex-direction: row-reverse;
+                    flex-direction: column;
+                    gap: 0;
 
                     .content {
                       background: #eff5fb;
+                      width: 100%;
 
                       .reaction-view {
                         background: #eff5fb;
@@ -692,6 +694,14 @@
                         left: auto !important;
                         right: 0 !important;
                       }
+                    }
+
+                    .replay-messge{
+                      background: #d2d9e1;
+                      width: 100%;
+                      border: 7px solid #eff5fb;
+                      padding: 0.5rem 0.8rem;
+                      border-bottom: 0;
                     }
                   }
                 }
@@ -810,8 +820,8 @@
                     }
 
                     &.right {
-                      position: relative;
-                      right: 0;
+                      position: absolute;
+                      left: -1.5rem;
                     }
 
                     &.right-more-icon {

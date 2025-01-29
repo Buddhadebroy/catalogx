@@ -21,7 +21,7 @@ const DEFAULT_OPTIONS = [
     },
     {
         label: 'Authorized Agent',
-        value: 'authorized_agent'
+        value: 'authorized agent'
     }
 ];
 const DEFAULT_PLACEHOLDER = (type) => `${type}`;
