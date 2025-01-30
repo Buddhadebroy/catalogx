@@ -25,7 +25,6 @@ jQuery( function( $ ) {
             currentElement.next().remove();
             if (response.result == 'true' || response.result == 'exists') {
               $('.quote_add_item_response-' + productId).hide().addClass('hide').html('');
-              $('.quote_add_item_product-response-' + productId).show().removeClass('hide').html(response.message);
               $('.quote_add_item_browse-list-' + productId).show().removeClass('hide');
               currentElement.parent().hide().removeClass('show').addClass('addedd');
               $('.add-to-quote-' + productId).attr('data-variation', response.variations);
