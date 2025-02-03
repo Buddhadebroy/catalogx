@@ -3,6 +3,7 @@ import { __ } from "@wordpress/i18n";
 import CustomTable, { TableCell } from "../../components/AdminLibrary/CustomTable/CustomTable";
 import axios from 'axios';
 import './QuoteListTable.scss';
+import '../../style/fonts.scss';
 
 const QuoteList = () => {
 	const [data, setData] = useState(null);
