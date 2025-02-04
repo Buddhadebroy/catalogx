@@ -4,6 +4,7 @@
     padding: 0.5rem;
     margin: 0.5rem 0;
 }
-.added_to_cart {
+.added_to_cart,
+.add-request-quote-button{
     margin-bottom:0.238rem;
 }
