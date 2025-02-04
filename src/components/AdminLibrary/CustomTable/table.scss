@@ -359,18 +359,18 @@
   grid-template-columns: 7rem 1fr 6rem 10rem;
   place-content: center;
 
-  .svYMe{
-    width: fit-content;
-
-    .eVrcSZ{
-      background: none;
-    }
-
-    svg{
-      right: 0.125rem;
-      top: 0.063rem;
-    }
+  select{
+    background: none;
   }
+    div{
+      width: fit-content;
+
+
+      svg{
+        right: 0.125rem;
+        top: 0.063rem;
+      }
+    }
 
   .bpcekY{
     svg{

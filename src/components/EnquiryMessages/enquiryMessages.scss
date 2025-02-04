@@ -238,6 +238,42 @@
             font-size: 1rem;
           }
         }
+        .date-filter{
+          display: flex;
+          align-items: center;
+          margin-top: 0.875rem;
+          background: #f6f6f9;
+          padding: 0.313rem 0.5rem;
+          border-radius: $border-radius-small;
+          width: 100%;
+          justify-content: space-between;
+
+          .title{
+            width: 25%;
+          }
+          .search-option-field{
+            width: 75%;
+            text-align: right;
+            input{
+              border: none;
+              background: #f6f6f9;
+            }
+            .rdrDateInput{
+              border:none;
+              input{
+                margin: 0;
+              }
+            }
+            .rdrDateDisplayWrapper{
+              background: transparent;
+            }
+            .date-picker-section-wrapper{
+              position: absolute;
+              z-index: 9;
+              box-shadow: 0 2rem 5rem #827e7e2e;
+            }
+          }
+        }
       }
     }
 
@@ -365,6 +401,7 @@
     background-color: #fff;
     min-width: 28.438rem;
     width: 100%;
+    min-height: 100vh;
     overflow: hidden;
 
     &.no-data-section {
@@ -613,7 +650,7 @@
 
 
       .chatting-main-container {
-        height: calc(100vh - 7.5rem);
+        height: calc(100vh - 5rem);
         width: 100%;
         padding: 1.5rem;
         overflow: hidden;
@@ -658,6 +695,18 @@
             justify-content: flex-start;
             padding-right: 0.5rem;
 
+            .replay-messge{
+              margin: 0;
+              background: #d2d9e1;
+              width: 100%;
+              border: 7px solid #eff5fb;
+              padding: 0.5rem 0.8rem;
+              border-bottom: 0;
+            }
+            .chat-content {
+              flex-direction: column;
+              gap: 0;
+            }
             &.receive {
               justify-content: flex-end;
 
@@ -669,10 +718,7 @@
                     text-align: end;
                   }
 
-                  .chat-content {
-                    flex-direction: column;
-                    gap: 0;
-
+                  .chat-content {                    
                     .content {
                       background: #eff5fb;
                       width: 100%;
@@ -694,14 +740,6 @@
                         left: auto !important;
                         right: 0 !important;
                       }
-                    }
-
-                    .replay-messge{
-                      background: #d2d9e1;
-                      width: 100%;
-                      border: 7px solid #eff5fb;
-                      padding: 0.5rem 0.8rem;
-                      border-bottom: 0;
                     }
                   }
                 }
@@ -729,7 +767,6 @@
                   margin-bottom: 0.313rem;
                   position: relative;
                   align-items: flex-start;
-                  gap: 0.75rem;
 
                   .message-text {
                     font-size: 0.975rem;
@@ -758,7 +795,7 @@
 
                   .content {
                     padding: 0.4rem 4.4rem 1.5rem 0.875rem;
-                    background-color: #f8f9fa;
+                    background-color: #eff5fb;
                     position: relative;
                     border-radius: 0.188rem;
                     max-width: 22rem;
