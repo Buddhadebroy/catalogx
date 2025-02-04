@@ -34,6 +34,8 @@ class Frontend{
         add_action( 'woocommerce_single_product_summary', [ $this, 'catalog_woocommerce_template_single' ], 5 );
 
         $this->register_description_box();
+
+        add_action( 'wp_enqueue_scripts', [ $this, 'frontend_scripts' ] );
     }
 
     /**
@@ -101,6 +103,16 @@ class Frontend{
     }
 
     /**
+     * Enqueue script
+     * @return void
+     */
+    public function frontend_scripts() {
+        if (is_product() || is_shop()) {
+            wp_enqueue_style( 'frontend_css', Catalog()->plugin_url . 'modules/Catalog/assets/css/frontend.css' );
+        }
+    }
+
+    /**
      * Display single product page descrioption box 
      * @return void
      */
@@ -110,11 +122,14 @@ class Frontend{
         if ( ! Util::is_available_for_product( $post->ID  ) ) {
             return;
         }
+
         ?>
         <div class="desc-box">
             <?php $input_box = Catalog()->setting->get_setting( 'additional_input' );
             if ($input_box) { ?>
-                <input type="text" id="desc-box" name="desc_box" value= "<?php echo $input_box; ?>" readonly>
+                <div class="desc">
+                    <?php echo $input_box; ?>
+                </div>
             <?php } ?>
         </div>
         <?php

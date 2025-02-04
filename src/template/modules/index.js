@@ -4,7 +4,7 @@ export default [
     {
         id: 'catalog',
         name: __("Catalog Showcase", "catalogx"),
-        desc: __("<fieldset><legend>Free</legend><span>Ideal for showcasing products by hiding prices, disabling purchases, and restricting cart/checkout access.</span></fieldset>", "catalogx"),
+        desc: __("<fieldset><legend><i class='adminLib-pro-tab'></i> Pro</legend><span>Ideal for showcasing products by hiding prices, disabling purchases, and restricting cart/checkout access.</span></fieldset>", "catalogx"),
         icon: 'adminLib-catalog',
         doc_link: 'https://catalogx.com/docs/catalog/',
         settings_link: appLocalizer.site_url,
@@ -30,7 +30,7 @@ export default [
     },
     {
         id: 'wholesale',
-        name: __("Wholesale Pricing", "catalogx"),
+        name: __("Wholesale Pricing", "catalogx;"),
         desc: __("<fieldset><legend>Free</legend><span>Custom wholesale registration forms builder, admin approval, wholesale order lists, and coupon restrictions for wholesale users.</span></fieldset>", "catalogx"),
         icon: 'adminLib-warehousing-icon',
         doc_link: 'https://catalogx.com/docs/wholesale-pricing/',
@@ -40,7 +40,7 @@ export default [
     {
         id: 'rules',
         name: __("Dynamic Pricing Rules", "catalogx"),
-        desc: __("<fieldset><legend>Free</legend><span>You can set up various rules to modify the prices of different categories and products in bulk, targeting specific customers and user roles.</span></fieldset>", "catalogx"),
+        desc: __("<fieldset><legend><i class='adminLib-pro-tab'></i> Pro</legend><span>You can set up various rules to modify the prices of different categories and products in bulk, targeting specific customers and user roles.</span></fieldset>", "catalogx"),
         icon: 'adminLib-dynamic-pricing',
         doc_link: 'https://catalogx.com/docs/dynamic-pricing-rules/',
         settings_link: appLocalizer.rule_url,
