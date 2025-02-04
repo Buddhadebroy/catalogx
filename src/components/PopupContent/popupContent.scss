@@ -125,6 +125,11 @@
     textarea{
       width: 100%;
       resize: none;
+      border:$border-light-medium;
+
+      &:focus{
+       box-shadow: none;
+      }
     }
     .status-field{
       display: flex;

@@ -6,7 +6,6 @@ import { getApiLink, sendApiResponse } from "../../services/apiService";
 import { useModules } from "../../contexts/ModuleContext";
 // import context
 import { getModuleData } from "../../services/templateService";
-import Animation from "../../assets/images/Animation.gif"
 import "./modules.scss";
 
 const Modules = () => {

@@ -228,6 +228,9 @@
   }
 
   .rdt_TableBody {
+    h4{
+      display:none;
+    }
     .rdt_TableRow {
       position: relative;
       padding: 0 0.313rem;
@@ -395,13 +398,13 @@
         display: flex;
 
         .rdt_TableCol {
-
+          display:none;
           &:nth-child(1),
           &:nth-child(2),
           &:nth-child(3) {
             display: inline-flex;
             max-width: 33% !important; // To overwrite default table width for only responsive device
-            min-width: 5% !important; // To overwrite default table width for only responsive device
+            min-width: 5% !important; // To overwrite default table width for only responsive device            
           }
         }
       }
@@ -433,7 +436,13 @@
             display: inline-flex !important; // force to set display type for laptop screen
             max-width: 33% !important; // To overwrite default table cell size only responsive device
             min-width: 5% !important; // To overwrite default table cell size only responsive device
+            display: inline;
 
+            .order-status{
+              h4{
+                display: none;
+              }
+            }
             .table-row-custom {
               padding: 0;
             }
@@ -457,6 +466,7 @@
 
             h4 {
               display: block;
+              margin: 0;
             }
           }
         }
