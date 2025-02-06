@@ -82,7 +82,9 @@
         .meta-description {
           font-size: 0.875rem;
           min-height: 5.25rem;
-
+          legend{
+            text-align: left;
+          }
           .highlight{
             font-weight: 600;
             background-color: transparent;
