@@ -213,6 +213,15 @@ class Admin {
             $settings_value[ $tab_name ] = Catalog()->setting->get_option( 'catalog_' . $tab_name . '_settings' );
         }
 
+        if ($current_user_role === 'administrator') {
+            $quote_base_url = admin_url('admin.php?page=wc-orders&action=edit&id=');
+        } elseif ($current_user_role === 'customer') {
+            $quote_base_url = site_url('/my-account/view-quote/');
+        } else {
+            $quote_base_url = '/';
+        }
+        
+
         // Enque script and style
         wp_enqueue_style('mvx-catalog-style', Catalog()->plugin_url . 'build/index.css');
         wp_enqueue_script('mvx-catalog-script', Catalog()->plugin_url . 'build/index.js', [ 'wp-element', 'wp-i18n', 'react-jsx-runtime' ], '1.0.0', true);
@@ -254,7 +263,8 @@ class Admin {
             'currency'                  => get_woocommerce_currency(),
             'stock_alert_open'          => class_exists('StockManager'),
             'mvx_active'                => Utill::is_active_MVX(),
-            'quote_module_active'       => Catalog()->modules->is_active('quote')
+            'quote_module_active'       => Catalog()->modules->is_active('quote'),
+            'quote_base_url'            => $quote_base_url
         ]));
     }
 

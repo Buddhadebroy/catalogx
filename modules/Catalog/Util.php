@@ -91,7 +91,7 @@ class Util {
         // Get excluded tag
         $exclude_tags = array_filter(array_map( function( $tag ) use ($product_id) {
             $tag_term_list = wp_get_post_terms($product_id,'product_tag',['fields'=>'ids']);
-            return $tag[ 'key' ] == $tag_term_list[0] ? $product_id : null;
+            return $tag[ 'key' ] == (!empty($tag_term_list) && $tag_term_list[0]) ? $product_id : null;
         }, $tag_exclusion_settings ));
 
         // Check current product id is in exclude tags
