@@ -17,6 +17,8 @@ const FreeForm = (props) => {
     const [inputs, setInputs] = useState({});
     const [ fileName, setFileName ] = useState("");
     const [ captchaStatus, setCaptchaStatus] = useState(false);
+    const [validationErrors, setValidationErrors] = useState({});
+
 
     /**
      * Handle input change
@@ -45,6 +47,33 @@ const FreeForm = (props) => {
      */
     const handleSubmit = async (e) => {
         e.preventDefault();
+
+        // Basic validation checks
+        let errors = {};
+        formFields.forEach((field) => {
+            if (field.active) {
+                const value = inputs[field.key]?.trim() || "";
+
+                // Check required fields
+                if (!value) {
+                    errors[field.key] = `${field.label} is required`;
+                }
+
+                // Validate email format
+                if (field.key === "email" && value) {
+                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    if (!emailRegex.test(value)) {
+                        errors[field.key] = "Invalid email format";
+                    }
+                }
+            }
+        });
+
+        // If there are errors, set state and return (prevent submission)
+        if (Object.keys(errors).length > 0) {
+            setValidationErrors(errors);
+            return;
+        }
 
         const data = new FormData();
 
@@ -88,6 +117,7 @@ const FreeForm = (props) => {
                                         onChange={handleChange}
                                         required
                                     />
+                                    {validationErrors[field.key] && <p className="error-message">{validationErrors[field.key]}</p>}
                                 </div>
                             );
                         case "phone":

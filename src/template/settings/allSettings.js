@@ -92,6 +92,7 @@ export default {
                 }
             ],
             moduleDepend: 'enquiry',
+            dependentPlugin: appLocalizer.stock_alert_open
         },
         {
             key: 'is_disable_popup',

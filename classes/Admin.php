@@ -261,7 +261,7 @@ class Admin {
             'wholesale_settings_url'      => admin_url( 'admin.php?page=catalog#&tab=settings&subtab=wholesale' ),
             'rule_url'                    => admin_url( 'admin.php?page=catalog#&tab=rules' ),
             'currency'                  => get_woocommerce_currency(),
-            'stock_alert_open'          => class_exists('StockManager'),
+            'stock_alert_open'          => is_plugin_active('woocommerce-product-stock-alert/product_stock_alert.php'),
             'mvx_active'                => Utill::is_active_MVX(),
             'quote_module_active'       => Catalog()->modules->is_active('quote'),
             'quote_base_url'            => $quote_base_url
