@@ -110,14 +110,16 @@ const FreeForm = (props) => {
                             return (
                                 <div className='form-free-sections'>
                                     <label>{field.label}</label>
-                                    <input
-                                        type="email"
-                                        name={field.key}
-                                        value={enquiry_form_data.default_placeholder.email || inputs[field.key]}
-                                        onChange={handleChange}
-                                        required
-                                    />
-                                    {validationErrors[field.key] && <p className="error-message">{validationErrors[field.key]}</p>}
+                                    <div className="field-wrapper">
+                                        <input
+                                            type="email"
+                                            name={field.key}
+                                            value={enquiry_form_data.default_placeholder.email || inputs[field.key]}
+                                            onChange={handleChange}
+                                            required
+                                        />
+                                        {validationErrors[field.key] && <p className="error-message">{validationErrors[field.key]}</p>}
+                                    </div>
                                 </div>
                             );
                         case "phone":
@@ -151,7 +153,7 @@ const FreeForm = (props) => {
                             return (
                                 <div className='form-free-sections'>
                                     <label className='attachment-main-label'>{field.label}</label>
-                                    <div className="attachment-section">
+                                    <div className="attachment-section field-wrapper">
                                         <label
                                             htmlFor="dropzone-file"
                                             className="attachment-label"
@@ -176,11 +178,12 @@ const FreeForm = (props) => {
                                     </div>
                                 </div>
                             );
+                           
                         case "captcha":
                             return (
                                 <div className='form-free-sections'>
                                     <label>{field.label}</label>
-                                    <div className='recaptcha-wrapper'>
+                                    <div className='recaptcha-wrapper field-wrapper'>
                                         <Recaptcha
                                             captchaValid = {(validStatus) => setCaptchaStatus(validStatus)}
                                         />

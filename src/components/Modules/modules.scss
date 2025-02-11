@@ -47,6 +47,7 @@
           padding: 3px 6px;
           margin-left: 0.25rem;
           border-radius: $border-radius-small;
+          text-align: left;
         }
       }
       .admin-pro-tag {
@@ -82,9 +83,6 @@
         .meta-description {
           font-size: 0.875rem;
           min-height: 5.25rem;
-          legend{
-            text-align: left;
-          }
           .highlight{
             font-weight: 600;
             background-color: transparent;

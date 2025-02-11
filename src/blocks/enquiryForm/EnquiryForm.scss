@@ -652,7 +652,19 @@
                         max-width: 35%;
                         font-size: 0.875rem;
                     }
-
+                    .field-wrapper{
+                      width: 64%;
+                      .error-message{
+                        margin: 0;
+                        color: red;
+                      }
+                    }
+                    .recaptcha-wrapper{
+                      width: 64%;
+                      p{
+                        margin: 0;
+                      }
+                    }
                     label,
                     input[type='number'],
                     input[type='text'],
@@ -681,7 +693,6 @@
                         display: flex;
                         justify-content: center;
                         align-items: center;
-                        width: 100%;
 
                         .attachment-label {
                             display: flex;
@@ -710,7 +721,6 @@
                             .wrapper {
                                 display: flex;
                                 padding-top: 1.25rem;
-                                padding-bottom: 1.5rem;
                                 flex-direction: column;
                                 justify-content: center;
                                 align-items: center;

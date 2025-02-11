@@ -48,6 +48,7 @@ const InputField = ({ label, type = "text", value, onChange }) => (
 const SettingMetaBox = (props) => {
 	const { formField, inputTypeList, onChange, onTypeChange, opened } = props;
 	const [hasOpened, setHasOpened] = useState(opened.click);
+	const [isSiteKeyEmpty, setIsSiteKeyEmpty] = useState(!formField.sitekey);
 
 	useEffect(() => {
 		setHasOpened(opened.click);
@@ -108,9 +109,12 @@ const SettingMetaBox = (props) => {
 				<InputField
 				label="Site Key"
 				value={formField.sitekey}
-				onChange={(value) => onChange("sitekey", value)}
+				onChange={(value) => {
+					onChange("sitekey", value);
+					setIsSiteKeyEmpty(!value); // Remove class when input has value
+				}}
 				/>
-				<p>
+				<p className={isSiteKeyEmpty ? "highlight" : ""}>
 					Register your site with your Google account to obtain the{' '}
 					<a href="https://www.google.com/recaptcha" target="_blank" rel="noopener noreferrer">
 						reCAPTCHA script
