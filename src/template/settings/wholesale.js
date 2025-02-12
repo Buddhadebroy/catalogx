@@ -22,7 +22,7 @@ export default {
                 {
                     key: "automatic",
                     label: __('Automatic', 'catalogx'),
-                    value: "Automatic"
+                    value: "automatic"
                 }
             ],
             proSetting: true,

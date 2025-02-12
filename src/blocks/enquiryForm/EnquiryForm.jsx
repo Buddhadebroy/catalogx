@@ -14,7 +14,6 @@ const FreeForm = (props) => {
     let { formFields, onSubmit } = props;
     if(!formFields) formFields = [];
 
-    const [inputs, setInputs] = useState({});
     const [ fileName, setFileName ] = useState("");
     const [ captchaStatus, setCaptchaStatus] = useState(false);
     const [validationErrors, setValidationErrors] = useState({});
@@ -40,24 +39,27 @@ const FreeForm = (props) => {
             }));
         }
     };
+    const [inputs, setInputs] = useState(() => {
+        const initialState = {};
+        formFields.forEach((field) => {
+            initialState[field.key] = enquiry_form_data.default_placeholder[field.key] || ""; 
+        });
+        return initialState;
+    });
+    
 
     /**
      * Handle input submit
      * @param {*} e 
      */
-    const handleSubmit = async (e) => {
+    const handleSubmit = (e) => {
         e.preventDefault();
 
         // Basic validation checks
         let errors = {};
         formFields.forEach((field) => {
             if (field.active) {
-                const value = inputs[field.key]?.trim() || "";
-
-                // Check required fields
-                if (!value) {
-                    errors[field.key] = `${field.label} is required`;
-                }
+                const value = inputs[field.key] || ""; // Ensure it does not return undefined
 
                 // Validate email format
                 if (field.key === "email" && value) {
@@ -178,7 +180,6 @@ const FreeForm = (props) => {
                                     </div>
                                 </div>
                             );
-                           
                         case "captcha":
                             return (
                                 <div className='form-free-sections'>
