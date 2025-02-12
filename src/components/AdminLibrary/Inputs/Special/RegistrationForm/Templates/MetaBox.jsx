@@ -171,14 +171,24 @@ const SettingMetaBox = (props) => {
 					<FieldWrapper label="Visibility">                  
 					<div className="visibility-control-container">
 						<div className="tabs">
-							<input checked={!formField.disabled} onChange={(e)=> onChange( 'disabled', !e.target.checked ) } type="radio" id="radio-1" name="tabs" />
-							<label className="tab" htmlFor="radio-1">
-							Visible
-							</label>
-							<input checked={formField.disabled} onChange={(e)=> onChange( 'disabled', e.target.checked ) } type="radio" id="radio-2" name="tabs" />
-							<label className="tab" htmlFor="radio-2">
-							Hidden
-							</label>
+							<input
+								checked={formField.type === 'recaptcha' ? !isSiteKeyEmpty : !formField.disabled}
+								onChange={(e) => onChange('disabled', !e.target.checked)}
+								type="radio"
+								id="radio-1"
+								name="tabs"
+							/>
+							<label className="tab" htmlFor="radio-1">Visible</label>
+
+							<input
+								checked={formField.type === 'recaptcha' ? isSiteKeyEmpty : formField.disabled}
+								onChange={(e) => onChange('disabled', e.target.checked)}
+								type="radio"
+								id="radio-2"
+								name="tabs"
+							/>
+							<label className="tab" htmlFor="radio-2">Hidden</label>
+
 							<span className="glider" />
 						</div>
 					</div>

@@ -6,7 +6,7 @@ const Recaptach = (props) => {
 
     return (
         <>
-            <div className='main-input-wrapper recaptcha'>
+            <div className={`main-input-wrapper ${!formField.sitekey ? 'recaptcha' : ''}`}>
                 {/* Render label */}
                 <input
                     className='input-label textArea-label'

@@ -66,7 +66,7 @@ const selectOptions = [
         label: 'Dropdown'
     },
     {
-        icon: 'adminLib-captcha-automatic-code-svgrepo-com icon-form-recaptcha',
+        icon: 'adminLib-captcha-automatic-code icon-form-recaptcha',
         value: 'recaptcha',
         label: 'reCaptcha v2'
     },
