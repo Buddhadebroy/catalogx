@@ -247,12 +247,15 @@
           border-radius: $border-radius-small;
           width: 100%;
           justify-content: space-between;
+          flex-wrap: wrap;
+          overflow: hidden;
 
           .title{
-            width: 25%;
+            // width: 25%;
+            font-size: 0.938rem;
           }
           .search-option-field{
-            width: 75%;
+            // width: 75%;
             text-align: right;
             input{
               border: none;
@@ -348,6 +351,7 @@
                   align-self: center;
                   margin-right: 0.75rem;
                   position: relative;
+                  width: 20%;
 
                   img {
                     height: 2.5rem;
@@ -361,6 +365,7 @@
                   margin-right: 0.5rem;
                   text-align: left;
                   overflow: hidden;
+                  width: 80%;
 
                   p {
                     overflow: hidden;
@@ -680,11 +685,13 @@
           .date {
             width: 100%;
             text-align: center;
+            margin: 0.875rem 0;
 
             span {
               padding: 0.625rem;
               box-shadow: 0 0 1.25rem rgba(85, 83, 83, 0.11);
               border-radius: 0.25rem;
+              font-size: 0.925rem;
             }
           }
 
@@ -770,6 +777,10 @@
 
                   .message-text {
                     font-size: 0.975rem;
+
+                    &.span{
+                      font-size: 0.975rem;
+                    }
                   }
 
                   &:hover {
@@ -778,10 +789,19 @@
                       position: absolute;
                       right: -1.75rem;
                       top: 0;
+                      width: calc(100% + 1.625rem);
+                      justify-content: end;
 
                       i {
                         font-size: 1.4rem;
                         color: #3c434a;
+                      }
+
+                      &.right{
+                        width: calc(100% + 1.625rem);
+                        justify-content: space-between;
+                        flex-direction: row-reverse;
+                        right: 0;
                       }
                     }
                   }
@@ -806,6 +826,10 @@
                       width: 100%;
                       height: auto;
                       overflow: hidden;
+
+                      a{
+                        font-size: 0.938rem;
+                      }
                     }
 
                     .reaction-view {
@@ -854,28 +878,26 @@
                         font-size: 1.4rem;
                         color: #3c434a;
                       }
+                      &.right{
+                        width: calc(100% + 1.625rem);
+                        justify-content: space-between;
+                        flex-direction: row-reverse;
+                        right: 0;
+                      }
                     }
 
-                    &.right {
-                      position: absolute;
-                      left: -1.5rem;
-                    }
-
-                    &.right-more-icon {
-                      position: absolute;
-                      right: 0;
-                    }
 
                     button {
                       font-size: 1rem;
                       background: transparent;
                       padding: 0;
+                      color: #3c434a;
                     }
 
                     .reaction-wrapper {
                       position: absolute;
                       top: 1.5rem;
-                      left: 0;
+                      left: 50%;
                       z-index: 2;
                     }
 
