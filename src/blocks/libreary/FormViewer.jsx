@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import Select from 'react-select';
 import Button from './Button';
 import './FromViewer.scss';
-import ReCAPTCHA from "react-google-recaptcha";
 
 /**
  * Render checkboxes
@@ -150,6 +149,7 @@ const FromViewer = (props) => {
     const [file, setFile] = useState(null); 
 
     const recaptchaField = formList.find((field) => field.type === "recaptcha");
+    console.log(recaptchaField)
     const siteKey = recaptchaField ? recaptchaField.sitekey : null;
 
     useEffect(() => {  
@@ -226,6 +226,8 @@ const FromViewer = (props) => {
         <main className='enquiry-pro-form'>
             {
                 formList.map((field) => {
+                    console.log('name',field.name)
+                    console.log(field.disabled)
                     if (field.disabled) { return }
 
                     switch (field.type) {
@@ -405,8 +407,11 @@ const FromViewer = (props) => {
                     customStyle={buttonSetting}
                     onClick={(e) => {
                         const captcha = formList.find((field) => field.type === "recaptcha");
-                        if (captcha) {
-                            if (captchaError || !captchaToken) {
+                        if (captcha?.disabled === false) {
+                            if (captchaError) {
+                                return;
+                            }
+                            if (!captchaToken) {
                                 return;
                             }
                         } 
