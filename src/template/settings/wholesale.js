@@ -26,7 +26,7 @@ export default {
                 }
             ],
             proSetting: true,
-            moduleDepend: 'wholesale',
+            moduleEnabled: 'wholesale',
         },
         {
             key: "disable_coupon_for_wholesale",
@@ -42,7 +42,7 @@ export default {
             ],
             proSetting: true,
             look: "toggle",
-            moduleDepend: 'wholesale',
+            moduleEnabled: 'wholesale',
         },
         {
             key: "show_wholesale_price",
@@ -58,7 +58,7 @@ export default {
             ],
             proSetting: true,
             look: "toggle",
-            moduleDepend: 'wholesale',
+            moduleEnabled: 'wholesale',
         },
         {
             key: "enable_order_form",
@@ -74,7 +74,7 @@ export default {
             ],
             proSetting: true,
             look: "toggle",
-            moduleDepend: 'wholesale',
+            moduleEnabled: 'wholesale',
         },
         {
             key: "wholesale_discount",
@@ -108,7 +108,7 @@ export default {
                     placeholder: 'Minimum quantity'
                 }
             ],
-            moduleDepend: 'wholesale',
+            moduleEnabled: 'wholesale',
         },
     ]
 }

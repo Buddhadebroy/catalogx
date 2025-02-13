@@ -5,7 +5,7 @@ export default {
     priority: 10,
     name: __("Product Page Builder", "catalogx"),
     desc: __("Drag-and-drop to create and customize single product page elements.", "catalogx"),
-    icon: 'adminLib-web-page-website-svgrepo-com',
+    icon: 'adminLib-web-page-website',
     submitUrl: 'save_enquiry',
     modal: [
         {

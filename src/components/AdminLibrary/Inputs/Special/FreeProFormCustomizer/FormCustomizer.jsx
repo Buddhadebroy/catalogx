@@ -5,7 +5,7 @@ import SubTabSection from '../SubTabSection/SubTabSection';
 import ProForm from '../RegistrationForm/RegistrationForm';
 
 const FormCustomizer = (props) => {
-    const {setting, proSetting, proSettingChange, moduleDependChange, onChange} = props;
+    const {setting, proSetting, proSettingChange, moduleEnabledChange, onChange} = props;
     const settingChange = useRef(false);
     const [formFieldsData, setFromFieldsData] = useState(setting['freefromsetting'] || []);
     
@@ -21,7 +21,7 @@ const FormCustomizer = (props) => {
     }
     
     const activeDeactiveFields = (fieldKey, activeStatus) => {
-        if (moduleDependChange()) return;
+        if (moduleEnabledChange()) return;
         settingChange.current = true;
         if (getFields(fieldKey)) {
             setFromFieldsData((prevData) => {
@@ -40,7 +40,7 @@ const FormCustomizer = (props) => {
     }
     
     const updateFieldLabel = (fieldKey, labelValue) => {
-        if (moduleDependChange()) return;
+        if (moduleEnabledChange()) return;
         settingChange.current = true;
         if (getFields(fieldKey)) {
             setFromFieldsData((prevData) => {
@@ -100,7 +100,6 @@ const FormCustomizer = (props) => {
     const [menu, setMenu] = useState([
         { name: "Free", link: "hi", id: 2, icon: 'adminLib-info' },
         { name: "Pro", link: "hi", id: 1, icon: 'adminLib-cart' },
-
     ]);
 
     // Set default current tab
@@ -109,7 +108,6 @@ const FormCustomizer = (props) => {
 
     return (
         <>
-
             <SubTabSection menuitem={menu} currentTab={currentTab} setCurrentTab={setCurrentTab} />
             {
                 currentTab.id == 1 ?

@@ -13,7 +13,7 @@ export default {
             type: 'form-customizer',
             desc: __("Form Customizer", "catalogx"),
             classes: 'form_customizer',
-            moduleDepend: 'enquiry',
+            moduleEnabled: 'enquiry',
             proSetting: true
         }
     ]

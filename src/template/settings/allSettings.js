@@ -20,7 +20,7 @@ export default {
             ],
             proSetting: true,
             look: "toggle",
-            moduleDepend: 'catalog',
+            moduleEnabled: 'catalog',
         },
         {
             key: 'disable_cart_page_link',
@@ -40,7 +40,7 @@ export default {
                 set: true
             },
             proSetting: true,
-            moduleDepend: 'catalog',
+            moduleEnabled: 'catalog',
         },
         {
             key: 'separator_content',
@@ -59,7 +59,7 @@ export default {
                 }
             ],
             look: "toggle",
-            moduleDepend: 'enquiry',
+            moduleEnabled: 'enquiry',
         },
         {
             key: 'is_enable_out_of_stock',
@@ -73,7 +73,7 @@ export default {
                 }
             ],
             look: "toggle",
-            moduleDepend: 'enquiry',
+            moduleEnabled: 'enquiry',
         },
         {
             key: 'notify_me_button',
@@ -91,7 +91,7 @@ export default {
                     value: "notify_me_button"
                 }
             ],
-            moduleDepend: 'enquiry',
+            moduleEnabled: 'enquiry',
             dependentPlugin: appLocalizer.stock_alert_open
         },
         {
@@ -111,7 +111,7 @@ export default {
                     label: "Inline In-page",
                 }
             ],
-            moduleDepend: 'enquiry',
+            moduleEnabled: 'enquiry',
         },
         {
             key: 'is_page_redirect',
@@ -125,7 +125,7 @@ export default {
                 }
             ],
             look: "toggle",
-            moduleDepend: 'enquiry',
+            moduleEnabled: 'enquiry',
         },
         {
             key: 'redirect_page_id',
@@ -137,7 +137,7 @@ export default {
             label:  __( 'Post enquiry submission redirect page', 'catalogx' ),
             desc: __( 'Select page where user will be redirected after successful enquiry.', 'catalogx' ),
             options: appLocalizer.all_pages,
-            moduleDepend: 'enquiry',
+            moduleEnabled: 'enquiry',
         },
         {
             key: 'is_enable_multiple_product_enquiry',
@@ -152,7 +152,7 @@ export default {
             ],
             proSetting: true,
             look: "toggle",
-            moduleDepend: 'enquiry',
+            moduleEnabled: 'enquiry',
         },
         {
             key: 'separator_content',
@@ -171,7 +171,7 @@ export default {
                 }
             ],
             look: "toggle",
-            moduleDepend: 'quote',
+            moduleEnabled: 'quote',
             tour: "quote-permission"
         },
         {
@@ -181,7 +181,7 @@ export default {
             desc: __( 'Set the period after which a quotation will expire and no longer be valid for purchase.', 'catalogx' ),
             parameter: __('days', 'catalogx'),
             proSetting: true,
-            moduleDepend: 'quote',
+            moduleEnabled: 'quote',
         },
         {
             key: 'separator_content',
@@ -207,12 +207,12 @@ export default {
                 {
                     key: "enquiry_pdf_permission",
                     label: __("Enquiry", "catalogx"),
-                    moduleDepend: "enquiry"
+                    moduleEnabled: "enquiry"
                 },
                 {
                     key: "quote_pdf_permission",
                     label: __("Quote", "catalogx"),
-                    moduleDepend: "quote"
+                    moduleEnabled: "quote"
                 }
             ],
             proSetting: true,

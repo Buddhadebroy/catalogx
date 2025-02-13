@@ -178,19 +178,19 @@ const SettingMetaBox = (props) => {
 								checked={formField.type === 'recaptcha' ? !isSiteKeyEmpty : !formField.disabled}
 								onChange={(e) => onChange('disabled', !e.target.checked)}
 								type="radio"
-								id="radio-1"
+								id="visible"
 								name="tabs"
 							/>
-							<label className="tab" htmlFor="radio-1">Visible</label>
+							<label className="tab" htmlFor="visible">Visible</label>
 
 							<input
 								checked={formField.type === 'recaptcha' ? isSiteKeyEmpty : formField.disabled}
 								onChange={(e) => onChange('disabled', e.target.checked)}
 								type="radio"
-								id="radio-2"
+								id="hidden"
 								name="tabs"
 							/>
-							<label className="tab" htmlFor="radio-2">Hidden</label>
+							<label className="tab" htmlFor="hidden">Hidden</label>
 
 							<span className="glider" />
 						</div>

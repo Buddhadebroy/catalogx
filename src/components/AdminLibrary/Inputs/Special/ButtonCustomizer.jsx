@@ -74,7 +74,7 @@ const Customizer = (props) => {
                 <div className="simple">
                   <div className="section">
                     <span className="lable">
-                      {__("Background Color", "catalogx")}
+                      Background Color
                     </span>
                     <div className="property-section">
                       <input
@@ -91,7 +91,7 @@ const Customizer = (props) => {
                   </div>
                   <div className="section">
                     <span className="lable">
-                      {__("Font Color", "catalogx")}
+                      Font Color
                     </span>
                     <div className="property-section">
                       <input
@@ -118,10 +118,7 @@ const Customizer = (props) => {
                 >
                   <div className="section">
                     <span className="lable">
-                      {__(
-                        "Background Color On Hover",
-                        "catalogx"
-                      )}
+                      Background Color On Hover
                     </span>
                     <div className="property-section">
                       <input
@@ -138,7 +135,7 @@ const Customizer = (props) => {
                   </div>
                   <div className="section">
                     <span className="lable">
-                      {__("Font Color On Hover", "catalogx")}
+                      Font Color On Hover
                     </span>
                     <div className="property-section">
                       <input
@@ -161,7 +158,7 @@ const Customizer = (props) => {
                 <div className="simple">
                   <div className="section">
                     <span className="lable">
-                      {__("Border Color", "catalogx")}
+                      Border Color
                     </span>
                     <div className="property-section">
                       <input
@@ -178,7 +175,7 @@ const Customizer = (props) => {
                   </div>
                   <div className="section section-row">
                     <span className="lable">
-                      {__("Border Size", "catalogx")}
+                      Border Size
                     </span>
                     <div className="property-section">
                       {/* <div class="PB-range-slider-div"> */}
@@ -195,7 +192,7 @@ const Customizer = (props) => {
                   </div>
                   <div className="section section-row">
                     <span className="lable">
-                      {__("Border Radious", "catalogx")}
+                      Border Radious
                     </span>
                     <div className="property-section">
                       {/* <div class="PB-range-slider-div"> */}
@@ -214,7 +211,7 @@ const Customizer = (props) => {
                 <div className="section-wrapper hover">
                   <div className="section">
                     <span className="lable">
-                      {__("Border Color On Hover", "catalogx")}
+                      Border Color On Hover
                     </span>
                     <div className="property-section">
                       <input
@@ -237,7 +234,7 @@ const Customizer = (props) => {
                 <div className="simple">
                   <div className="section">
                     <span className="lable">
-                      {__("Button text", "catalogx")}
+                      Button text
                     </span>
                     <div className="property-section">
                       <div class="PB-range-slider-div">
@@ -252,7 +249,7 @@ const Customizer = (props) => {
                   </div>
                   <div className="section section-row">
                     <span className="lable">
-                      {__("Font Size", "catalogx")}
+                      Font Size
                     </span>
                     <div className="property-section">
                       {/* <div class="PB-range-slider-div"> */}
@@ -269,7 +266,7 @@ const Customizer = (props) => {
                   </div>
                   <div className="section section-row">
                     <span className="lable">
-                      {__("Font Width", "catalogx")}
+                      Font Width
                     </span>
                     <div className="property-section">
                       {/* <div class="PB-range-slider-div"> */}
@@ -295,7 +292,7 @@ const Customizer = (props) => {
                 <div className="simple">
                   <div className="section section-row">
                     <span className="lable">
-                      {__("Padding", "catalogx")}
+                      Padding
                     </span>
                     <div className="property-section">
                       {/* <div class="PB-range-slider-div"> */}
@@ -312,7 +309,7 @@ const Customizer = (props) => {
                   </div>
                   <div className="section section-row">
                     <span className="lable">
-                      {__("Margin", "catalogx")}
+                      Margin
                     </span>
                     <div className="property-section">
                       {/* <div class="PB-range-slider-div"> */}
@@ -359,7 +356,7 @@ const Customizer = (props) => {
               <div className="section-wrapper settings">
                 <div className="section">
                   <span className="lable">
-                    {__("System settings", "catalogx")}
+                    System settings
                   </span>
                   <div className="property-section">
                     <button onClick={(e) => {

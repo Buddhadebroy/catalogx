@@ -433,7 +433,7 @@ const CatalogCustomizer = (props) => {
         <section className='single-product-page-description'>
           <div className='option'>
             <ul>
-              <li className='active'>Description <span><i className='admin-font adminLib-keyboard_arrow_down'></i></span></li>
+              <li className='active'>Description <span><i className='admin-font adminLib-keyboard-arrow-down'></i></span></li>
               <li>Additional Information</li>
               <li>Review</li>
             </ul>

@@ -20,7 +20,7 @@ export default {
             class: 'woo-setting-wpeditor-class',
             desc: __("Set the email address to receive notifications when a user submits enquiry of a product. You can add multiple comma-separated emails.<br/> Default: The admin\'s email is set as the receiver. Exclude the admin\'s email from the list to exclude admin from receiving these notifications.", "catalogx"),
             label: __("Recipient email for new subscriber", "catalogx"),
-            moduleDepend: 'enquiry',
+            moduleEnabled: 'enquiry',
         },
         {
             key: "selected_email_tpl",
@@ -71,7 +71,7 @@ export default {
                     value: "template7"
                 }
             ],
-            moduleDepend: 'enquiry',
+            moduleEnabled: 'enquiry',
         },
         // {
         //     key: "custom_email_subject",
