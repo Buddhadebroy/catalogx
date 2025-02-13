@@ -22,8 +22,8 @@ const FormFieldSelect = ({ inputTypeList, formField, onTypeChange }) => (
 /**
  * Reusable wrapper for a label and input field.
  */
-const FieldWrapper = ({ label, children }) => (
-  <article className="modal-content-section-field" onClick={(e) => e.stopPropagation()}>
+const FieldWrapper = ({ label, children , className}) => (
+  <article className={`modal-content-section-field ${className || ''}`}  onClick={(e) => e.stopPropagation()}>
     <p>{label}</p>
     {children}
   </article>
@@ -32,8 +32,8 @@ const FieldWrapper = ({ label, children }) => (
 /**
  * Component for rendering input fields with labels.
  */
-const InputField = ({ label, type = "text", value, onChange }) => (
-  <FieldWrapper label={label}>
+const InputField = ({ label, type = "text", value, onChange, className}) => (
+  <FieldWrapper label={label} className={className}>
     <input
       type={type}
       value={value || ""}
@@ -109,12 +109,13 @@ const SettingMetaBox = (props) => {
 				<InputField
 				label="Site Key"
 				value={formField.sitekey}
+				className={isSiteKeyEmpty ? "highlight" : ""}
 				onChange={(value) => {
 					onChange("sitekey", value);
 					setIsSiteKeyEmpty(!value); // Remove class when input has value
 				}}
 				/>
-				<p className={isSiteKeyEmpty ? "highlight" : ""}>
+				<p>
 					Register your site with your Google account to obtain the{' '}
 					<a href="https://www.google.com/recaptcha" target="_blank" rel="noopener noreferrer">
 						reCAPTCHA script

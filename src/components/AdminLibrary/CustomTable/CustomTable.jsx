@@ -34,7 +34,7 @@ export const TableCell = (props) => {
   return (
     <>
       <div title={props.value} className="order-status table-row-custom">
-        <h4>{props.title}</h4> 
+        <h4 className="hide-title">{props.title}</h4> 
         {props.children}
       </div>
     </>

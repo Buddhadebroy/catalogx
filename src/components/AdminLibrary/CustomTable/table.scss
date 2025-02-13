@@ -104,6 +104,7 @@
         background: $color-white;
         z-index: 5;
         padding: 1rem;
+        border: $border-light-small;
 
           input{
             width: 100%;
@@ -228,9 +229,6 @@
   }
 
   .rdt_TableBody {
-    h4{
-      display:none;
-    }
     .rdt_TableRow {
       position: relative;
       padding: 0 0.313rem;
@@ -273,10 +271,13 @@
         }
         .table-row-custom {
           display: flex;
-          align-items: center;
           justify-content: flex-start;
           gap: 0.5rem;
+          padding: 0;
 
+          .hide-title{
+            display: none;
+          }
           img {
             width: 3.15rem;
             height: 3.15rem;
@@ -293,29 +294,6 @@
               flex-direction: column;
               align-items: flex-start;
               gap: 0.25rem;
-
-              .status-show-btn{
-                display: flex;
-                flex-direction: column;
-                gap: 0.5rem;
-                
-                div{
-                  min-width: 6.5rem;
-                }
-                .reject{                
-                  background: #eba3a3;
-                  color: #550202;
-                }                
-                .approved{
-                  background: #c6e1c6;
-                }
-              }
-              &:hover {
-                .action-btn {
-                  visibility: visible;
-                }
-
-              }
 
               .action-btn {
                 display: flex;
@@ -343,52 +321,25 @@
   }
 }
 
-.sc-feUZmu{
-  border: 0.063rem solid #c3c4c7;
-  .gocYik{
-    border-bottom: 0.063rem solid #c3c4c7;
-  }
-  .sc-dhKdcB{
-    border:none; // For hide table colunm border
-  }
-}
-.sc-eeDRCY{
-  border: 0.063rem solid #c3c4c7;
-  border-top:none !important;
-
-}
 .rdt_Pagination {
   display: grid !important; // For overwrite defauld grid system
   grid-template-columns: 7rem 1fr 6rem 10rem;
   place-content: center;
-
+  
+  span{
+    margin: 0;
+  }
   select{
-    background: none;
+    background: none; // For hide defauld pagination icon
   }
     div{
       width: fit-content;
-
 
       svg{
         right: 0.125rem;
         top: 0.063rem;
       }
     }
-
-  .bpcekY{
-    svg{
-      display: none; // For hide svg icon
-    }
-  }
-  .sc-lmoLKH.lcunyj {
-    select {
-      &:focus {
-        border: none;
-        color: $color-active;
-        box-shadow: none;
-      }
-    }
-  }
 }
 
 @media only screen and (max-width: 85.365rem) {
@@ -439,12 +390,9 @@
             display: inline;
 
             .order-status{
-              h4{
-                display: none;
+              .hide-title{
+                display: none; // Hide 1st 3 columns title only responsive device
               }
-            }
-            .table-row-custom {
-              padding: 0;
             }
           }
 
@@ -464,7 +412,7 @@
             overflow: hidden;
             padding: 0.313rem 0.625rem;
 
-            h4 {
+            .hide-title{
               display: block;
               margin: 0;
             }
