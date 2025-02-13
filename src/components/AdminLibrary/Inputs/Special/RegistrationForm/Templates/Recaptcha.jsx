@@ -7,19 +7,7 @@ const Recaptach = (props) => {
     return (
         <>
             <div className={`main-input-wrapper ${!formField.sitekey ? 'recaptcha' : ''}`}>
-                {/* Render label */}
-                <input
-                    className='input-label textArea-label'
-                    type="text"
-                    value={formField.label}
-                    placeholder={"I am label"}
-                    onChange={(event) => {
-                        onChange('label', event.target.value);
-                    }}
-                />
-
-                {/* Render attachments */}
-                <img className='recapcha-img' src={Recapcha} alt="Recapcha" />
+                <p>reCAPTCHA has been successfully added to the form.</p>
             </div>
         </>
     )

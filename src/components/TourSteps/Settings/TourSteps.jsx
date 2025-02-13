@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from "axios";
 import { useTour } from '@reactour/tour';
-import { useModules } from '../../../contexts/ModuleContext';
 import gif from "../../../assets/images/product-page-builder.gif";
-
 
 const Tour = () => {
     const { setIsOpen, setSteps, setCurrentStep } = useTour();

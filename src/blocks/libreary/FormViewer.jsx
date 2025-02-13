@@ -145,12 +145,40 @@ const FromViewer = (props) => {
     const formList = formFields.formfieldlist || [];
     const buttonSetting = formFields.butttonsetting || {}
     const [captchaToken, setCaptchaToken] = useState(null);
+    const [captchaError, setCaptchaError] = useState(false);
     const [fileName, setFileName] = useState("");
     const [file, setFile] = useState(null); 
 
-    const handleCaptchaChange = (token) => {
-        setCaptchaToken(token);
-    };
+    const recaptchaField = formList.find((field) => field.type === "recaptcha");
+    const siteKey = recaptchaField ? recaptchaField.sitekey : null;
+
+    useEffect(() => {  
+        const loadRecaptcha = () => {
+            window.grecaptcha.ready(() => {
+                window.grecaptcha.execute(siteKey, { action: "form_submission" })
+                    .then((token) => {
+                        setCaptchaToken(token);
+                    })
+                    .catch((error) => {
+                        setCaptchaError(true);
+                    });
+            });
+        };
+    
+        if (!window.grecaptcha) {
+            const script = document.createElement("script");
+            script.src = `https://www.google.com/recaptcha/api.js?render=${siteKey}`;
+            script.async = true;
+            script.onload = loadRecaptcha;
+            script.onerror = () => {
+                setCaptchaError(false);
+            };
+            document.body.appendChild(script);
+        } else {
+            loadRecaptcha();
+        }
+    }, [siteKey]);
+    
 
     /**
      * Handle input change
@@ -303,12 +331,8 @@ const FromViewer = (props) => {
                         case "recaptcha":
                             return (
                                 <section className=' form-pro-sections'>
-                                    <label>{field.label}</label>
                                     <div className='recaptcha-wrapper'>
-                                        <ReCAPTCHA
-                                            sitekey={field.sitekey}
-                                            onChange={handleCaptchaChange}
-                                        />
+                                        <input type="hidden" name="g-recaptcha-response" value={captchaToken} />
                                     </div>
                                 </section>
                             );
@@ -380,9 +404,12 @@ const FromViewer = (props) => {
                 <Button
                     customStyle={buttonSetting}
                     onClick={(e) => {
-                        const captcha = formFields.formfieldlist?.find((field)=> field.key == "recaptcha");
-                        if (captcha && !captchaToken) 
-                            return
+                        const captcha = formList.find((field) => field.type === "recaptcha");
+                        if (captcha) {
+                            if (captchaError || !captchaToken) {
+                                return;
+                            }
+                        } 
                         handleSubmit(e)
                     }}
                     children={'submit'}

@@ -68,7 +68,7 @@ const selectOptions = [
     {
         icon: 'adminLib-captcha-automatic-code icon-form-recaptcha',
         value: 'recaptcha',
-        label: 'reCaptcha v2'
+        label: 'reCaptcha v3'
     },
     {
         icon: 'adminLib-submission-message icon-form-attachment',

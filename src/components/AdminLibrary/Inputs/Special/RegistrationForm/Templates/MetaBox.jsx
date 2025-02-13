@@ -112,7 +112,9 @@ const SettingMetaBox = (props) => {
 				className={isSiteKeyEmpty ? "highlight" : ""}
 				onChange={(value) => {
 					onChange("sitekey", value);
-					setIsSiteKeyEmpty(!value); // Remove class when input has value
+					// Check if the site key is valid for reCAPTCHA v3
+					const isValidSiteKey = /^6[0-9A-Za-z_-]{39}$/.test(value);
+					setIsSiteKeyEmpty(!isValidSiteKey); 
 				}}
 				/>
 				<p>
