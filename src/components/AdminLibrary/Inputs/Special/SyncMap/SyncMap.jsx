@@ -78,11 +78,11 @@ const SyncMap = (props) => {
                     {/* Static email mapping */}
                     <div className="map-content-wrapper">
                         <select className="" disabled>
-                            <option value="email">Email</option>
+                            <option value="email">{__("Email", "catalogx")}</option>
                         </select>
                         <span className="connection-icon">⇌</span>
                         <select className="" disabled>
-                            <option value="email">Email</option>
+                            <option value="email">{__("Email", "catalogx")}</option>
                         </select>
                     </div>
                     {/* Dynamic field mappings */}
@@ -136,7 +136,7 @@ const SyncMap = (props) => {
                                         }
                                     }}
                                 >
-                                    <span className="text">Clear</span>
+                                    <span className="text">{__("Clear", "catalogx")}</span>
                                     <span className="icon adminLib-close"></span>
                                 </button>
                             </div>
@@ -156,10 +156,10 @@ const SyncMap = (props) => {
                                 }
                             }}
                         >
-                            <span className="text">Add</span>
+                            <span className="text">{__("Add", "catalogx")}</span>
                             <i class="adminLib-vendor-form-add"></i>
                         </button>
-                        {proSetting && <span className="admin-pro-tag">pro</span>}
+                        {proSetting && <span className="admin-pro-tag">{__("pro", "catalogx")}</span>}
                     </div>
                 </div>
             </div>

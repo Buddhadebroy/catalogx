@@ -119,8 +119,8 @@ const FormCustomizer = (props) => {
                     :
                     <div>
                         <div className='fields-header'>
-                            <h3 class="name">Field Name</h3>
-                            <h3 class="set-name">Set new field name</h3>
+                            <h3 class="name">{__("Field Name", "catalogx")}</h3>
+                            <h3 class="set-name">{__("Set new field name", "catalogx")}</h3>
                         </div>
                         <div className='registrationFrom-main-wrapper-section'>
                             <div className='form-field'>

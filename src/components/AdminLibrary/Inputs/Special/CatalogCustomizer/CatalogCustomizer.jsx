@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { __ } from '@wordpress/i18n';
 import ButtonCustomizer from '../ButtonCustomizer';
 import SubTabSection from '../SubTabSection/SubTabSection';
 import Sample_Product from '../../../../../assets/images/sample-product.jpg';
@@ -57,7 +58,7 @@ const CatalogCustomizer = (props) => {
             >
               <i className='admin-font adminLib-support'></i>
             </div>
-            <p className='product-price' style={{ opacity: hideProductPrice ? "0.3" : "1" }}><span className='strikethrough'>$20.00</span> $18.00</p>
+            <p className='product-price' style={{ opacity: hideProductPrice ? "0.3" : "1" }}><span className='strikethrough'>{__("$20.00", "catalogx")}</span> {__("$18.00", "catalogx")}</p>
           </div>
         )
       },
@@ -79,7 +80,7 @@ const CatalogCustomizer = (props) => {
             >
               <i className='admin-font adminLib-support'></i>
             </div>
-            <p className='product-description' style={{ opacity: hideProductDesc ? "0.3" : "1" }}>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+            <p className='product-description' style={{ opacity: hideProductDesc ? "0.3" : "1" }}>{__("Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.", "catalogx")}</p>
           </div>
         )
       },
@@ -96,8 +97,8 @@ const CatalogCustomizer = (props) => {
       content: () => (
         <>
           <section className='catalog-add-to-cart-section'>
-            <div className='catalog-add-to-cart-quantity'>1</div>
-            <div class="main-btn btn-purple catalog-add-to-cart-btn">Add to cart</div>
+            <div className='catalog-add-to-cart-quantity'>{__("1", "catalogx")}</div>
+            <div class="main-btn btn-purple catalog-add-to-cart-btn">{__("Add to cart", "catalogx")}</div>
           </section>
         </>
       ),
@@ -108,8 +109,8 @@ const CatalogCustomizer = (props) => {
       id: 'sku_category',
       content: () => (
         <div className='product-sku-category'>
-          <p>SKU: <span>WOO-ALBUM</span></p>
-          <p>Category: <span>Music</span></p>
+          <p>{__("SKU:", "catalogx")}<span>{__("WOO-ALBUM:", "catalogx")}</span></p>
+          <p>{__("Category:", "catalogx")}<span>{__("Music", "catalogx")}</span></p>
         </div>
       ),
       defaultPosition: 4,
@@ -314,7 +315,7 @@ const CatalogCustomizer = (props) => {
             <img src={Sample_Product} alt="" />
           </div>
           <div className='product-data'>
-            <h1 className='product-name'>Sample Product</h1>
+            <h1 className='product-name'>{__("Sample Product", "catalogx")}</h1>
             <div className='drag-drop-component'>
               {/* Render default shop pages drag and drop */}
               <ReactDragListView
@@ -424,8 +425,8 @@ const CatalogCustomizer = (props) => {
             </div>
             {!proSetting &&
               <article className='pro-banner'>
-                <p>Upgrade to pro for endless customization</p>
-                <a href="https://catalogx.com/pricing/" className="main-btn btn-purple" target='_blank'>Upgrade now</a>
+                <p>{__("Upgrade to pro for endless customization", "catalogx")}</p>
+                <a href="https://catalogx.com/pricing/" className="main-btn btn-purple" target='_blank'>{__("Upgrade now", "catalogx")}</a>
               </article>
             }
           </div>
@@ -433,14 +434,14 @@ const CatalogCustomizer = (props) => {
         <section className='single-product-page-description'>
           <div className='option'>
             <ul>
-              <li className='active'>Description <span><i className='admin-font adminLib-keyboard-arrow-down'></i></span></li>
-              <li>Additional Information</li>
-              <li>Review</li>
+              <li className='active'> {__("Description", "catalogx")}<span><i className='admin-font adminLib-keyboard-arrow-down'></i></span></li>
+              <li>{__("Additional Information", "catalogx")}</li>
+              <li>{__("Review", "catalogx")}</li>
             </ul>
           </div>
           <div className='description'>
-            <h2>Description</h2>
-            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+            <h2>{__("Description", "catalogx")}</h2>
+            <p> {__("Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.", "catalogx")}</p>
           </div>
         </section>
       </main>

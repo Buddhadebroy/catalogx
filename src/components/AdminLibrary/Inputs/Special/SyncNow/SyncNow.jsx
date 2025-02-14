@@ -93,14 +93,14 @@ const SyncNow = (props) => {
         )}
       </div>
 
-      {syncStarted && <div className="fetch-display-output success">Synchronization started please wait.</div>}
+      {syncStarted && <div className="fetch-display-output success">{__("Synchronization started please wait.", "catalogx")}</div>}
 
       {/* Render description */}
       <p className="settings-metabox-description" dangerouslySetInnerHTML={{ __html: description }}></p>
 
       {/* Render pro tag */}
       {
-        proSetting && <span className="admin-pro-tag">pro</span>
+        proSetting && <span className="admin-pro-tag">{__("pro", "catalogx")}</span>
       }
 
       {/* Render sync status */}

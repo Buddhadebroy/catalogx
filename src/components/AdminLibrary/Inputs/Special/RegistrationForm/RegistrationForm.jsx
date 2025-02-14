@@ -113,7 +113,7 @@ const AddNewBtn = (props) => {
                         <div onClick={(event) => { onAddNew?.() }}>
                             <i className="admin-font adminLib-move"></i>
                         </div>
-                        <p>Click to add next text field</p>
+                        <p>{__("Click to add next text field", "catalogx")}</p>
                     </div>
                     :
                     <div className="add-new-sections" onClick={(event) => { onAddNew?.() }} >

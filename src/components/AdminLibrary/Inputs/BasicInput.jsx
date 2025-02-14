@@ -25,7 +25,7 @@ const BasicInput = (props) => {
                     props.parameter && <span className="parameter" dangerouslySetInnerHTML={{ __html: props.parameter }}></span>
                 }
                 {
-                    props.proSetting && <span className="admin-pro-tag">pro</span>
+                    props.proSetting && <span className="admin-pro-tag">{__("pro", "catalogx")}</span>
                 }
                 {
                     props.description &&

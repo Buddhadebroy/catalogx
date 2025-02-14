@@ -32,12 +32,12 @@ const OPtionMetaBox = (props) => {
                             
                             {/* Render main components */}
                             <main className="meta-setting-modal-content">
-                                <h3>Input Field Settings</h3>
+                                <h3>{__("Input Field Settings", "catalogx")}</h3>
 
                                 <div className="setting-modal-content-section">
                                     {/* Set the name of input field */}
                                     <article className="modal-content-section-field">
-                                        <p>Value</p>
+                                        <p>{__("Value", "catalogx")}</p>
                                         <input
                                             type="text"
                                             value={option.value}
@@ -46,7 +46,7 @@ const OPtionMetaBox = (props) => {
                                     </article>
 
                                     <article className="modal-content-section-field">
-                                        <p>Label</p>
+                                        <p>{__("Label", "catalogx")}</p>
                                         <input
                                             type="text"
                                             value={option.label}
@@ -56,7 +56,7 @@ const OPtionMetaBox = (props) => {
                                 </div>
                                 <div className="setting-modal-content-section">
                                     <article className="modal-content-section-field">
-                                        <p>Set default</p>
+                                        <p>{__("Set default", "catalogx")}</p>
                                         <input
                                             type="checkbox"
                                             checked={option.isdefault}

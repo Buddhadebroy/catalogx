@@ -7,7 +7,7 @@ const DefaultMeta = (props) => {
             {
                 !hideDeactive &&
                 <div className="deactive">
-                    <span>Deactive</span> 
+                    <span>{__("Deactive", "catalogx")}</span> 
                     <input
                         type="checkbox"
                         checked={deactive}
@@ -18,7 +18,7 @@ const DefaultMeta = (props) => {
             {
                 !hideName &&
                 <div className="name">
-                    <span>Set name</span> 
+                    <span>{__("Set name", "catalogx")}</span> 
                     <input
                         type="text"
                         value={name}
@@ -29,7 +29,7 @@ const DefaultMeta = (props) => {
             {
                 !hideDefaultValue &&
                 <div className="default-value">
-                    <span>Set Defaut Value</span>
+                    <span>{__("Set Defaut Value", "catalogx")}</span>
                     <input
                         type="text"
                         value={defaultvalue}

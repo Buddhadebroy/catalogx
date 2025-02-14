@@ -74,7 +74,7 @@ const Customizer = (props) => {
                 <div className="simple">
                   <div className="section">
                     <span className="lable">
-                      Background Color
+                      {__("Background Color", "catalogx")}
                     </span>
                     <div className="property-section">
                       <input
@@ -91,7 +91,7 @@ const Customizer = (props) => {
                   </div>
                   <div className="section">
                     <span className="lable">
-                      Font Color
+                      {__("Font Color", "catalogx")}
                     </span>
                     <div className="property-section">
                       <input
@@ -118,7 +118,10 @@ const Customizer = (props) => {
                 >
                   <div className="section">
                     <span className="lable">
-                      Background Color On Hover
+                      {__(
+                          "Background Color On Hover",
+                          "catalogx"
+                        )}
                     </span>
                     <div className="property-section">
                       <input
@@ -135,7 +138,7 @@ const Customizer = (props) => {
                   </div>
                   <div className="section">
                     <span className="lable">
-                      Font Color On Hover
+                      {__("Font Color On Hover", "catalogx")}
                     </span>
                     <div className="property-section">
                       <input
@@ -158,7 +161,7 @@ const Customizer = (props) => {
                 <div className="simple">
                   <div className="section">
                     <span className="lable">
-                      Border Color
+                      {__("Border Color", "catalogx")}
                     </span>
                     <div className="property-section">
                       <input
@@ -175,7 +178,7 @@ const Customizer = (props) => {
                   </div>
                   <div className="section section-row">
                     <span className="lable">
-                      Border Size
+                      {__("Border Size", "catalogx")}
                     </span>
                     <div className="property-section">
                       {/* <div class="PB-range-slider-div"> */}
@@ -192,7 +195,7 @@ const Customizer = (props) => {
                   </div>
                   <div className="section section-row">
                     <span className="lable">
-                      Border Radious
+                      {__("Border Radious", "catalogx")}
                     </span>
                     <div className="property-section">
                       {/* <div class="PB-range-slider-div"> */}
@@ -211,7 +214,7 @@ const Customizer = (props) => {
                 <div className="section-wrapper hover">
                   <div className="section">
                     <span className="lable">
-                      Border Color On Hover
+                      {__("Border Color On Hover", "catalogx")}
                     </span>
                     <div className="property-section">
                       <input
@@ -234,7 +237,7 @@ const Customizer = (props) => {
                 <div className="simple">
                   <div className="section">
                     <span className="lable">
-                      Button text
+                      {__("Button text", "catalogx")}
                     </span>
                     <div className="property-section">
                       <div class="PB-range-slider-div">
@@ -249,7 +252,7 @@ const Customizer = (props) => {
                   </div>
                   <div className="section section-row">
                     <span className="lable">
-                      Font Size
+                      {__("Font Size", "catalogx")}
                     </span>
                     <div className="property-section">
                       {/* <div class="PB-range-slider-div"> */}
@@ -266,7 +269,7 @@ const Customizer = (props) => {
                   </div>
                   <div className="section section-row">
                     <span className="lable">
-                      Font Width
+                      {__("Font Width", "catalogx")}
                     </span>
                     <div className="property-section">
                       {/* <div class="PB-range-slider-div"> */}
@@ -292,7 +295,7 @@ const Customizer = (props) => {
                 <div className="simple">
                   <div className="section section-row">
                     <span className="lable">
-                      Padding
+                      {__("Padding", "catalogx")}
                     </span>
                     <div className="property-section">
                       {/* <div class="PB-range-slider-div"> */}
@@ -309,7 +312,7 @@ const Customizer = (props) => {
                   </div>
                   <div className="section section-row">
                     <span className="lable">
-                      Margin
+                      {__("Margin", "catalogx")}
                     </span>
                     <div className="property-section">
                       {/* <div class="PB-range-slider-div"> */}
@@ -349,21 +352,21 @@ const Customizer = (props) => {
                     </button>
                   </div>
                 </div>
-                <p><span>*</span>Keep it blank for default button behavior</p>
+                <p><span>*</span>{__("Keep it blank for default button behavior", "catalogx")}</p>
               </div>
             )}
             {select === "setting" && (
               <div className="section-wrapper settings">
                 <div className="section">
                   <span className="lable">
-                    System settings
+                  {__("System settings", "catalogx")}
                   </span>
                   <div className="property-section">
                     <button onClick={(e) => {
                       e.preventDefault();
                       onChange('', {}, true);
                     }}>
-                      Restore default
+                      {__("Restore default", "catalogx")}
                     </button>
                   </div>
                 </div>

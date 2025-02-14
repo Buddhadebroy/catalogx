@@ -24,7 +24,7 @@ const ToggleSetting = (props) => {
                         })}
                     </ul>
                 </div>
-                { proSetting && <span className="admin-pro-tag">pro</span> }
+                { proSetting && <span className="admin-pro-tag">{__("pro", "catalogx")}</span> }
                 {description && 
                     <p className={descClass} dangerouslySetInnerHTML={{__html: description}}></p>
                 }

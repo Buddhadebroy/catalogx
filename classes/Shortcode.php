@@ -11,6 +11,8 @@ class Shortcode {
 		add_shortcode( 'request_quote', [ $this, 'display_request_quote' ] );
         //For quote thank you page
 		add_shortcode( 'request_quote_thank_you', [ $this, 'display_request_quote_thank_you' ] );
+
+		add_shortcode( 'catalog_list_rest_routes', [ $this, 'catalog_list_rest_routes' ] );
     }
 
     function frontend_scripts() {
@@ -57,5 +59,27 @@ class Shortcode {
         <?php
         return ob_get_clean();
     }
+
+    function catalog_list_rest_routes() {
+        $routes = rest_get_server()->get_routes();
+        $custom_routes = [];
+        $api_base_url = get_rest_url(); // Get the base REST API URL
+    
+        foreach ($routes as $route => $details) {
+            if (strpos($route, Catalog()->rest_namespace) !== false) {
+                $custom_routes[] = $route;
+            }
+        }
+    
+        ob_start();
+        echo '<ol>';
+        foreach ($custom_routes as $route) {
+            echo '<li>'. esc_url($api_base_url . $route) . '</li>';
+        }
+        echo '</ol>';
+    
+        return ob_get_clean();
+    }
+        
 
 } 

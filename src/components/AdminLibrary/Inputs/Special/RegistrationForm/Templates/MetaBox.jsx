@@ -127,9 +127,9 @@ const SettingMetaBox = (props) => {
 				}}
 				/>
 				<p>
-					Register your site with your Google account to obtain the{' '}
+					{__("Register your site with your Google account to obtain the", "catalogx")}{' '}
 					<a href="https://www.google.com/recaptcha" target="_blank" rel="noopener noreferrer">
-						reCAPTCHA script
+					{__("reCAPTCHA script", "catalogx")}
 					</a>.
 				</p>
 
@@ -190,7 +190,7 @@ const SettingMetaBox = (props) => {
 								id="visible"
 								name="tabs"
 							/>
-							<label className="tab" htmlFor="visible">Visible</label>
+							<label className="tab" htmlFor="visible">{__("Visible", "catalogx")}</label>
 
 							<input
 								checked={formField.type === 'recaptcha' ? isSiteKeyEmpty : formField.disabled}
@@ -199,7 +199,7 @@ const SettingMetaBox = (props) => {
 								id="hidden"
 								name="tabs"
 							/>
-							<label className="tab" htmlFor="hidden">Hidden</label>
+							<label className="tab" htmlFor="hidden">{__("Hidden", "catalogx")}</label>
 
 							<span className="glider" />
 						</div>

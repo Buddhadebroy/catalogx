@@ -68,7 +68,7 @@ const FormCustomizer = (props) => {
                                                     
                                             }} className="wrapper-close"><i class="admin-font adminLib-cross"></i></button>
                                             <div className="setting-section-dev">
-                                                <span class="label">Placeholder text</span>
+                                                <span class="label">{__("Placeholder text", "catalogx")}</span>
                                                 <div class="property-section">
                                                     <input
                                                         type="text"

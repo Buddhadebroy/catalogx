@@ -36,7 +36,7 @@ const MultipleOptions = ({ formField, onChange, type }) => {
                 return (
                     <section className="select-input-section merge-components">
                         <select>
-                            <option>Select...</option>
+                            <option>{__("Select...", "catalogx")}</option>
                             {options.map((option, idx) => (
                                 <option key={idx} value={option.value}>
                                     {option.label}
@@ -46,7 +46,7 @@ const MultipleOptions = ({ formField, onChange, type }) => {
                     </section>
                 );
             default:
-                return <p>Unsupported input type</p>;
+                return <p>{__("Unsupported input type", "catalogx")}</p>;
         }
     };
 
@@ -126,7 +126,7 @@ const MultipleOptions = ({ formField, onChange, type }) => {
                                             handleDeleteOption(index);
                                         }}
                                     >
-                                        Delete
+                                       {__("Delete", "catalogx")} 
                                     </div>
                                     <OptionMetaBox
                                         hasOpen={openOption === index}
@@ -152,7 +152,7 @@ const MultipleOptions = ({ formField, onChange, type }) => {
                         ))}
 
                         <div className="add-more-option-section" onClick={handleInsertOption}>
-                            Add new options <span><i className="admin-font adminLib-plus-circle-o"></i></span>
+                        {__("Add new options", "catalogx")} <span><i className="admin-font adminLib-plus-circle-o"></i></span>
                         </div>
                     </ReactSortable>
                 </>

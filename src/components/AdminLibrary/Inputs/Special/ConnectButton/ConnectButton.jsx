@@ -155,7 +155,7 @@ const ConnectButton = (props) => {
                     {testStatus === 'Failed'
                         ? (
                             <p>
-                                Test connection failed. Check further details in <Link className="errorlog-link" to={'?page=moowoodle#&tab=settings&subtab=log'}>error log</Link>.
+                                {__("Test connection failed. Check further details in", "catalogx")} <Link className="errorlog-link" to={'?page=moowoodle#&tab=settings&subtab=log'}>{__("error log", "catalogx")}</Link>.
                             </p>
                         )
                         : 'Test connection successful'}

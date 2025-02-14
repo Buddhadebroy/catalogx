@@ -34,7 +34,7 @@ const MergeComponent = (props) => {
                     if (type === 'select') {
                         return (
                             <select key={index} id={name} value={data[name]} onChange={(e) => handleOnChange(name, e.target.value)}>
-                                <option value="">Select</option>
+                                <option value=""> {__("Select", "catalogx")}</option>
                                 {options.map((option) => (
                                     <option key={option.value} value={option.value}>{option.label}</option>
                                 ))}
@@ -58,7 +58,7 @@ const MergeComponent = (props) => {
                 })}
             </section>
             {description && <p className={descClass} dangerouslySetInnerHTML={{ __html: description }} />}
-            {proSetting && <span className="admin-pro-tag">pro</span>}
+            {proSetting && <span className="admin-pro-tag">{__("pro", "catalogx")}</span>}
         </main>
     );
 };

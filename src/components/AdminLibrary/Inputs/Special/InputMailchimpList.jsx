@@ -58,7 +58,7 @@ const InputMailchimpList = (props) => {
             }
           }}
         >
-          Fetch List
+          {__("Fetch List", "catalogx")}
         </button>
 
         {

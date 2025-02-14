@@ -120,7 +120,7 @@ const SearchOptionDisplay = (props) => {
                     }
                     {
                         searchStarted &&
-                        <div>Searching</div>
+                        <div>{__("Searching", "catalogx")}</div>
                     }
                 </div>
             }
@@ -305,7 +305,7 @@ const MultiCheckboxTable = (props) => {
     const { rows, columns, onChange, setting, proSetting, modules } = props;
     return (
         <>
-            {proSetting && <span className="admin-pro-tag">pro</span>}
+            {proSetting && <span className="admin-pro-tag">{__("pro", "catalogx")}</span>}
             <table className='grid-table'>
                 <thead>
                     <tr>

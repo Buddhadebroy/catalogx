@@ -37,7 +37,7 @@ const Tabs = (props) => {
           {menuCol
             ? null
             : !appLocalizer.khali_dabba &&
-              tab.proDependent && <span class="admin-pro-tag">Pro</span>}
+              tab.proDependent && <span class="admin-pro-tag">{__("pro", "catalogx")}</span>}
         </div>
         <div>
           <p className="menu-name">{menuCol ? null : tab.name}</p>

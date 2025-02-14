@@ -86,7 +86,7 @@ const Modules = () => {
         <div className="module-option-row">
           {modulesArray.map((module) => (
             <div className="module-list-item">
-              {module.pro_module && !appLocalizer.khali_dabba && <span className="admin-pro-tag">Pro</span>}
+              {module.pro_module && !appLocalizer.khali_dabba && <span className="admin-pro-tag">{__("Pro", "catalogx")}</span>}
               <div className="module-icon">
                 <i className={`font ${module.icon}`}></i>
               </div>
@@ -97,8 +97,8 @@ const Modules = () => {
               </div>
               <div className="card-footer">
                 <div className="card-support">
-                  <a href={module.doc_link} className="main-btn btn-purple card-support-btn">Docs</a>
-                  <a href={module.settings_link} className="main-btn btn-purple card-support-btn">Setting</a>
+                  <a href={module.doc_link} className="main-btn btn-purple card-support-btn">{__("Docs", "catalogx")}</a>
+                  <a href={module.settings_link} className="main-btn btn-purple card-support-btn">{__("Setting", "catalogx")}</a>
                 </div>
                 <div className="toggle-checkbox-content" data={`${module.id}-showcase-tour`}>
                   {/* <img src={Animation}/> */}

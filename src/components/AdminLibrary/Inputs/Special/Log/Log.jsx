@@ -102,10 +102,10 @@ const Log = (props) => {
     <div className="section-log-container">
       <div className="button-section">
         <button onClick={handleDownloadLog} class="btn-purple download-btn">
-          Download
+          {__("Download", "catalogx")}
         </button>        
         <button className="btn-purple button-clear" onClick={handleClearLog}>
-          <span class="text">Clear</span>
+          <span class="text">{__("Clear", "catalogx")}</span>
           <i class="adminLib-close"></i>
         </button>
       </div>

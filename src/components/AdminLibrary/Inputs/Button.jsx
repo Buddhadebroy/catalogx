@@ -13,7 +13,7 @@ export default function Button(props) {
           props.onClick(e);
         }}
       />
-      {props.proSetting && <span className="admin-pro-tag">pro</span>}
+      {props.proSetting && <span className="admin-pro-tag">{__("pro", "catalogx")}</span>}
       {props.description && (
         <p
           className={props.descClass}
