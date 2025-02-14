@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import DataTable from "react-data-table-component";
-// import "./table.scss";
+import "./table.scss";
 
 const PENALTY = 28;
 const COOLDOWN = 1;
