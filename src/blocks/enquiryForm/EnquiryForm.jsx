@@ -14,8 +14,9 @@ const FreeForm = (props) => {
     let { formFields, onSubmit } = props;
     if(!formFields) formFields = [];
 
-    const [ fileName, setFileName ] = useState("");
-    const [ captchaStatus, setCaptchaStatus] = useState(false);
+    const [fileName, setFileName] = useState("");
+    const [errorMessage, setErrorMessage] = useState("");
+    const [captchaStatus, setCaptchaStatus] = useState(false);
     const [validationErrors, setValidationErrors] = useState({});
 
 
@@ -25,9 +26,21 @@ const FreeForm = (props) => {
      */
     const handleChange = (e) => {
         const { name, value, type, files } = e.target;
+        const filesizeLimitField = formFields.find(item => item.key === "filesize-limit");
+        const maxFileSize = filesizeLimitField.label * 1024 * 1024;
 
         if (type === 'file') {
-            setFileName( e.target.files[0].name )
+            const file = e.target.files[0];
+            setFileName( file.name );
+             // check file size
+            if(file){
+                if (file.size > maxFileSize) {
+                    setErrorMessage(`File size exceeds ${filesizeLimitField.value} MB. Please upload a smaller file.`);
+                    return;
+                }
+                setErrorMessage(""); // Clear any previous error message
+                setFileName(file.name); // Store the uploaded file name
+            }
             setInputs((prevData) => ({
                 ...prevData,
                 [name]: files[0],
@@ -177,8 +190,13 @@ const FreeForm = (props) => {
                                                 type="file" 
                                                 className="hidden" />
                                         </label>
+                                        {errorMessage && <p className="error-message">{errorMessage}</p>}
                                     </div>
                                 </div>
+                            );
+                        case "filesize-limit":
+                            return(
+                                <p>{field.label}</p>
                             );
                         case "captcha":
                             return (
