@@ -7,7 +7,7 @@ import { getApiLink, getApiResponse } from "../../../../services/apiService";
 
 import { useSetting } from "../../../../contexts/SettingContext";
 
-import "./InputMailchimpList.scss";
+// import "./InputMailchimpList.scss";
 
 const InputMailchimpList = (props) => {
   const { mailchimpKey, optionKey, settingChanged } = props;
