@@ -194,10 +194,6 @@ const FreeForm = (props) => {
                                     </div>
                                 </div>
                             );
-                        case "filesize-limit":
-                            return(
-                                <p>{field.label}</p>
-                            );
                         case "captcha":
                             return (
                                 <div className='form-free-sections'>
