@@ -204,11 +204,11 @@ class Frontend{
      * @return void
      */
     public function catalogx_enquiry_button_shortcode($attr) {
-        ob_start();
-        $product_id = isset( $attr['product_id'] ) ? (int)$attr['product_id'] : 0;
-
+        global $product;
         remove_action('display_shop_page_button', [ $this, 'add_enquiry_button' ]);
 
+        ob_start();
+        $product_id = isset( $attr['product_id'] ) ? (int)$attr['product_id'] : $product->get_id();
         $this->add_enquiry_button($product_id);
         return ob_get_clean();
     }

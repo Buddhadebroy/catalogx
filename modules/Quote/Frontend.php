@@ -98,9 +98,11 @@ class Frontend {
     }
 
     public function catalogx_quote_button_shortcode($attr) {
-        ob_start();
-        $product_id = isset( $attr['product_id'] ) ? (int)$attr['product_id'] : 0;
+        global $product;
         remove_action('display_shop_page_button', [ $this, 'add_button_for_quote' ]);
+        
+        ob_start();
+        $product_id = isset( $attr['product_id'] ) ? (int)$attr['product_id'] : $product->get_id();
         $this->add_button_for_quote($product_id);
         return ob_get_clean();
     }
