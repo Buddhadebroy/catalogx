@@ -37,6 +37,9 @@ class Frontend{
         // Enquiry button shortcode
         add_shortcode( 'catalogx_enquiry_button', [ $this, 'catalogx_enquiry_button_shortcode' ] );
 
+        add_action( 'wp_ajax_add_variation_for_enquiry_mail', [ $this, 'add_variation_for_enquiry_mail' ] );
+		add_action( 'wp_ajax_nopriv_add_variation_for_enquiry_mail', [ $this, 'add_variation_for_enquiry_mail' ] );
+
     }
 
     /**
@@ -131,6 +134,10 @@ class Frontend{
 
         wp_register_style( 'catalogx-enquiry-form-style', CatalogX()->plugin_url . 'build/blocks/enquiryForm/index.css' );
         wp_register_script( 'catalogx-enquiry-frontend-script', CatalogX()->plugin_url . 'modules/Enquiry/assets/js/frontend.js', [ 'jquery', 'jquery-blockui' ], CatalogX()->version, true );
+        wp_localize_script(
+            'catalogx-enquiry-frontend-script', 'enquiryFrontend', [
+                'ajaxurl' => admin_url('admin-ajax.php'),
+        ]);
         wp_register_script('enquiry-form-script', CatalogX()->plugin_url . 'build/blocks/enquiryForm/index.js', [ 'jquery', 'jquery-blockui', 'wp-element', 'wp-i18n', 'wp-blocks', 'wp-hooks' ], CatalogX()->version, true );
         wp_localize_script(
             'enquiry-form-script', 'enquiryFormData', [
@@ -162,6 +169,22 @@ class Frontend{
             wp_set_script_translations( 'enquiry-form-script', 'catalogx' );
         }
     }
+
+    public function add_variation_for_enquiry_mail() {
+        $product_id = filter_input(INPUT_POST, 'product_id', FILTER_VALIDATE_INT);
+    
+        if ($product_id) {
+            if (get_transient('variation_list')) {
+                delete_transient('variation_list');
+            }
+    
+            $variation_data = filter_input(INPUT_POST, 'variation_data', FILTER_DEFAULT, FILTER_REQUIRE_ARRAY);
+            set_transient('variation_list', $variation_data, 30 * MINUTE_IN_SECONDS);
+        }
+    
+        die;
+    }
+    
 
     public function catalogx_free_form_settings() {
         $form_settings = CatalogX()->setting->get_option( 'catalogx_enquiry-form-customization_settings', [] );
