@@ -30,6 +30,8 @@ final class CatalogX {
         $this->container[ 'rest_namespace' ] = 'catalogx/v1';
         $this->container[ 'block_paths' ]    = [];
         $this->container[ 'admin_email' ]    = get_option( 'admin_email' );
+        $this->container[ 'render_enquiry_btn_via' ]    = '';
+        $this->container[ 'render_quote_btn_via' ]    = '';
 
         register_activation_hook( $file, [ $this, 'activate' ] );
         register_deactivation_hook( $file, [ $this, 'deactivate' ] );
