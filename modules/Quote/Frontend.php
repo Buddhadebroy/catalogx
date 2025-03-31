@@ -53,9 +53,9 @@ class Frontend {
     }
 
     public function catalogx_add_quote_button() {
+        global $product;
         $render_button = CatalogX()->render_quote_btn_via;
-        if (empty($render_button)) {
-            global $product;
+        if (empty(trim(CatalogX()->render_quote_btn_via))) {
             CatalogX()->render_quote_btn_via = 'hook';
             $this->add_button_for_quote($product->get_id());
         }
@@ -107,9 +107,8 @@ class Frontend {
     }
 
     public function catalogx_quote_button_shortcode($attr) {
-        $render_button = CatalogX()->render_quote_btn_via;
-        if (empty($render_button)) {
-            global $product;
+        global $product;
+        if (empty(trim(CatalogX()->render_quote_btn_via))) {
             CatalogX()->render_quote_btn_via = 'shortcode';
             ob_start();
             $product_id = isset( $attr['product_id'] ) ? (int)$attr['product_id'] : $product->get_id();
