@@ -1,4 +1,4 @@
-=== CatalogX - Product Catalog Mode For WooCommerce ===
+=== CatalogX - Product Catalog Mode & Enquiry-Based Quotation Module for WooCommerce, Wholesale Prices, B2B, Wholesale User Roles, Dynamic Pricing & More ===
 Contributors: wcmp
 Tags: product catalog, b2b , dynamic pricing, wholesale pricing, request a quote
 Donate link: https://multivendorx.com/donate
