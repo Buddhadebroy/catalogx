@@ -65,7 +65,7 @@ The Enquiry Module is essential 📨 for businesses that want to engage with pot
 📊 Monitor and manage all inquiries efficiently via an Inquiry Cart [PRO].
 
 [**Quotation**](https://catalogx.com/quotation/?utm_source=wporg&utm_medium=plugindescription&utm_campaign=catalogxwporg)
-The Quote Module is designed 💬 to help businesses that regularly deal with custom orders, bulk purchases, or high-value transactions. By allowing customers to request quotes directly from your product catalog, you open up new sales opportunities and streamline the buying process. This module is particularly useful for businesses in B2B, wholesale, or custom manufacturing, where personalized pricing and quick response times are critical for closing deals 💼.
+The Quote Module is designed 💬 to help businesses that regularly deal with custom orders, bulk purchases, or high-value transactions. By allowing customers to request quotes directly from your product catalog, you open up new sales opportunities and streamline the buying process. This module is particularly useful for businesses in B2B, wholesale, or custom manufacturing, where personalized pricing and quick response times are critical for closing deals 💼
 
 #Key Features:
 🔍 Quickly find customer quotations with the Quick Search feature [PRO].
@@ -74,7 +74,7 @@ The Quote Module is designed 💬 to help businesses that regularly deal with cu
 🔐 Restrict quote requests to registered users to ensure qualified leads.
 📲 Receive instant notifications via Google Chat and SMS when a customer places a quote request, keeping you informed and responsive [Coming Soon].
 
-[**Wholesale**](https://catalogx.com/wholesale/?utm_source=wporg&utm_medium=plugindescription&utm_campaign=catalogxwporg)
+[**Wholesale-PRO**](https://catalogx.com/wholesale/?utm_source=wporg&utm_medium=plugindescription&utm_campaign=catalogxwporg)
 The Wholesale Module is perfect for businesses 🛒 that serve both retail and wholesale customers. This module helps you create distinct pricing structures, manage customer segments, and protect your retail pricing strategies. By offering exclusive wholesale pricing and preventing coupon use for wholesale customers, you can better manage your profit margins while still offering competitive deals to your business clients 💼.
 
 #Key Features:
@@ -84,7 +84,7 @@ The Wholesale Module is perfect for businesses 🛒 that serve both retail and w
 💸 Configure fixed amount or percentage discounts to suit different customer segments[PRO].
 🏷️ Set up different prices for each user or product to tailor your offerings [PRO].
 
-[**Dynamic Rule-Based Pricing**](https://catalogx.com/dynamic-role-based-pricing/?utm_source=wporg&utm_medium=plugindescription&utm_campaign=catalogxwporg)
+[**Dynamic Rule-Based Pricing-PRO**](https://catalogx.com/dynamic-role-based-pricing/?utm_source=wporg&utm_medium=plugindescription&utm_campaign=catalogxwporg)
 The Dynamic Rule-Based Pricing module is a powerful tool 💪 for businesses looking to maximize sales through targeted pricing strategies. By creating custom discount rules based on user roles, product categories, and more, you can attract specific customer groups, encourage larger purchases, and optimize your pricing for different scenarios. This module is essential for businesses aiming to increase conversions, customer loyalty, and overall revenue through smart pricing techniques💰.
 
 #Key Features:
