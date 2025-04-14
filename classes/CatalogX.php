@@ -133,6 +133,10 @@ final class CatalogX {
             }
         }
 
+        if ( function_exists( 'pll_register_string' ) ) {
+            pll_register_string( 'my-quote', 'my-quote', 'catalogx' );
+        }
+
         // Save the form settings to the options table
         update_option( 'catalogx_enquiry-form-customization_settings', $form_settings );
     }
