@@ -88,6 +88,9 @@ final class CatalogX {
      * Load setup class and register string
      */
     public function catalogx_register_strings_and_setup_wizard() {
+        // Load all active modules
+        $this->container['modules']->load_active_modules();
+        
         new SetupWizard();
         if (get_option('catalogx_plugin_activated')) {
             delete_option('catalogx_plugin_activated');
@@ -154,7 +157,6 @@ final class CatalogX {
         $this->container['quotecart']	= new Core\QuoteCart();
 
         // Load all active modules
-        $this->container['modules']->load_active_modules();
 
         $this->container['block'] 		= new Block();
     }
