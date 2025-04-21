@@ -70,14 +70,14 @@ const FreeForm = (props) => {
     
                 // Check if the field is empty
                 if (!value.trim()) {
-                    errors[field.key] = "This field is required";
+                    errors[field.key] = enquiryFormData.error_strings.required;
                 }
     
                 // Email format validation
                 if (field.key === "email" && value) {
                     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
                     if (!emailRegex.test(value)) {
-                        errors[field.key] = "Invalid email format";
+                        errors[field.key] = enquiryFormData.error_strings.invalid;
                     }
                 }
             }

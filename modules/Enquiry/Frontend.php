@@ -157,6 +157,10 @@ class Frontend{
             ],
             'content_before_form' => apply_filters('catalogx_add_content_before_form', ''),
             'content_after_form'  => apply_filters('catalogx_add_content_after_form', ''),
+            'error_strings' => [
+                'required' => __("This field is required", "catalogx"),
+                'invalid' => __("Invalid email format", "catalogx"),
+            ]
         ]);
 
         if (is_product()) {
