@@ -88,15 +88,15 @@ final class CatalogX {
      * Load setup class and register string
      */
     public function catalogx_register_strings_and_setup_wizard() {
-        // Load all active modules
-        $this->container['modules']->load_active_modules();
-        
         new SetupWizard();
         if (get_option('catalogx_plugin_activated')) {
             delete_option('catalogx_plugin_activated');
             wp_redirect(admin_url('admin.php?page=catalogx-setup'));
             exit;
         }
+
+        // Load all active modules
+        $this->container['modules']->load_active_modules();
 
         if ( ! function_exists( 'icl_register_string' ) ) {
             return;
@@ -155,9 +155,6 @@ final class CatalogX {
         $this->container['shortcode']	= new Shortcode();
         $this->container['session'] 	= new Core\Session();
         $this->container['quotecart']	= new Core\QuoteCart();
-
-        // Load all active modules
-
         $this->container['block'] 		= new Block();
     }
 
