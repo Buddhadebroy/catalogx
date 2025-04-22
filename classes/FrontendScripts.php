@@ -63,7 +63,7 @@ class FrontendScripts {
 
 		$register_styles = [
 			'catalogx-frontend-style'   => [
-				'src'     => CatalogX()->plugin_url . 'modules/Catalog/assets/css/frontend.css',
+				'src'     => CatalogX()->plugin_url . 'assets/css/frontend.css',
 				'deps'    => array(),
 				'version' => $version,
             ],
