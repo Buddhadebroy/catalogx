@@ -172,7 +172,7 @@ Unlock even more possibilities with CatalogX Pro :
 🚀 <code>[catalogx_enquiry_cart_button]</code> = Displays the "Add to Enquiry Cart" button.
 🚀 <code>[catalogx_enquiry_button]</code> = Displays the "Add to Enquiry" button.
 🚀 <code>[catalogx_quote_button]</code> =Displays the "Add to Quote" button.
-🚀 <code> [wholesale_products] </code> = Creates a page listing all wholesale products, enabling wholesalers to easily purchase multiple items in one transaction. [PRO]
+🚀 <code> [catalogx_wholesale_products] </code> = Creates a page listing all wholesale products, enabling wholesalers to easily purchase multiple items in one transaction. [PRO]
 🚀 <code>[catalogx_request_quote] </code> = Displays a list of products for which users have requested quotes, making it easy to review all requests. 
 🚀 <code>[catalogx_enquiry_cart]</code> = Display all products in the enquiry cart and send a single inquiry email for all items in the cart.[PRO]
 

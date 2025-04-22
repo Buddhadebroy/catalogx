@@ -66,6 +66,7 @@ class Block {
     }
 
     public function enqueue_all_block_assets() {
+        FrontendScripts::load_scripts();
         foreach ($this->blocks as $block_script) {
             FrontendScripts::localize_scripts($block_script['textdomain'] . '-' . $block_script['name'] . '-editor-script');
             FrontendScripts::localize_scripts($block_script['textdomain'] . '-' . $block_script['name'] . '-script');
