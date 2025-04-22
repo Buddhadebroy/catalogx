@@ -1,6 +1,7 @@
 <?php 
 
 namespace CatalogX\Catalog;
+use CatalogX\FrontendScripts;
 
 /**
  * CatalogX Catalog Module Frontend class
@@ -71,8 +72,9 @@ class Frontend{
      * @return void
      */
     public function frontend_scripts() {
+        FrontendScripts::load_scripts();
         if (is_product() || is_shop()) {
-            wp_enqueue_style( 'catalogx-frontend-style', CatalogX()->plugin_url . 'modules/Catalog/assets/css/frontend.css' );
+            FrontendScripts::enqueue_style( 'catalogx-frontend-style' );
         }
     }
 

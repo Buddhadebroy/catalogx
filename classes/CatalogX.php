@@ -156,6 +156,7 @@ final class CatalogX {
         $this->container['session'] 	= new Core\Session();
         $this->container['quotecart']	= new Core\QuoteCart();
         $this->container['block'] 		= new Block();
+        $this->container['frontendscripts'] = new FrontendScripts();
     }
 
     public function plugin_link( $links ) {	
