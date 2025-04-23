@@ -95,9 +95,6 @@ final class CatalogX {
             exit;
         }
 
-        // Load all active modules
-        $this->container['modules']->load_active_modules();
-
         if ( ! function_exists( 'icl_register_string' ) ) {
             return;
         }
@@ -155,6 +152,10 @@ final class CatalogX {
         $this->container['shortcode']	= new Shortcode();
         $this->container['session'] 	= new Core\Session();
         $this->container['quotecart']	= new Core\QuoteCart();
+
+         // Load all active modules
+        $this->container['modules']->load_active_modules();
+        
         $this->container['block'] 		= new Block();
         $this->container['frontendscripts'] = new FrontendScripts();
     }
