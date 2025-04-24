@@ -11,57 +11,62 @@ use Catalogx\Enquiry\Frontend as EnquiryFrontend;
  */
 class FrontendScripts {
 
-    private static $scripts = [];
-    private static $styles = [];
+    public static $scripts = [];
+    public static $styles = [];
 
     public function __construct() {
         add_action( 'wp_enqueue_scripts', [ $this, 'load_scripts' ] );
     }
 
-    private static function register_script( $handle, $path, $deps = [], $version="" ) {
+    public static function register_script( $handle, $path, $deps = [], $version="", $text_domain="" ) {
 		self::$scripts[] = $handle;
 		wp_register_script( $handle, $path, $deps, $version, true );
+        wp_set_script_translations( $handle, $text_domain );
 	}
 
-    private static function register_style( $handle, $path, $deps = [], $version="" ) {
+    public static function register_style( $handle, $path, $deps = [], $version="" ) {
 		self::$styles[] = $handle;
 		wp_register_style( $handle, $path, $deps, $version );
 	}
 
-    private static function register_scripts() {
+    public static function register_scripts() {
 		$version = CatalogX()->version;
 
-		$register_scripts = array(
+		$register_scripts = apply_filters('catalogx_register_scripts', array(
 			'catalogx-enquiry-frontend-script' => [
 				'src'     => CatalogX()->plugin_url . 'modules/Enquiry/assets/js/frontend.js',
 				'deps'    => [ 'jquery', 'jquery-blockui' ],
 				'version' => $version,
+                'text_domain' => 'catalogx'
             ],
 			'enquiry-form-script' => [
 				'src'     => CatalogX()->plugin_url . 'build/blocks/enquiryForm/index.js',
 				'deps'    => [ 'jquery', 'jquery-blockui', 'wp-element', 'wp-i18n', 'wp-blocks', 'wp-hooks' ],
 				'version' => $version,
+                'text_domain' => 'catalogx'
             ],
 			'catalogx-quote-cart-script' => [
 				'src'     => CatalogX()->plugin_url . 'build/blocks/quote-cart/index.js',
 				'deps'    => [ 'jquery', 'jquery-blockui', 'wp-element', 'wp-i18n', 'wp-blocks' ],
 				'version' => $version,
+                'text_domain' => 'catalogx'
             ],
 			'add-to-quote-cart-script' => [
 				'src'     => CatalogX()->plugin_url . 'modules/Quote/js/frontend.js',
 				'deps'    => [ 'jquery' ],
 				'version' => $version,
+                'text_domain' => 'catalogx'
             ],
-		);
+		) );
 		foreach ( $register_scripts as $name => $props ) {
-			self::register_script( $name, $props['src'], $props['deps'], $props['version'] );
+			self::register_script( $name, $props['src'], $props['deps'], $props['version'], $props['text_domain'] );
 		}
 	}
 
-    private static function register_styles() {
+    public static function register_styles() {
 		$version = CatalogX()->version;
 
-		$register_styles = [
+		$register_styles = apply_filters('catalogx_register_styles', [
 			'catalogx-frontend-style'   => [
 				'src'     => CatalogX()->plugin_url . 'assets/css/frontend.css',
 				'deps'    => array(),
@@ -76,9 +81,8 @@ class FrontendScripts {
 				'src'     => CatalogX()->plugin_url . 'build/blocks/quote-cart/index.css',
 				'deps'    => array(),
 				'version' => $version,
-            ],
-			
-        ];
+            ],	
+        ] );
 		foreach ( $register_styles as $name => $props ) {
 			self::register_style( $name, $props['src'], $props['deps'], $props['version'] );
 		}
@@ -94,8 +98,8 @@ class FrontendScripts {
 
     public static function localize_scripts( $handle ) {
 		$current_user = wp_get_current_user();
-
-		$localize_scripts = array(
+		
+        $localize_scripts = apply_filters('catalogx_localize_scripts', array(
 			'catalogx-enquiry-frontend-script' => [
 				'object_name' => 'enquiryFrontend',
                 'data' => [
@@ -187,16 +191,15 @@ class FrontendScripts {
                     'nonce'   => wp_create_nonce( 'catalog-security-nonce' )
                 ],
             ],
-		);
-		
+		));
+       
         if ( isset( $localize_scripts[ $handle ] ) ) {
-            wp_set_script_translations( $handle, CatalogX()->version );
             $props = $localize_scripts[ $handle ];
             self::localize_script( $handle, $props['object_name'], $props['data'] );
         }
 	}
 
-    private static function localize_script( $handle, $name, $data = [], ) {
+    public static function localize_script( $handle, $name, $data = [], ) {
 		wp_localize_script( $handle, $name, $data );
 	}
 
