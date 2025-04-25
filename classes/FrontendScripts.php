@@ -111,8 +111,8 @@ class FrontendScripts {
                 'data' => [
                     'apiurl'        => untrailingslashit(get_rest_url()),
                     'nonce'         => wp_create_nonce( 'wp_rest' ),
-                    'settings_free' => EnquiryFrontend::catalogx_free_form_settings(),
-                    'settings_pro'  => EnquiryFrontend::catalogx_pro_form_settings(),
+                    'settings_free' => CatalogX()->modules->is_active('enquiry') ? EnquiryFrontend::catalogx_free_form_settings() : [],
+                    'settings_pro'  => CatalogX()->modules->is_active('enquiry') ? EnquiryFrontend::catalogx_pro_form_settings() : [],
                     'khali_dabba'    => \CatalogX\Utill::is_khali_dabba(),
                     'product_data'  => (\CatalogX\Utill::is_khali_dabba() && !empty(CatalogX_Pro()->cart->get_cart_data())) ? CatalogX_Pro()->cart->get_cart_data() : '',
                     'default_placeholder'  => [
