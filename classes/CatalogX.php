@@ -153,10 +153,11 @@ final class CatalogX {
         $this->container['session'] 	= new Core\Session();
         $this->container['quotecart']	= new Core\QuoteCart();
 
-        // Load all active modules
+         // Load all active modules
         $this->container['modules']->load_active_modules();
-
+        
         $this->container['block'] 		= new Block();
+        $this->container['frontendscripts'] = new FrontendScripts();
     }
 
     public function plugin_link( $links ) {	

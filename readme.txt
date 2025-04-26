@@ -3,9 +3,9 @@ Contributors: wcmp
 Tags: product catalog, b2b , dynamic pricing, wholesale pricing, request a quote
 Donate link: https://multivendorx.com/donate
 Requires at least: 6.4
-Tested up to: 6.7.2
+Tested up to: 6.8.0
 Requires PHP: 8.0
-Stable tag: 6.0.3
+Stable tag: 6.0.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -172,7 +172,7 @@ Unlock even more possibilities with CatalogX Pro :
 🚀 <code>[catalogx_enquiry_cart_button]</code> = Displays the "Add to Enquiry Cart" button.
 🚀 <code>[catalogx_enquiry_button]</code> = Displays the "Add to Enquiry" button.
 🚀 <code>[catalogx_quote_button]</code> =Displays the "Add to Quote" button.
-🚀 <code> [wholesale_products] </code> = Creates a page listing all wholesale products, enabling wholesalers to easily purchase multiple items in one transaction. [PRO]
+🚀 <code> [catalogx_wholesale_products] </code> = Creates a page listing all wholesale products, enabling wholesalers to easily purchase multiple items in one transaction. [PRO]
 🚀 <code>[catalogx_request_quote] </code> = Displays a list of products for which users have requested quotes, making it easy to review all requests. 
 🚀 <code>[catalogx_enquiry_cart]</code> = Display all products in the enquiry cart and send a single inquiry email for all items in the cart.[PRO]
 
@@ -215,6 +215,11 @@ Answer: Simply enable the 'Product Enquiry Button When Product is Out Of Stock' 
 7. Enquiry Dashbaord
 
 == Changelog ==
+= 6.0.4 - 2025-04-29 =
+* Added     - Compatibility of WordPress 6.8.0.
+* Added     - Compatibility of WooCommerce 9.8.2.
+* Fixed     - Required email field issue for non-logged-in users #27.
+
 = 6.0.3 - 2025-04-01 =
 * Fixed     - Product exclusion fixed.
 
