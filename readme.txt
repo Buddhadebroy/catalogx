@@ -215,9 +215,9 @@ Answer: Simply enable the 'Product Enquiry Button When Product is Out Of Stock' 
 7. Enquiry Dashbaord
 
 == Changelog ==
-= 6.0.4 - 2025-04-22 =
+= 6.0.4 - 2025-04-29 =
 * Added     - Compatibility of WordPress 6.8.0.
-* Added     - Compatibility of WooCommerce 9.8.1.
+* Added     - Compatibility of WooCommerce 9.8.2.
 * Fixed     - Required email field issue for non-logged-in users #27.
 
 = 6.0.3 - 2025-04-01 =

@@ -39,7 +39,7 @@ class FrontendScripts {
 				'version' => $version,
                 'text_domain' => 'catalogx'
             ],
-			'enquiry-form-script' => [
+			'catalogx-enquiry-form-script' => [
 				'src'     => CatalogX()->plugin_url . 'build/blocks/enquiryForm/index.js',
 				'deps'    => [ 'jquery', 'jquery-blockui', 'wp-element', 'wp-i18n', 'wp-blocks', 'wp-hooks' ],
 				'version' => $version,
@@ -51,7 +51,7 @@ class FrontendScripts {
 				'version' => $version,
                 'text_domain' => 'catalogx'
             ],
-			'add-to-quote-cart-script' => [
+			'catalogx-add-to-quote-cart-script' => [
 				'src'     => CatalogX()->plugin_url . 'modules/Quote/js/frontend.js',
 				'deps'    => [ 'jquery' ],
 				'version' => $version,
@@ -77,7 +77,7 @@ class FrontendScripts {
 				'deps'    => array(),
 				'version' => $version,
             ],
-			'quote-cart-style'   => [
+			'catalogx-quote-cart-style'   => [
 				'src'     => CatalogX()->plugin_url . 'build/blocks/quote-cart/index.css',
 				'deps'    => array(),
 				'version' => $version,
@@ -106,7 +106,7 @@ class FrontendScripts {
                     'ajaxurl' => admin_url('admin-ajax.php'),
                 ],
             ],
-			'enquiry-form-script' => [
+			'catalogx-enquiry-form-script' => [
 				'object_name' => 'enquiryFormData',
                 'data' => [
                     'apiurl'        => untrailingslashit(get_rest_url()),
@@ -127,7 +127,7 @@ class FrontendScripts {
                     ]
                 ],
             ],
-			'add-to-quote-cart-script' => [
+			'catalogx-add-to-quote-cart-script' => [
 				'object_name' => 'addToQuoteCart',
                 'data' => [
                     'ajaxurl' => admin_url('admin-ajax.php'),

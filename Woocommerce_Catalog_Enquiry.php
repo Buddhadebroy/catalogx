@@ -7,7 +7,7 @@
  * Version: 6.0.4
  * Author URI: https://catalogx.com/
  * WC requires at least: 8.2
- * WC tested up to: 9.8.1
+ * WC tested up to: 9.8.2
  * Text Domain: catalogx
  * Domain Path: /languages/
 */

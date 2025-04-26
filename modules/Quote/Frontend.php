@@ -36,9 +36,9 @@ class Frontend {
      */
     public function enqueue_scripts() {
         FrontendScripts::load_scripts();
-        FrontendScripts::localize_scripts('add-to-quote-cart-script');
+        FrontendScripts::localize_scripts('catalogx-add-to-quote-cart-script');
         if (is_shop() || is_product()) {
-            FrontendScripts::enqueue_script('add-to-quote-cart-script');
+            FrontendScripts::enqueue_script('catalogx-add-to-quote-cart-script');
         }
     }
 

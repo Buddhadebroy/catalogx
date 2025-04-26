@@ -1,7 +1,6 @@
 <?php 
 
 namespace CatalogX\Catalog;
-use CatalogX\FrontendScripts;
 
 /**
  * CatalogX Catalog Module Frontend class

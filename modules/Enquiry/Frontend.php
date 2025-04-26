@@ -137,12 +137,12 @@ class Frontend{
     public function frontend_scripts() {
         FrontendScripts::load_scripts();
         FrontendScripts::localize_scripts('catalogx-enquiry-frontend-script');
-        FrontendScripts::localize_scripts('enquiry-form-script');
+        FrontendScripts::localize_scripts('catalogx-enquiry-form-script');
         
         if (is_product()) {
             FrontendScripts::enqueue_style( 'catalogx-enquiry-form-style' );
             FrontendScripts::enqueue_script( 'catalogx-enquiry-frontend-script' );
-            FrontendScripts::enqueue_script( 'enquiry-form-script' );
+            FrontendScripts::enqueue_script( 'catalogx-enquiry-form-script' );
 
             // additional css
             $additional_css_settings = CatalogX()->setting->get_setting( 'custom_css_product_page' );

@@ -12,12 +12,12 @@
   "editorScript": [
     "file:./index.js",
     "catalogx-enquiry-frontend-script",
-    "enquiry-form-script"
+    "catalogx-enquiry-form-script"
   ],
   "script": [
     "file:./index.js",
     "catalogx-enquiry-frontend-script",
-    "enquiry-form-script"
+    "catalogx-enquiry-form-script"
   ],
   "editorStyle": [
     "catalogx-enquiry-form-style",

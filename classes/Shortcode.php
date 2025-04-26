@@ -23,7 +23,7 @@ class Shortcode {
             FrontendScripts::load_scripts();
             FrontendScripts::localize_scripts('catalogx-quote-cart-script');
             FrontendScripts::enqueue_script('catalogx-quote-cart-script' );
-            FrontendScripts::enqueue_style('quote-cart-style');
+            FrontendScripts::enqueue_style('catalogx-quote-cart-style');
         }
     }
 
