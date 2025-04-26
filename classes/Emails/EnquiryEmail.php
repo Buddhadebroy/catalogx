@@ -163,7 +163,7 @@ class EnquiryEmail extends \WC_Email {
      */
     public function get_content_html() {
         ob_start();
-        if (Utill::is_khali_dabba()) {
+        if (Utill::is_khali_dabba() && $this->template_html !== 'emails/enquiry-email.php') {
             CatalogX_Pro()->utill->get_template($this->template_html, $this->get_template_args());
         } else {
             CatalogX()->util->get_template($this->template_html, $this->get_template_args());
