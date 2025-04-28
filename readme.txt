@@ -14,7 +14,7 @@ CatalogX: WooCommerce catalog mode, ecommerce product catalog, enquiry based quo
 
 🥇 Most advanced WooCommerce catalog mode, wholesale, and request quote plugin.
 🎁 Feature-packed solution to create powerful **B2B, B2C,** and hybrid ecommerce stores.
-📞 **Dedicated support** team with **4.9/5** customer satisfaction on
+📞 **Dedicated support** team with **4.9/5** customer satisfaction
 
 CatalogX turns your WooCommerce site into a flexible ecommerce product catalog with catalog mode to show products without prices and remove the “Add to Cart” button.
 Enable an enquiry-based shopping experience where customers can easily request quotes through custom enquiry forms — perfect for B2B, wholesale, and catalog WordPress businesses.
