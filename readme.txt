@@ -1,4 +1,4 @@
-=== CatalogX - Product Catalog Mode & Enquiry-Based Quotation Module for WooCommerce, Wholesale Prices, B2B, Wholesale User Roles, Dynamic Pricing & More ===
+=== CatalogX - Product Catalog Mode & Enquiry Based Quotation Module for WooCommerce, Wholesale Prices, B2B, Wholesale User Roles, Dynamic Pricing, Tired Pricing & More ===
 Contributors: wcmp
 Tags: product catalog, b2b , dynamic pricing, wholesale pricing, request a quote
 Donate link: https://multivendorx.com/donate
@@ -9,7 +9,7 @@ Stable tag: 6.0.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-CatalogX: Integrated Enquiry Based Quotation System & Advanced Wholesale/B2B Pricing Management.
+CatalogX: WooCommerce catalog mode, ecommerce product catalog, enquiry based quotation system, B2B or B2B + B2C wholesale pricing, and quote management for WooCommerce.
 ## Description
 
 Elevate your WooCommerce store with CatalogX, featuring a fully integrated enquiry system for seamless quote requests and advanced wholesale/B2B pricing management. With Catalog Mode, you can showcase your products without displaying prices and remove the 'Add to Cart' button, encouraging customers to submit enquiries for each item via custom enquiry forms.
@@ -65,14 +65,14 @@ The Enquiry Module is essential 📨 for businesses that want to engage with pot
 📊 Monitor and manage all inquiries efficiently via an Inquiry Cart [PRO].
 
 [**Quotation**](https://catalogx.com/quotation/?utm_source=wporg&utm_medium=plugindescription&utm_campaign=catalogxwporg)
-The Quote Module is designed 💬 to help businesses that regularly deal with custom orders, bulk purchases, or high-value transactions. By allowing customers to request quotes directly from your product catalog, you open up new sales opportunities and streamline the buying process. This module is particularly useful for businesses in B2B, wholesale, or custom manufacturing, where personalized pricing and quick response times are critical for closing deals 💼
+The Quote WooCommerce is designed 💬 to help businesses that regularly deal with custom orders, bulk purchases, or high-value transactions. By allowing customers to request quotes directly from your ecommerce product catalog, you open up new sales opportunities and streamline the buying process. This module is particularly useful for businesses in B2B, wholesale, or custom manufacturing, where personalized pricing and quick response times are critical for closing deals 💼
 
 #Key Features:
-🔍 Quickly find customer quotations with the Quick Search feature [PRO].
-🤝 Ensure compatibility with MultiVendor plugins like [MultiVendorX](https://wordpress.org/plugin/dc-woocommerce-multi-vendor/?utm_source=wporg&utm_medium=plugindescription&utm_campaign=catalogxwporg) for a seamless experience [PRO].
-🛒 Enable visitors to request a quote for all or selected products, catering to different customer needs.
-🔐 Restrict quote requests to registered users to ensure qualified leads.
-📲 Receive instant notifications via Google Chat and SMS when a customer places a quote request, keeping you informed and responsive [Coming Soon].
+🔍 Quickly find customer quote with the Quick Search feature [PRO].
+🤝 Ensure your quote WooCommerce workflow is compatible with MultiVendor plugins like [MultiVendorX](https://wordpress.org/plugin/dc-woocommerce-multi-vendor/?utm_source=wporg&utm_medium=plugindescription&utm_campaign=catalogxwporg) for a seamless experience [PRO].
+🛒 Allow visitors to request a quote for individual or multiple products from your WooCommerce catalog, depending on your sales strategy.
+🔐 Restrict quote requests to registered users, ensuring only qualified leads submit a quote in your B2B or wholesale store.
+📲 Instantly get notified via Google Chat and SMS when a customer submits a quote request, helping you follow up faster. [Coming Soon].
 
 [**Wholesale-PRO**](https://catalogx.com/wholesale/?utm_source=wporg&utm_medium=plugindescription&utm_campaign=catalogxwporg)
 The Wholesale Module is perfect for businesses 🛒 that serve both retail and wholesale customers. This module helps you create distinct pricing structures, manage customer segments, and protect your retail pricing strategies. By offering exclusive wholesale pricing and preventing coupon use for wholesale customers, you can better manage your profit margins while still offering competitive deals to your business clients 💼.
@@ -88,7 +88,7 @@ The Wholesale Module is perfect for businesses 🛒 that serve both retail and w
 The Dynamic Rule-Based Pricing module is a powerful tool 💪 for businesses looking to maximize sales through targeted pricing strategies. By creating custom discount rules based on user roles, product categories, and more, you can attract specific customer groups, encourage larger purchases, and optimize your pricing for different scenarios. This module is essential for businesses aiming to increase conversions, customer loyalty, and overall revenue through smart pricing techniques💰.
 
 #Key Features:
-⚙️ Implement flexible pricing strategies to adapt to different customer needs and market conditions[PRO].
+⚙️ Implement tired pricing strategies to adapt to different customer needs and market conditions[PRO].
 🎯 Create custom discount rules that offer exclusive deals to specific user roles like subscribers or wholesale buyers[PRO].
 🏷️ Target promotions based on products, categories, or user roles to maximize sales potential [PRO].
 📊 Add multiple user role levels with corresponding pricing rules for greater pricing flexibility [PRO].
