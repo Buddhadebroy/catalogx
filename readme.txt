@@ -17,7 +17,7 @@ CatalogX: WooCommerce catalog mode, product enquiry, Request a quote, B2B or B2B
 📞 **Dedicated support** team with **95%** customer satisfaction
 
 CatalogX turns your WooCommerce site into a flexible ecommerce product catalog with catalog mode to show products without prices and remove the “Add to Cart” button.
-Enable an enquiry-based shopping experience where customers can easily request quotes through custom enquiry forms — perfect for B2B, wholesale, and catalog WordPress businesses.
+Enable a seamless product enquiry experience where customers can easily submit product enquiry requests and quotes through custom enquiry forms — perfect for B2B, wholesale, and catalog WordPress businesses.
 
 Simplify your woocommerce catalog management, offer wholesale pricing, set role-based discounts, and streamline the quote woocommerce process — all from a single powerful plugin.
 CatalogX streamlines the quotation process, enabling customers to request quotes directly from your site. Perfect for wholesale and B2B businesses, it simplifies the management of wholesale and role-based pricing. With extensive customization options, you can tailor the shopping experience to fit your unique business needs.
@@ -48,7 +48,7 @@ CatalogX streamlines the quotation process, enabling customers to request quotes
 
 [**Catalog**](https://catalogx.com/product-catalog/?utm_source=wporg&utm_medium=plugindescription&utm_campaign=catalogxwporg)
 
-The Catalog module 🛒 helps you create a tailored shopping experience by offering a private or catalog-only mode for your WooCommerce store. This feature is perfect for businesses that want to manage price visibility, attract specific customer segments, or operate a members-only store. By controlling how and when prices are displayed, you can increase lead generation and encourage customer inquiries, which can then be converted into sales 💬.
+The Catalog module 🛒 helps you create a tailored shopping experience with enhanced product enquiry capabilities by offering a private or catalog-only mode for your WooCommerce store. This feature is perfect for businesses that want to manage price visibility, attract specific customer segments, or operate a members-only store. By controlling how and when prices are displayed, you can increase lead generation and encourage customer inquiries, which can then be converted into sales 💬.
 
 #Key Features:
 🛍️ Enable Catalog Mode for the entire site or specific products to create a unique shopping experience.
@@ -58,7 +58,7 @@ The Catalog module 🛒 helps you create a tailored shopping experience by offer
 📈 Manage price visibility strategically to boost lead generation.
 
 [**Enquiry**](https://catalogx.com/enquiry/?utm_source=wporg&utm_medium=plugindescription&utm_campaign=catalogxwporg)
-The Enquiry Module is essential 📨 for businesses that want to engage with potential customers who have questions or are interested in bulk or high-value orders. By placing inquiry and quote request buttons strategically across your site, you make it easy for users to reach out, even for out-of-stock items. This module helps you capture leads, respond efficiently, and better understand product demand, all of which contribute to higher conversion rates and customer satisfaction.
+Product enquiry is essential 📨 for businesses that want to engage with potential customers who have questions or are interested in bulk or high-value orders. By placing inquiry and quote request buttons strategically across your site, you make it easy for users to reach out, even for out-of-stock items. This module helps you capture leads, respond efficiently, and better understand product demand, all of which contribute to higher conversion rates and customer satisfaction.
 
 #Key Features:
 📍 Place Enquiry & Quote Request buttons anywhere using shortcode for maximum visibility.
@@ -175,8 +175,8 @@ Unlock even more possibilities with CatalogX Pro :
 * Non-Profit Organisers displaying Initiative and Fund Raisers.
 
 ##👉 Shortcodes:
-🚀 <code>[catalogx_enquiry_cart_button]</code> = Displays the "Add to Enquiry Cart" button.
-🚀 <code>[catalogx_enquiry_button]</code> = Displays the "Add to Enquiry" button.
+🚀 <code>[catalogx_enquiry_cart_button]</code> =  Displays a customizable Add to Enquiry Cart button that allows customers to add products to their enquiry list, making it easy to submit multiple product enquiry requests at once for faster and more efficient communication.
+🚀 <code>[catalogx_enquiry_button]</code> = Displays the "Add to Product Enquiry" button, enabling customers to send a quick product enquiry.
 🚀 <code>[catalogx_quote_button]</code> =Displays the "Add to Quote" button.
 🚀 <code> [catalogx_wholesale_products] </code> = Creates a page listing all wholesale products, enabling wholesalers to easily purchase multiple items in one transaction. [PRO]
 🚀 <code>[catalogx_request_quote] </code> = Displays a list of products for which users have requested quotes, making it easy to review all requests. 
