@@ -1,6 +1,6 @@
 === CatalogX - Product Catalog Mode & product Enquiry, Request Quote for WooCommerce, Wholesale Prices, B2B, Wholesale User Roles, Dynamic Pricing, Tired Pricing & More ===
 Contributors: wcmp
-Tags: product enquiry, b2b , dynamic pricing, wholesale pricing, request a quote
+Tags: product enquiry for woocommerce, b2b , dynamic pricing, wholesale pricing, request a quote
 Donate link: https://multivendorx.com/donate
 Requires at least: 6.4
 Tested up to: 6.8.0
@@ -17,7 +17,7 @@ CatalogX: WooCommerce catalog mode, product enquiry, Request a quote, B2B or B2B
 📞 **Dedicated support** team with **95%** customer satisfaction
 
 CatalogX turns your WooCommerce site into a flexible ecommerce product catalog with catalog mode to show products without prices and remove the “Add to Cart” button.
-Enable a seamless product enquiry experience where customers can easily submit product enquiry requests and quotes through custom enquiry forms — perfect for B2B, wholesale, and catalog WordPress businesses.
+Enable a seamless product enquiry experience where customers can easily submit product enquiry requests and request a quote through custom enquiry forms — perfect for B2B, wholesale, and catalog WordPress businesses.
 
 Simplify your woocommerce catalog management, offer wholesale pricing, set role-based discounts, and streamline the quote woocommerce process — all from a single powerful plugin.
 CatalogX streamlines the quotation process, enabling customers to request quotes directly from your site. Perfect for wholesale and B2B businesses, it simplifies the management of wholesale and role-based pricing. With extensive customization options, you can tailor the shopping experience to fit your unique business needs.
@@ -71,12 +71,12 @@ Product enquiry is essential 📨 for businesses that want to engage with potent
 📊 Monitor and manage all inquiries efficiently via an Inquiry Cart [PRO].
 
 [**Quotation**](https://catalogx.com/quotation/?utm_source=wporg&utm_medium=plugindescription&utm_campaign=catalogxwporg)
-The Quote WooCommerce is designed 💬 to help businesses that regularly deal with custom orders, bulk purchases, or high-value transactions. By allowing customers to request quotes directly from your ecommerce product catalog, you open up new sales opportunities and streamline the buying process. This module is particularly useful for businesses in B2B, wholesale, or custom manufacturing, where personalized pricing and quick response times are critical for closing deals 💼
+The Quote WooCommerce is designed 💬 to help businesses that regularly deal with custom orders, bulk purchases, or high-value transactions. It allows customers to easily request a quote directly from your ecommerce product catalog, simplifying the quotation process and opening new sales opportunities. This module is particularly useful for businesses in B2B, wholesale, or custom manufacturing, where personalized pricing and quick response times are critical for closing deals 💼
 
 #Key Features:
-🔍 Quickly find customer quote with the Quick Search feature [PRO].
+🔍 Quickly find and manage request a quote submissions with the Quick Search feature [PRO].
 🤝 Ensure your quote WooCommerce workflow is compatible with MultiVendor plugins like [MultiVendorX](https://wordpress.org/plugin/dc-woocommerce-multi-vendor/?utm_source=wporg&utm_medium=plugindescription&utm_campaign=catalogxwporg) for a seamless experience [PRO].
-🛒 Allow visitors to request a quote for individual or multiple products from your WooCommerce catalog, depending on your sales strategy.
+🛒 Allow visitors to request a quote for individual or multiple products from your WooCommerce catalog, making the request a quote process seamless and efficient.
 🔐 Restrict quote requests to registered users, ensuring only qualified leads submit a quote in your B2B or wholesale store.
 📲 Instantly get notified via Google Chat and SMS when a customer submits a quote request, helping you follow up faster. [Coming Soon].
 
@@ -199,7 +199,7 @@ Answer: Simply activate the 'Catalog Mode' settings, and the 'Add to Cart' butto
 =Can I display both the Enquiry tab and the Add To Cart button simultaneously?=
 Answer: Yes, you can achieve this with our Pro version, WooCommerce Product Catalog Mode Pro - Quote Request, which allows you to keep both the 'Add to Cart' button and the Enquiry Tab.
 
-=How can I show the 'Quote' tab on the product page?=
+=How can I enable the Request a Quote tab on the product page to encourage more request a quote submissions?=
 Answer: You can customize the button text through the Button Appearance Settings.
 
 =How do I respond to customer inquiries once they've been submitted?=
