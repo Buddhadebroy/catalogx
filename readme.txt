@@ -1,4 +1,4 @@
-=== CatalogX - Product Catalog Mode & Enquiry, Request Quote for WooCommerce, Wholesale Prices, B2B, Wholesale User Roles, Dynamic Pricing, Tired Pricing & More ===
+=== CatalogX - Product Catalog Mode & product Enquiry, Request Quote for WooCommerce, Wholesale Prices, B2B, Wholesale User Roles, Dynamic Pricing, Tired Pricing & More ===
 Contributors: wcmp
 Tags: product catalog, b2b , dynamic pricing, wholesale pricing, request a quote
 Donate link: https://multivendorx.com/donate
@@ -9,7 +9,7 @@ Stable tag: 6.0.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-CatalogX: WooCommerce catalog mode, ecommerce product catalog, enquiry based quotation system, B2B or B2B + B2C wholesale pricing, and quote management for WooCommerce.
+CatalogX: WooCommerce catalog mode, product enquiry, Request a quote, B2B or B2B + B2C wholesale pricing, 
 ## Description
 
 🥇 Most advanced WooCommerce catalog mode, wholesale, and request quote plugin.
