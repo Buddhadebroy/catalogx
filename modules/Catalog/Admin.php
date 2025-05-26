@@ -34,7 +34,7 @@ class Admin{
         $tabs[ 'catalog' ] = [
             'label'    => __( 'Catalog', 'catalogx' ),
             'target'   => 'catalog_per_product_desc',
-            'class'    => [ 'show_if_simple', 'show_if_variable' ],
+            'class'    => [ 'show_if_simple', 'show_if_variable', 'show_if_grouped', 'show_if_external' ],
             'priority' => 50,
         ];
 
